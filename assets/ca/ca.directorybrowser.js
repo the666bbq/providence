@@ -278,7 +278,7 @@ var caUI = caUI || {};
 					var p = that.selectedItemIDs.slice(0, (l > 0) ? l-1 : 0).join("/");
 					
 					var item_id = that._queuedLoadsForLevel[l][i]['item_id'];
-					id_list.push(p + '/' + ((item_id != '/') ? item_id : '') +':'+that._queuedLoadsForLevel[l][i]['start']);
+					id_list.push(p + '/' + ((item_id != '/') ? item_id : '') +'@@'+that._queuedLoadsForLevel[l][i]['start']);
 					
 					itemIDsToLevelInfo[l] = {
 						level: l,
@@ -299,7 +299,7 @@ var caUI = caUI || {};
 			jQuery.getJSON(that.levelDataUrl, params, function(dataForLevels) {
 				jQuery.each(dataForLevels, function(key, data) {
 					var b = key.split("|");
-					var tmp = b[0].split(":");
+					var tmp = b[0].split("@@");
 					var item_id = tmp[0];
 					var start = tmp[1] ? tmp[1] : 0;
 					var level = b[1] ? b[1] : 0;
