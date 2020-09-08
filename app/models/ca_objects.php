@@ -1003,7 +1003,204 @@ class ca_objects extends RepresentableBaseModel implements IBundleProvider {
  	 * @return int
  	 */
  	public function removeRelationships($pm_rel_table_name_or_num, $pm_type_id=null, $pa_options=null) {
- 		return parent::removeRelationships($pm_rel_table_name_or_num, $pm_type_id, $pa_options);
+ 		if ($vn_rc = parent::removeRelationships($pm_rel_table_name_or_num, $pm_type_id, $pa_options)) {
+ 			
+ 			if ($this->relationshipChangeMayAffectCurrentLocation($pm_rel_table_name_or_num, null, $pm_type_id)) {
+ 				$this->deriveCurrentLocationForBrowse();
+ 			}
+ 		}
+ 		
+ 		return $vn_rc;
+ 	}
+ 	# ------------------------------------------------------
+ 	/**
+ 	 * Determines is a change being made to the object's relationships maight affect current location. I
+ 	 *
+ 	 * @param mixed $pm_rel_table_name_or_num Table bame or number of the related table
+ 	 * @param int $pn_rel_id Primary key of the record being related to the object
+ 	 * @param mixed $pm_type_id Type_id or type code for relationship
+ 	 * @param array $pa_options No options are currently supported.
+ 	 *
+ 	 * @return bool
+ 	 */
+ 	private function relationshipChangeMayAffectCurrentLocation($pm_rel_table_name_or_num, $pn_rel_id, $pm_type_id=null, $pa_options=null) {
+ 		ExternalCache::flush("objectHistory");
+ 		if(!$pn_rel_id) { return true; }	// null record means we are batch deleting so go ahead and recalculate
+ 		
+ 		if (!($t_instance = Datamodel::getInstance($pm_rel_table_name_or_num, true))) { return null; }
+ 		if ((($vs_table_name = $t_instance->tableName())) !== 'ca_storage_locations') {
+ 			$pm_type_id = $t_instance->getTypeID($pn_rel_id);
+ 		}
+ 		if (ca_objects::getConfigurationForCurrentLocationType($pm_rel_table_name_or_num, $pm_type_id)) { return true; }
+ 		return false;
+ 	}
+ 	# ------------------------------------------------------
+ 	/**
+ 	 * Calculates the current location of the currently loaded object and stores them in the ca_objects.current_loc_class,
+ 	 * ca_objects.current_loc_subclass and ca_objects.current_loc_id fields.
+ 	 *
+ 	 * @param array $pa_options
+ 	 *
+ 	 * @return bool
+ 	 */
+ 	public function deriveCurrentLocationForBrowse($pa_options=null) {
+ 		$va_bundle_settings = array();
+ 		$t_rel_type = new ca_relationship_types();
+ 		$va_map = $this->getAppConfig()->getAssoc('current_location_criteria');
+ 		if(!is_array($va_map)){
+		    $va_map = array();
+	    }
+	 
+ 		foreach($va_map as $vs_table => $va_types) {
+ 			$va_bundle_settings["{$vs_table}_showTypes"] = array();
+ 			if(is_array($va_types)) {
+				foreach($va_types as $vs_type => $va_config) {
+					switch($vs_table) {
+						case 'ca_storage_locations':
+						case 'ca_objects_x_storage_locations':
+							$va_bundle_settings["{$vs_table}_showRelationshipTypes"][] = $t_rel_type->getRelationshipTypeID('ca_objects_x_storage_locations', $vs_type);
+							break;
+						default:
+							if(!is_array($va_config)) { break; }
+							$va_bundle_settings["{$vs_table}_showTypes"][] = array_shift(caMakeTypeIDList($vs_table, array($vs_type)));
+							$va_bundle_settings["{$vs_table}_{$vs_type}_dateElement"] = $va_config['date'];
+							break;
+					}
+				}
+			}
+ 		}
+ 		
+		if (is_array($va_history = $this->getObjectHistory($va_bundle_settings, array('displayLabelOnly' => true, 'limit' => 1, 'currentOnly' => true, 'noCache' => true))) && (sizeof($va_history) > 0)) {
+			$va_current_location = array_shift(array_shift($va_history));
+			
+			if ($va_current_location['type'] == 'ca_storage_locations') {
+				return $this->setCurrentLocationForBrowse('ca_objects_x_storage_locations', $va_current_location['rel_type_id'], $va_current_location['id'], array('dontCheckID' => true));
+			} else {
+				return $this->setCurrentLocationForBrowse($va_current_location['type'], $va_current_location['type_id'], $va_current_location['id'], array('dontCheckID' => true));
+			}
+		}
+		
+		return $this->setCurrentLocationForBrowse(null, null, array('dontCheckID' => true));
+ 	}
+ 	# ------------------------------------------------------
+ 	/**
+ 	 * Sets the ca_objects.current_loc_class, ca_objects.current_loc_subclass and ca_objects.current_loc_id
+ 	 * fields in the currently loaded object row with information about the current location. These fields are used 
+ 	 * by BrowseEngine to browse objects on current location
+ 	 *
+ 	 * @param mixed $pm_loc_class
+ 	 * @param mixed $pm_current_loc_subclass
+ 	 * @param int $pn_current_loc_id
+ 	 * @param array $pa_options Options include:
+ 	 *		dontCheckID = Don't verify that the referenced row exists. This can save time if you're updating many object rows. [Default=false]
+ 	 *
+ 	 * @see BrowseEngine
+ 	 *
+ 	 * @return bool
+ 	 */
+ 	private function setCurrentLocationForBrowse($pm_current_loc_class, $pm_current_loc_subclass, $pn_current_loc_id, $pa_options=null) {
+ 		if (!$this->getPrimaryKey()) { return null; }
+ 		if ($vn_table_num = Datamodel::getTableNum($pm_current_loc_class)) {
+ 			$t_instance = Datamodel::getInstanceByTableNum($vn_table_num, true);
+ 			if (!caGetOption('dontCheckID', $pa_options, false)) {
+ 				if (!$t_instance->load(array($t_instance->primaryKey() => $pn_current_loc_id, 'deleted' => 0))) {
+ 					return false;
+ 				}
+ 			}
+ 			
+ 			if(!is_numeric($vn_type_id = $pm_current_loc_subclass)) {
+				switch($vs_table_name) {
+					case 'ca_storage_locations':
+						$t_rel_type = new ca_relationship_types();
+						$vn_type_id = $t_rel_type->getRelationshipTypeID('ca_objects_x_storage_locations', $pm_current_loc_subclass);
+						break;
+					default:
+						$vn_type_id = $t_instance->getTypeIDForCode($pm_current_loc_subclass);
+						break;
+				}
+			}
+			
+ 			$this->setMode(ACCESS_WRITE);
+ 			$this->set('current_loc_class', $vn_table_num);
+ 			$this->set('current_loc_subclass', $vn_type_id);
+ 			$this->set('current_loc_id', $pn_current_loc_id);
+ 			$this->update();
+ 			
+ 			if ($this->numErrors()) {
+ 				return false;
+ 			} 
+ 			
+ 			return true;
+ 		} else {
+ 			$this->setMode(ACCESS_WRITE);
+ 			$this->set('current_loc_class', null);
+ 			$this->set('current_loc_subclass', null);
+ 			$this->set('current_loc_id', null);
+ 			$this->update();
+ 			
+ 			
+ 			if ($this->numErrors()) {
+ 				return false;
+ 			} 
+ 			return true;
+ 		}
+ 		return false;
+ 	}
+ 	# ------------------------------------------------------
+ 	/**
+ 	 * Fetches configuration for the specified location class/subclass
+ 	 *
+ 	 * @param mixed $pm_current_loc_class Table name or number (aka. class)
+ 	 * @param mixed $pm_current_loc_subclass Type_id or code (aka. subclass)
+ 	 * 
+ 	 * @return array
+ 	 */
+ 	public static function getConfigurationForCurrentLocationType($pm_current_loc_class, $pm_current_loc_subclass=null, $pa_options=null) {
+ 		$vs_cache_key = caMakeCacheKeyFromOptions($pa_options, "{$pm_current_loc_class}/{$pm_current_loc_subclass}");
+ 		
+ 		if (isset(ca_objects::$s_current_location_type_configuration_cache[$vs_cache_key])) { return ca_objects::$s_current_location_type_configuration_cache[$vs_cache_key]; }
+ 		$o_config = Configuration::load();
+ 		
+ 		$va_map = $o_config->getAssoc('current_location_criteria');
+ 		
+ 		if (isset($va_map['ca_storage_locations'])) { 
+ 			$va_map['ca_objects_x_storage_locations'] = $va_map['ca_storage_locations'];
+ 			unset($va_map['ca_storage_locations']);
+ 		}
+ 		
+ 		if (!($t_instance = Datamodel::getInstance($pm_current_loc_class, true))) { return ca_objects::$s_current_location_type_configuration_cache[$vs_cache_key] = null; }
+ 		$vs_table_name = $t_instance->tableName();
+ 		
+ 		if (isset($va_map[$vs_table_name])) {
+ 			if ((!$pm_current_loc_subclass) && isset($va_map[$vs_table_name]['*'])) { return ca_objects::$s_current_location_type_configuration_cache[caMakeCacheKeyFromOptions($pa_options, "{$vs_table_name}/{$pm_type_id}")] = ca_objects::$s_current_location_type_configuration_cache[$vs_cache_key] = $va_map[$vs_table_name]['*']; }	// return default config if no type is specified
+ 			
+ 			if ($pm_current_loc_subclass) { 
+ 				switch($vs_table_name) {
+ 					case 'ca_objects_x_storage_locations':
+ 						$va_types = ca_relationship_types::relationshipTypeIDsToTypeCodes(array($pm_current_loc_subclass));
+ 						$vs_type = array_shift($va_types);
+ 						break;
+ 					default:
+ 						$vs_type = $t_instance->getTypeCode($pm_current_loc_subclass);
+ 						break;
+ 				}
+ 				
+ 				$va_facet_display_config = caGetOption('facet', $pa_options, null); 
+ 				if ($vs_type && isset($va_map[$vs_table_name][$vs_type])) {
+ 					if (is_array($va_facet_display_config) && isset($va_facet_display_config[$vs_table_name][$vs_type])) {
+ 						$va_map[$vs_table_name][$vs_type] = array_merge($va_map[$vs_table_name][$vs_type], $va_facet_display_config[$vs_table_name][$vs_type]);
+ 					}
+					return ca_objects::$s_current_location_type_configuration_cache[caMakeCacheKeyFromOptions($pa_options, "{$vs_table_name}/{$pm_current_loc_subclass}")] = ca_objects::$s_current_location_type_configuration_cache[$vs_cache_key] = $va_map[$vs_table_name][$vs_type];
+				} elseif (isset($va_map[$vs_table_name]['*'])) {
+					if (is_array($va_facet_display_config) && isset($va_facet_display_config[$vs_table_name]['*'])) {
+ 						$va_map[$vs_table_name][$vs_type] = array_merge($va_map[$vs_table_name]['*'], $va_facet_display_config[$vs_table_name]['*']);
+ 					}
+					return ca_objects::$s_current_location_type_configuration_cache[caMakeCacheKeyFromOptions($pa_options, "{$vs_table_name}/{$pm_current_loc_subclass}")] = ca_objects::$s_current_location_type_configuration_cache[$vs_cache_key] = $va_map[$vs_table_name]['*'];
+				}
+ 			} 
+ 			
+ 		}
+ 		return ca_objects::$s_current_location_type_configuration_cache[caMakeCacheKeyFromOptions($pa_options, "{$vs_table_name}/{$pm_current_loc_subclass}")] = ca_objects::$s_current_location_type_configuration_cache[$vs_cache_key] = null;
  	}
  	# ------------------------------------------------------
  	# Object checkout 
