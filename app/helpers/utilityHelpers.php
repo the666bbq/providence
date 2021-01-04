@@ -41,9 +41,6 @@ require_once(__CA_LIB_DIR__.'/Logging/Eventlog.php');
 require_once(__CA_LIB_DIR__.'/Utils/Encoding.php');
 require_once(__CA_LIB_DIR__.'/Zend/Measure/Length.php');
 require_once(__CA_LIB_DIR__.'/Parsers/ganon.php');
-use GuzzleHttp\Client;
-use PHPUnit\Framework\Exception;
-use PHPUnit\Framework\SelfDescribing;
 
 /**
  * array_key_first polyfill for PHP < 7.3
@@ -344,7 +341,7 @@ function caFileIsIncludable($ps_file) {
 		if(substr($dir, -1, 1) == "/"){
 			$dir = substr($dir, 0, strlen($dir) - 1);
 		}
-
+		if(!file_exists($dir) || !is_dir($dir)) { return []; }
 		if($va_paths = scandir($dir, 0)) {
 			foreach($va_paths as $item) {
 				if ($item != "." && $item != ".." && ($pb_include_hidden_files || (!$pb_include_hidden_files && $item{0} !== '.'))) {
@@ -2873,11 +2870,46 @@ function caFileIsIncludable($ps_file) {
 	/** 
 	 *
 	 */
-	function caHumanFilesize($bytes, $decimals = 2) {
-		$size = array('B','KiB','MiB','GiB','TiB');
-		$factor = intval(floor((strlen($bytes) - 1) / 3), 10);
+	function caHumanFilesize($bytes, $decimals = 2) : string {
+		$size = ['B','KiB','MiB','GiB','TiB'];
+		$factor = intval(floor((strlen((int)$bytes) - 1) / 3), 10);
 
-		return sprintf("%.{$decimals}f", $bytes/pow(1024, $factor)).@$size[$factor];
+		return sprintf("%.{$decimals}f", (int)$bytes/pow(1024, $factor)).@$size[$factor];
+	}
+	# ----------------------------------------
+	/** 
+	 * Parse human-readable filesize into bytes. Note that we always assume that 
+	 * 1 kilobyte = 1024 bytes, not 1000 bytes as Mac OS and some hard drive manufacturers do.
+	 *
+	 * Common and IEC units may be used:
+	 *		Common = 'B', 'KB', 'MB', 'GB', 'TB', 'PB'
+	 *		IEC = 'KiB', 'MiB', 'GiB', 'TiB', 'PiB'
+	 *
+	 * @param string $from File size expression
+	 * @return int File size in bytes, or null if the expression could not be parsed.
+	 */
+	function caParseHumanFilesize(string $from): ?int {
+		$alts = [
+			'KIB' => 'KB', 'MIB' => 'MB', 'GIB' => 'GB', 'TIB' => 'TB', 'PIB' => 'PB'		// iec
+		];
+		$units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB'];
+		
+		$suffix = preg_match('![ ]*([KIBMGTP]+)[ ]*$!i', $from, $m) ? strtoupper($m[1]) : null;
+		$number = preg_replace('![^\d\.]!', '', $from);
+		
+		//B or no suffix
+		if(is_numeric($number) && !$suffix) {
+			return $number;
+		}
+		
+		if (isset($alts[$suffix])) { $suffix = $alts[$suffix]; }
+
+		$exponent = array_flip($units)[$suffix] ?? null;
+		if($exponent === null) {
+			return null;
+		}
+
+		return $number * (1024 ** $exponent);
 	}
 	# ----------------------------------------
 	/**
@@ -4070,6 +4102,9 @@ function caFileIsIncludable($ps_file) {
 			case 'not in':
 				return ($pb_is_list) ? true : false;
 				break;
+			case 'between':
+				return ($pb_is_list) ? true : false;
+				break;
 		}
 		return false;
 	}
@@ -4343,27 +4378,47 @@ function caFileIsIncludable($ps_file) {
 	 *
 	 * @param string $url
 	 * @param string $dest File path to write data to. If omitted a temporary file will be created. [Default is null]
+	 * @param array $options Options include:
+	 *		mimetypes = MIME type, or list of MIME types expected in response to URL. If content type of response does ot match the MIME type(s) specified here a UrlFetchException is thrown.
 	 * 
+	 * @throws UrlFetchException
 	 * @return string Path to file
 	 */
-	function caFetchFileFromUrl($url, $dest=null) {
+	function caFetchFileFromUrl($url, $dest=null, array $options=null) {
 		$tmp_file = $dest ? $dest : tempnam(__CA_APP_DIR__.'/tmp', 'caUrlCopy');
-		$r_incoming_fp = @fopen($url, 'r');
-		if(!$r_incoming_fp) {
-			throw new ApplicationException(_t("Cannot open remote URL [%1] to fetch media", $url));
-		}
-
+		
 		$r_outgoing_fp = @fopen($tmp_file, 'w');
 		if(!$r_outgoing_fp) {
-			throw new ApplicationException(_t("Cannot open temporary file for media fetched from URL [%1]", $url));
+			throw new UrlFetchException(_t("Cannot open temporary file for media fetched from URL [%1]", $url));
 		}
-
-		while(($content = fgets($r_incoming_fp, 4096)) !== false) {
-			fwrite($r_outgoing_fp, $content);
+		
+		$ch = curl_init($url);
+		curl_setopt($ch, CURLOPT_FILE, $r_outgoing_fp);
+		curl_setopt($ch, CURLOPT_TIMEOUT, 240);
+		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+		curl_exec($ch);
+ 
+		if(curl_errno($ch)){
+			throw new UrlFetchException(_t('Media fetch from URL [%1] failed: %2', $url, curl_error($ch)));
 		}
-		fclose($r_incoming_fp);
+ 
+		$status_code = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
+		$content_type = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
+		curl_close($ch);
 		fclose($r_outgoing_fp);
 		
+		if ($status_code !== 200) {
+			@unlink($tmp_file);
+			throw new UrlFetchException(_t("Media fetched from URL [%1] failed with status code %2", $url, $status_code));
+		}
+		
+		$mimetypes = caGetOption('mimetype', $options, null, ['castTo' => 'array']);
+		if (is_array($mimetypes) && sizeof($mimetypes)) {
+			if(!$content_type || !in_array($content_type, $mimetypes, true)) { 
+				@unlink($tmp_file);
+				throw new UrlFetchException(_t("Media fetched from URL [%1] is not in accepted format", $url));
+			}
+		}
 		return $tmp_file;
 	}
 	# ----------------------------------------

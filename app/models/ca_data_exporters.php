@@ -740,10 +740,10 @@ class ca_data_exporters extends BundlableLabelableBaseModelWithAttributes {
 			}
 
 			$vn_row_num = $o_row->getRowIndex();
-			$o_cell = $o_sheet->getCellByColumnAndRow(1, $vn_row_num);
-			$vs_mode = (string)$o_cell->getValue();
+			$o_cell = $o_sheet->getCellByColumnAndRow(0, $vn_row_num);
+			$vs_mode = strtolower((string)$o_cell->getValue());
 
-			switch(strtolower($vs_mode)) {
+			switch($vs_mode) {
 				case 'mapping':
 				case 'constant':
 				case 'variable':
@@ -781,14 +781,14 @@ class ca_data_exporters extends BundlableLabelableBaseModelWithAttributes {
                     $va_replacement_values = preg_split("![\n\r]{1}!", (string)$o_replacement_values->getValue());
                     array_walk($va_replacement_values, function(&$v) { $v = trim($v); });
 
-					if ($vs_mode == 'Constant') {
+					if ($vs_mode === 'constant') {
 						if(strlen($vs_source)<1) { // ignore constant rows without value
 							continue(2);
 						}
 						$vs_source = "_CONSTANT_:{$vs_source}";
 					}
 
-					if ($vs_mode == 'Variable') {
+					if ($vs_mode === 'variable') {
 						if(preg_match("/^[A-Za-z0-9\_\-]+$/",$vs_element)) {
 							$vs_element = "_VARIABLE_:{$vs_element}";
 						} else {
@@ -828,7 +828,7 @@ class ca_data_exporters extends BundlableLabelableBaseModelWithAttributes {
 
 						$va_new_items = array();
 
-						$va_mapping_items_to_repeat = explode(',', $vs_source);
+						$va_mapping_items_to_repeat = preg_split('/[,;]/', $vs_source);
 
 						foreach($va_mapping_items_to_repeat as $vs_mapping_item_to_repeat) {
 							$vs_mapping_item_to_repeat = trim($vs_mapping_item_to_repeat);
@@ -1803,8 +1803,8 @@ class ca_data_exporters extends BundlableLabelableBaseModelWithAttributes {
 
 			$va_info = array();
 
-			if(is_array($va_related)) {
-				$o_log->logDebug(_t("The current mapping will now be repreated for these items: %1", print_r($va_related,true)));
+			if(is_array($va_related) && sizeof($va_related)) {
+				$o_log->logDebug(_t("The current mapping will now be repeated for these items: %1", print_r($va_related,true)));
 				if(!$vn_new_table_num) { $vn_new_table_num = $pn_table_num; }
 
 				foreach($va_related as $va_rel) {

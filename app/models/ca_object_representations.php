@@ -482,7 +482,6 @@ class ca_object_representations extends BundlableLabelableBaseModelWithAttribute
 			caExtractEmbeddedMetadata($this, $va_metadata, $this->get('locale_id'));
 			
 			$vn_rc = parent::update($pa_options);
-
 		}
 		
 		return $vn_rc;

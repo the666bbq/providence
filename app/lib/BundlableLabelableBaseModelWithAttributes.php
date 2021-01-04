@@ -203,9 +203,8 @@ class BundlableLabelableBaseModelWithAttributes extends LabelableBaseModelWithAt
 					} else {
 						// is root
 						$va_type_list = $this->getTypeList(array('directChildrenOnly' => true, 'item_id' => null));
-						if (!isset($va_type_list[$this->getTypeID()])) {
+						if (!isset($va_type_list[$this->getTypeID()]) && ($t = $this->getTypeInstance())) {
 							// if all ancestors for type are not enabled then we can allow this type even in strict mode
-							$t = $this->getTypeInstance();
 							$ancestors = $t->getHierarchyAncestors(null, ['includeSelf' => false]);
 							if (sizeof(array_filter($ancestors, function($v) {
 								return (!is_null($v['NODE']['parent_id']) && (bool)$v['NODE']['is_enabled']);
@@ -887,7 +886,7 @@ class BundlableLabelableBaseModelWithAttributes extends LabelableBaseModelWithAt
 	public function checkForDupeLabel($pn_locale_id, $pa_label_values, $pb_preferred_only=true) {
 		$o_db = $this->getDb();
 		$t_label = $this->getLabelTableInstance();
-		//unset($pa_label_values['displayname']);
+		if(!empty($pa_label_values['surname']) || !empty($pa_label_values['forename'])) { unset($pa_label_values['displayname']); }
 		$va_wheres = array();
 		foreach($pa_label_values as $vs_field => $vs_value) {
 			$va_wheres[] = "(l.{$vs_field} = ?)";
@@ -1543,7 +1542,7 @@ class BundlableLabelableBaseModelWithAttributes extends LabelableBaseModelWithAt
 			# -------------------------------------------------
 			case 'attribute':
 				// Bundle names for attributes are element codes. They may be prefixed with 'ca_attribute_' in older installations.
-				// Since getAttributeHTMLFormBundle() takes a straight element code we have to strip the prefix here
+				// since getAttributeHTMLFormBundle() takes a straight element code we have to strip the prefix here
 				$vs_attr_element_code = str_replace('ca_attribute_', '', $ps_bundle_name);
 				$vs_display_format = $o_config->get('bundle_element_display_format');
 				

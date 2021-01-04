@@ -608,3 +608,4 @@ class ca_tours extends BundlableLabelableBaseModelWithAttributes {
 	}
 	# ----------------------------------------
 }
+?>

@@ -3300,6 +3300,22 @@
 			return isset($this->_FIELD_VALUE_CHANGED['_ca_attribute_'.$vn_id]) ? $this->_FIELD_VALUE_CHANGED['_ca_attribute_'.$vn_id] : false;
 		}
 		# ------------------------------------------------------------------
+		public function elementHasChanged($pm_element_code_or_id) {
+			return $this->attributeHasChanged($pm_element_code_or_id);
+		}
+		# ------------------------------------------------------------------
+		/**
+		 * Have any attributes changed on this row?
+		 *
+		 * @return bool
+		 */
+		public function attributesChanged() {
+            if(!is_array($cf = $this->_FIELD_VALUE_CHANGED)) { return false; }
+            if(sizeof($cf) === 0) { return false; }
+            if (sizeof(array_filter(array_keys($cf), function($v) { return substr($v, 0, 14) === '_ca_attribute_'; })) > 0) { return true; }
+            return false;
+		}
+		# ------------------------------------------------------------------
 		/**
 		 * Have any attributes changed on this row?
 		 *

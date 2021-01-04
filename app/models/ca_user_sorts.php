@@ -285,7 +285,7 @@ class ca_user_sorts extends BaseModel {
 	public function getSortBundleNames() {
 		if(!$this->getPrimaryKey()) { return false; }
 
-		$qr_sort_bundles = $this->getDb()->query('SELECT bundle_name, `rank` FROM ca_user_sort_items WHERE sort_id=? ORDER BY `rank`, item_id', $this->getPrimaryKey());
+		$qr_sort_bundles = $this->getDb()->query('SELECT bundle_name,`rank` FROM ca_user_sort_items WHERE sort_id=? ORDER BY `rank`, item_id', $this->getPrimaryKey());
 
 		$va_sort_bundle_names = array();
 		while($qr_sort_bundles->nextRow()) {

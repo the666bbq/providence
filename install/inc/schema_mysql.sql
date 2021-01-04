@@ -317,11 +317,6 @@ create table ca_entities
    status                         tinyint unsigned               not null default 0,
    deleted                        tinyint unsigned               not null default 0,
    `rank`                           int unsigned                   not null default 0,
-   submission_user_id               int unsigned                   null,
-   submission_group_id            int unsigned                   null,
-   submission_status_id              int unsigned                   null,
-   submission_via_form            varchar(100)                   null,
-   
    primary key (entity_id),
    constraint fk_ca_entities_source_id foreign key (source_id)
       references ca_list_items (item_id) on delete restrict on update restrict,
@@ -475,11 +470,7 @@ create table ca_object_lots
    source_id                      int unsigned,
    source_info                    longtext                       not null,
    deleted                        tinyint unsigned               not null default 0,
-   `rank`                           int unsigned                   not null default 0,
-   submission_user_id               int unsigned                   null,
-   submission_group_id            int unsigned                   null,
-   submission_status_id              int unsigned                   null,
-   submission_via_form            varchar(100)                   null,
+   `rank`                             int unsigned                     not null default 0,
    primary key (lot_id),
    
    constraint fk_ca_object_lots_type_id foreign key (type_id)
@@ -676,11 +667,7 @@ create table ca_occurrences
    access                         tinyint unsigned               not null default 0,
    status                         tinyint unsigned               not null default 0,
    deleted                        tinyint unsigned               not null default 0,
-   `rank`                           int unsigned                   not null default 0,
-   submission_user_id               int unsigned                   null,
-   submission_group_id            int unsigned                   null,
-   submission_status_id              int unsigned                   null,
-   submission_via_form            varchar(100)                   null,
+   `rank`                             int unsigned                     not null default 0,
    primary key (occurrence_id),
    
    constraint fk_ca_occurrences_type_id foreign key (type_id)
@@ -775,12 +762,8 @@ create table ca_collections
    access                         tinyint unsigned               not null default 0,
    status                         tinyint unsigned               not null default 0,
    deleted                        tinyint unsigned               not null default 0,
-   `rank`                           int unsigned                   not null default 0,
-   acl_inherit_from_parent        tinyint unsigned               not null default 0,
-   submission_user_id               int unsigned                   null,
-   submission_group_id            int unsigned                   null,
-   submission_status_id              int unsigned                   null,
-   submission_via_form            varchar(100)                   null,
+   `rank`                             int unsigned                     not null default 0,
+   acl_inherit_from_parent         tinyint unsigned              not null default 0,
    
    primary key (collection_id),
    constraint fk_ca_collections_type_id foreign key (type_id)
@@ -1080,11 +1063,7 @@ create table ca_loans (
    access                         tinyint unsigned               not null default 0,
    status                         tinyint unsigned               not null default 0,
    deleted                        tinyint unsigned               not null default 0,
-   `rank`                           int unsigned                   not null default 0,
-   submission_user_id               int unsigned                   null,
-   submission_group_id            int unsigned                   null,
-   submission_status_id              int unsigned                   null,
-   submission_via_form            varchar(100)                   null,
+   `rank`                             int unsigned                     not null default 0,
    primary key (loan_id),
    
    constraint fk_ca_loans_type_id foreign key (type_id)
@@ -1171,11 +1150,7 @@ create table ca_movements (
    access                         tinyint unsigned               not null default 0,
    status                         tinyint unsigned               not null default 0,
    deleted                        tinyint unsigned               not null default 0,
-   `rank`                           int unsigned                   not null default 0,
-   submission_user_id               int unsigned                   null,
-   submission_group_id            int unsigned                   null,
-   submission_status_id              int unsigned                   null,
-   submission_via_form            varchar(100)                   null,
+   `rank`                             int unsigned                     not null default 0,
    primary key (movement_id),
    
     constraint fk_ca_movements_type_id foreign key (type_id)
@@ -1575,6 +1550,50 @@ create index i_completed_on on ca_task_queue(completed_on);
 create index i_entity_key on ca_task_queue(entity_key);
 create index i_row_key on ca_task_queue(row_key);
 create index i_error_code on ca_task_queue(error_code);
+
+
+/*==========================================================================*/
+create table ca_user_groups
+(
+   group_id                       int unsigned                   not null AUTO_INCREMENT,
+   parent_id                      int unsigned,
+   name                           varchar(255)                   not null,
+   code                           varchar(20)                    not null,
+   description                    text                           not null,
+   user_id                        int unsigned                   null references ca_users(user_id),
+   `rank`                           smallint unsigned              not null default 0,
+   vars                           text                           not null,
+   hier_left                      decimal(30,20)                 not null,
+   hier_right                     decimal(30,20)                 not null,
+   primary key (group_id),
+      
+   constraint fk_ca_user_groups_parent_id foreign key (parent_id)
+      references ca_user_groups (group_id) on delete restrict on update restrict
+) engine=innodb CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+create index i_hier_left on ca_user_groups(hier_left);
+create index i_hier_right on ca_user_groups(hier_right);
+create index i_parent_id on ca_user_groups(parent_id);
+create index i_user_id on ca_user_groups(user_id);
+create unique index u_name on ca_user_groups(name);
+create unique index u_code on ca_user_groups(code);
+
+
+/*==========================================================================*/
+create table ca_user_roles
+(
+   role_id                        smallint unsigned              not null AUTO_INCREMENT,
+   name                           varchar(255)                   not null,
+   code                           varchar(20)                    not null,
+   description                    text                           not null,
+   `rank`                           smallint unsigned              not null default 0,
+   vars                           longtext                       not null,
+   field_access                   longtext                       not null,
+   primary key (role_id)
+) engine=innodb CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+create unique index u_name on ca_user_roles(name);
+create unique index u_code on ca_user_roles(code);
 
 
 /*==========================================================================*/
@@ -2578,7 +2597,7 @@ create table ca_occurrences_x_occurrences
    edatetime                      decimal(30,20),
    label_left_id                  int unsigned                   null,
    label_right_id                 int unsigned                   null,
-   `rank`                           int unsigned                   not null default 0,
+   `rank`                          int unsigned                   not null default 0,
    primary key (relation_id),
    constraint fk_ca_occurrences_x_occurrences_type_id foreign key (type_id)
       references ca_relationship_types (type_id) on delete restrict on update restrict,
@@ -2667,7 +2686,7 @@ create table ca_entities_x_collections
    edatetime                      decimal(30,20),
    label_left_id                  int unsigned                   null,
    label_right_id                 int unsigned                   null,
-   `rank`                           int unsigned                   not null default 0,
+   `rank`                          int unsigned                   not null default 0,
    primary key (relation_id),
    constraint fk_ca_entities_x_collections_collection_id foreign key (collection_id)
       references ca_collections (collection_id) on delete restrict on update restrict,
@@ -4549,7 +4568,7 @@ create table ca_editor_ui_type_restrictions (
    ui_id                          int unsigned                   not null,
    include_subtypes               tinyint unsigned               not null default 0,
    settings                       longtext                       not null,
-   `rank`                           smallint unsigned              not null default 0,
+   `rank`                          smallint unsigned              not null default 0,
    primary key (restriction_id),
    
    index i_ui_id				(ui_id),

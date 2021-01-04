@@ -2966,16 +2966,8 @@ require_once(__CA_LIB_DIR__.'/Media/MediaInfoCoder.php');
 					if ($vs_type_id_fld) {
 						$va_item['type_id'] = $qr_rel_items->get("{$vs_rel_table}.{$vs_type_id_fld}");
 					}
-
-					$va_item['_display'] = caProcessTemplateForIDs( $vs_template, $vs_table,
-						array( $qr_rel_items->get( "{$vs_table}.{$vs_pk}" ) ),
-						array(
-							'returnAsArray' => false,
-							'returnAsLink' => false,
-							'delimiter' => caGetOption( 'delimiter', $pa_options, $vs_display_delimiter ),
-							'resolveLinksUsing' => $vs_rel_table,
-							'primaryIDs' => $va_primary_ids
-						) );
+					
+					$va_item['_display'] = caProcessTemplateForIDs("{$vs_template}", $vs_table, array($qr_rel_items->get("{$vs_table}.{$vs_pk}")), array('returnAsArray' => false, 'returnAsLink' => false, 'delimiter' => caGetOption('delimiter', $pa_options, $vs_display_delimiter), 'resolveLinksUsing' => $vs_rel_table, 'primaryIDs' => $va_primary_ids));
 					$va_item['label'] = mb_strtolower($qr_rel_items->get("{$vs_table}.preferred_labels"));
 					if ($vs_idno_fld) { $va_item['idno'] = mb_strtolower($qr_rel_items->get("{$vs_table}.{$vs_idno_fld}")); }
 
@@ -3402,106 +3394,25 @@ require_once(__CA_LIB_DIR__.'/Media/MediaInfoCoder.php');
 	 * @param RequestHTTP $po_request
 	 * @param string $ps_id_prefix
 	 * @param string $ps_table
-	 * @param array $pa_options
-	 *		sort = 
+	 * @param string $ps_related_table
+	 * @param array $pa_options Options include:
+	 *		sort =
 	 *		sortDirection = 
 	 * 
 	 * @return string HTML implementing the control
 	 */
-	function caEditorBundleSortControls($po_request, $ps_id_prefix, $ps_table, $pa_options=null) {
+	function caEditorBundleSortControls($po_request, $ps_id_prefix, $ps_table, $ps_related_table, $pa_options=null) {
 		if (!is_array($pa_options)) { $pa_options = []; }
 		require_once(__CA_APP_DIR__.'/helpers/searchHelpers.php');
 
 		if(!$ps_table) { return '???'; }
-		if (!is_array($va_sort_fields = caGetAvailableSortFields($ps_table, null, array_merge(['request' => $po_request], $pa_options, ['naturalSortLabel' => _t('default')]))) || !sizeof($va_sort_fields)) { return ''; }
+		if (!is_array($va_sort_fields = caGetAvailableSortFields($ps_table, null, array_merge(['request' => $po_request, 'includeInterstitialSortsFor' => $ps_related_table], $pa_options))) || !sizeof($va_sort_fields)) { return ''; }
 		
-		$sort = caGetOption('sort', $pa_options, null);
-		$sort_direction = caGetOption('sortDirection', $pa_options, null);
+		unset($va_sort_fields['_natural']);
 		
-		$va_sort_fields = array_map(function($v) { return mb_strtolower($v); }, $va_sort_fields);
-		return "<div class='editorBundleSortControl'>"._t('Sort using %1 %2', caHTMLSelect("{$ps_id_prefix}_RelationBundleSortControl", 
-				array_flip($va_sort_fields), 
-				[
-					'onChange' => "caRelationBundle{$ps_id_prefix}.sort(jQuery(this).val())", 
-					'id' => "{$ps_id_prefix}_RelationBundleSortControl", 
-					'class' => 'caItemListSortControlTrigger dontTriggerUnsavedChangeWarning'], 
-				['value' => $sort]
-			), 
-			caHTMLSelect(
-				"{$ps_id_prefix}_RelationBundleSortDirectionControl", 
-				[_t('↑') => 'ASC', _t('↓') => 'DESC'], 
-				[
-					'onChange' => "caRelationBundle{$ps_id_prefix}.sort(jQuery('#{$ps_id_prefix}_RelationBundleSortControl').val())", 
-					'id' => "{$ps_id_prefix}_RelationBundleSortDirectionControl", 
-					'class' => 'caItemListSortControlTrigger dontTriggerUnsavedChangeWarning'
-				], 
-				['value' => strtoupper($sort_direction)]
-			)
-		)."</div>";
-	}
-	# ---------------------------------------
-	/** 
-	 * Used by ca_objects bundle
-	 */
-	function caReturnToHomeLocationControlForRelatedObjectBundle($ps_id_prefix, $po_request, $pt_primary, $pt_related, $pt_relation, $pa_initial_values, $ps_policy=null) {
-		$policies = array_filter(ca_objects::getHistoryTrackingCurrentValuePoliciesForTable('ca_objects'), function($v) { return array_key_exists('ca_storage_locations', $v['elements']); });
-		if(!is_array($policies) || !sizeof($policies)) { return ''; }
-		if (!$ps_policy) { $ps_policy = ca_objects::getDefaultHistoryTrackingCurrentValuePolicy(); }
+		$va_sort_fields = array_merge(['' => _t('User defined sort order')], $va_sort_fields);
 		
-		$settings = ca_objects::policy2bundleconfig(['policy' => $ps_policy]);
-		$interstitials = caGetOption('ca_storage_locations_setInterstitialElementsOnAdd', $settings, null);
-		
-		$vs_buf = "<div id='{$ps_id_prefix}_editor_bundle_return_to_home_button' class='editorBundleReturnToHomeControl'>".
-			caJSButton($po_request, __CA_NAV_ICON_HOME__, _t("Return to home locations"), "{$ps_id_prefix}_return_to_home_locations", ['onclick' => "caReturnToHomeLocationToggleForm{$ps_id_prefix}(); return false;"], ['size' => '15px']).
-			"</div>";
-			
-		$vs_buf .= "<div id='{$ps_id_prefix}_editor_bundle_return_to_home_controls_message' class='editorBundleReturnToHomeControlsMessage'></div>\n";
-			
-		$primary_table = $pt_primary->tableName();
-		$primary_id = $pt_primary->getPrimaryKey();
-			
-		$vs_buf .= "<div id='{$ps_id_prefix}_editor_bundle_return_to_home_controls' class='editorBundleReturnToHomeControls'>".
-			ca_storage_locations::getHistoryTrackingChronologyInterstitialElementAddHTMLForm($po_request, $ps_id_prefix, $pt_related->tableName(), $settings, ['placement_code' => $ps_id_prefix, 'noTemplate' => true]).
-			caJSButton($po_request, __CA_NAV_ICON_GO__, _t("Apply"), "{$ps_id_prefix}_return_to_home_locations_execute", ['onclick' => "caReturnToHomeLocation{$ps_id_prefix}(); return false;"], ['size' => '15px']).
-			"</div>\n"; 
-		$vs_buf .= "
-			<script type='text/javascript'>
-				function caReturnToHomeLocationToggleForm{$ps_id_prefix}() {
-					jQuery('#{$ps_id_prefix}_editor_bundle_return_to_home_controls').slideToggle(250);
-				}
-				function caReturnToHomeLocation{$ps_id_prefix}() {
-					var interstitials = ".json_encode($interstitials).";
-					var data = { 'table': '{$primary_table}', 'id': {$primary_id}, 'policy': '{$ps_policy}'};
-					for(var i in interstitials) {
-						data[interstitials[i]] = jQuery('#{$ps_id_prefix}_ca_storage_locations__' + interstitials[i]).val();
-					}
-					
-					jQuery('#{$ps_id_prefix}_editor_bundle_return_to_home_button').hide();
-					jQuery.post('".caNavUrl($po_request, '*', '*', 'ReturnToHomeLocations')."', data, function(data) {
-							jQuery('#{$ps_id_prefix}_editor_bundle_return_to_home_controls').hide();
-							var e = jQuery('#{$ps_id_prefix}_editor_bundle_return_to_home_controls_message');
-							if(data && (data.ok == 1)) {
-								jQuery(e).html(data.message).show();
-							} else if(data) {
-								jQuery(e).html('Error: ' + data.message).show(250);
-								jQuery('#{$ps_id_prefix}_editor_bundle_return_to_home_button').show();
-							}
-							
-							setTimeout(function() { 
-								jQuery(e).fadeOut(250);
-							}, 5000);
-							if(caBundleUpdateManager) { 
-								setTimeout(function() { 
-									caBundleUpdateManager.reloadBundle('history_tracking_current_contents'); 
-									caBundleUpdateManager.reloadBundle('ca_storage_locations_current_contents'); 
-									caBundleUpdateManager.reloadBundle('ca_objects'); 
-								}, 3000);
-							}
-					}, 'json');
-				}
-			</script>
-		";
-		return $vs_buf;
+		return _t('Sort by %1 %2', caHTMLSelect("{$ps_id_prefix}_RelationBundleSortControl", array_flip($va_sort_fields), ['onChange' => "caRelationBundle{$ps_id_prefix}.sort(jQuery(this).val())", 'id' => "{$ps_id_prefix}_RelationBundleSortControl", 'class' => 'caItemListSortControlTrigger dontTriggerUnsavedChangeWarning'], ['value' => caGetOption('sort', $pa_options, null)]), caHTMLSelect("{$ps_id_prefix}_RelationBundleSortDirectionControl", [_t('↑') => 'ASC', _t('↓') => 'DESC'], ['onChange' => "caRelationBundle{$ps_id_prefix}.sort(jQuery('#{$ps_id_prefix}_RelationBundleSortControl').val())", 'id' => "{$ps_id_prefix}_RelationBundleSortDirectionControl", 'class' => 'caItemListSortControlTrigger dontTriggerUnsavedChangeWarning'], ['value' => caGetOption('sortDirection', $pa_options, null)]));
 	}
 	# ---------------------------------------
 	/**

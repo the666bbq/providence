@@ -362,9 +362,21 @@
 						$sort_key_values[] = $sort_keys;
 						continue;
 					}
-				} elseif($table !== $sort_table) { // sort in related table
-					$t_sort_field_table = Datamodel::getInstanceByTableName($sort_table, true);
-					$path = Datamodel::getPath($table, $sort_table);
+				} elseif (($vs_field_table == 'ca_set_items') && ($vs_field == 'rank') && ((int)$vs_rel_type > 0)) {
+					// sort in related table
+					// sort by ranks in specific set
+					$vs_sql = "
+						SELECT {$ps_table}.{$vs_table_pk}, ca_set_items.`rank`
+						FROM ca_sets
+						INNER JOIN ca_set_items ON ca_set_items.set_id = ca_sets.set_id
+						INNER JOIN {$ps_table} ON {$ps_table}.{$vs_table_pk} = ca_set_items.row_id
+						WHERE
+							(ca_set_items.table_num = ?) AND
+							(ca_set_items.set_id = ?) AND
+							{$ps_table}.{$vs_table_pk} IN (?)
+					";
+				
+					$qr_sort = $this->opo_db->query($vs_sql, array($vn_table_num, (int)$vs_rel_type, $pa_hits));
 					
 					$field_table_pk = $t_sort_field_table->primaryKey();
 			
