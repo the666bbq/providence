@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: CollectiveAccess Providence\n"
 "Report-Msgid-Bugs-To: info@collectiveaccess.org\n"
 "POT-Creation-Date: 2020-12-04 10:37+0100\n"
-"PO-Revision-Date: 2017-04-27 14:04-0400\n"
+"PO-Revision-Date: 2021-01-04 14:53+0100\n"
 "Last-Translator: Seth <Seth@collectiveacess.org>\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/"
 "collectiveaccess/collectiveaccess-providence/language/nl_NL/)\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.2.3\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-KeywordsList: _t;_p;_\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -33,9 +33,8 @@ msgid "Clear dashboard"
 msgstr "Dashboard leegmaken"
 
 #: ../../themes/default/views/dashboard/dashboard_html.php:70
-#, fuzzy
 msgid "Default dashboard"
-msgstr "Dashboard leegmaken"
+msgstr "Dashboard herstellen"
 
 #: ../../themes/default/views/dashboard/dashboard_html.php:73
 msgid "Edit dashboard"
@@ -87,7 +86,7 @@ msgstr ""
 #: ../../themes/default/views/dashboard/dashboard_html.php:84
 #: ../../themes/default/views/dashboard/dashboard_html.php:93
 msgid "To place a dashboard widget in this column drag it here"
-msgstr "Om een dashboard widget in deze kolom te plaatsen, sleep het hierin."
+msgstr "Om een dashboard widget in deze kolom te plaatsen, sleep het hierin"
 
 #: ../../themes/default/views/dashboard/ajax_settings_html.php:38
 #: ../../themes/default/views/bundles/ca_site_page_media.php:207
@@ -867,9 +866,8 @@ msgid "No groups have been configured"
 msgstr "Er zijn geen groepen geconfigureerd"
 
 #: ../../themes/default/views/administrate/access/user_edit_html.php:54
-#, fuzzy
 msgid "Change password"
-msgstr "Bevestig wachtwoord"
+msgstr "Wachtwoord wijzigen"
 
 #: ../../themes/default/views/administrate/access/user_edit_html.php:55
 msgid "Confirm password"
@@ -996,7 +994,7 @@ msgstr ""
 #: ../../themes/default/views/administrate/setup/elements_edit_html.php:98
 #: ../../themes/default/views/administrate/setup/ajax_elements_settings_form_html.php:34
 msgid "Datatype-specific options"
-msgstr "Datatypespecifieke opties "
+msgstr "Datatype-specifieke opties"
 
 #: ../../themes/default/views/administrate/setup/elements_edit_html.php:112
 #: ../../app/models/ca_metadata_alert_rules.php:258
@@ -1183,7 +1181,7 @@ msgstr "Groeperen op"
 #: ../../themes/default/views/administrate/setup/Search/ajax_refine_facet_html.php:140
 #: ../../app/lib/Browse/BrowseEngine.php:2698
 msgid "Type "
-msgstr "Type"
+msgstr "Type "
 
 #: ../../themes/default/views/administrate/setup/Search/ajax_refine_facet_html.php:198
 msgid "Jump to"
@@ -1649,7 +1647,7 @@ msgstr "%1 elementen zijn gedefinieerd"
 
 #: ../../themes/default/views/administrate/setup/ui_list_html.php:34
 msgid "New interface for "
-msgstr "Nieuwe interface voor"
+msgstr "Nieuwe interface voor "
 
 #: ../../themes/default/views/administrate/setup/ui_list_html.php:68
 msgid "System?"
@@ -1999,7 +1997,12 @@ msgstr ""
 "lijsten, gebruikersinterfaces, taalinstellingen, zoekformulieren en "
 "weergaves in uw systeem beschrijft. De <em>CollectiveAccess</em> installer "
 "kan dit installatieprofiel gebruiken om nieuwe, lege voorbeelden met "
-"specifieke instellingen voor nieuwe projecten aan te maken.</p>"
+"specifieke instellingen voor nieuwe projecten aan te maken.</p>\n"
+"\t<p>Click op de \"Export\" knop hieronder om te exporteren en download de "
+"huidige systeemconfiguratie als een installatieprofiel</p> \n"
+"\t<p>Wees er je bewust van dat het genereren van een profiel tot twee "
+"minuten kan duren, voor systemen met complexe configuraties.</p>\n"
+"\t"
 
 #: ../../themes/default/views/administrate/maintenance/export_configuration_landing_html.php:38
 msgid "Export and download system configuration"
@@ -3050,7 +3053,7 @@ msgstr "Groep"
 #: ../../themes/default/views/bundles/ca_user_groups.php:60
 #: ../../themes/default/views/bundles/ca_users.php:59
 msgid " for period "
-msgstr "voor de periode"
+msgstr " voor de periode "
 
 #: ../../themes/default/views/bundles/ca_user_groups.php:84
 #: ../../themes/default/views/bundles/ca_acl_user_groups.php:82
@@ -3172,7 +3175,7 @@ msgstr "Speel clip af"
 #: ../../themes/default/views/bundles/ca_representation_annotations.php:141
 #: ../../app/lib/Attributes/Values/TaxonomyAttributeValue.php:214
 msgid "More"
-msgstr "Meer "
+msgstr "Meer"
 
 #: ../../themes/default/views/bundles/ca_representation_annotations.php:162
 msgid "Add annotation"
@@ -3233,7 +3236,7 @@ msgstr "Globale toegang"
 
 #: ../../themes/default/views/bundles/ca_acl_access.php:52
 msgid "All groups and users "
-msgstr "Alle groepen en gebruikers"
+msgstr "Alle groepen en gebruikers "
 
 #: ../../themes/default/views/bundles/ca_acl_access.php:54
 msgid "this record, unless you create an exception"
@@ -3329,7 +3332,7 @@ msgid ""
 msgstr ""
 "<strong>Opgelet:</strong>Het %1 type veranderen zorgt ervoor dat alle "
 "informatie in de velden die niet toepasbaar zijn op dit nieuwe type zullen "
-"verwijderd worden. Deze actie kan niet ongedaan gemaakt worden. "
+"verwijderd worden. Deze actie kan niet ongedaan gemaakt worden."
 
 #: ../../themes/default/views/bundles/batch_change_type_html.php:61
 #: ../../themes/default/views/bundles/change_type_html.php:61
@@ -3853,7 +3856,7 @@ msgstr ""
 
 #: ../../themes/default/views/bundles/ca_search_form_attributes.php:52
 msgid "Locale "
-msgstr "Locale"
+msgstr "Taal"
 
 #: ../../themes/default/views/bundles/intrinsic.php:94
 msgid "Inherit from parent?"
@@ -4031,7 +4034,7 @@ msgstr "Bekijk"
 #: ../../themes/default/views/find/Results/ca_tours_results_list_html.php:70
 #: ../../themes/default/views/find/Results/ca_tour_stops_results_list_html.php:70
 msgid "Currently sorting by "
-msgstr "Momenteel sorteren op"
+msgstr "Momenteel sorteren op "
 
 #: ../../themes/default/views/find/Results/ca_objects_results_list_html.php:74
 #: ../../themes/default/views/find/Results/ca_object_representations_results_list_html.php:74
@@ -4047,7 +4050,7 @@ msgstr "Momenteel sorteren op"
 #: ../../themes/default/views/find/Results/ca_tours_results_list_html.php:73
 #: ../../themes/default/views/find/Results/ca_tour_stops_results_list_html.php:73
 msgid "Click to sort by "
-msgstr "Klik om te sorteren op"
+msgstr "Klik om te sorteren op "
 
 #: ../../themes/default/views/find/Results/ca_objects_results_thumbnail_html.php:74
 #: ../../themes/default/views/find/Results/ca_objects_results_full_html.php:57
@@ -4064,7 +4067,7 @@ msgstr ""
 
 #: ../../themes/default/views/find/Results/quick_search_results_html.php:35
 msgid "Sort by "
-msgstr "Sorteer op"
+msgstr "Sorteer op "
 
 #: ../../themes/default/views/find/Results/quick_search_results_html.php:35
 #: ../../app/helpers/searchHelpers.php:1444
@@ -4160,7 +4163,7 @@ msgid ""
 "found have map coordinates."
 msgstr ""
 "Het is niet mogelijk om een kaart te tonen van de resultaten want geen enkel "
-"item bevat kaartcoördinaten"
+"item bevat kaartcoördinaten."
 
 #: ../../themes/default/views/find/Results/results_editable_html.php:43
 msgid "Loading... "
@@ -4233,7 +4236,7 @@ msgstr ""
 #: ../../themes/default/views/batch/metadataimport/importer_list_html.php:189
 #: ../../install/inc/page1.php:169
 msgid "Progress: "
-msgstr "Vooruitgang:"
+msgstr "Vooruitgang: "
 
 #: ../../themes/default/views/manage/tools/tool_run_html.php:40
 msgid "Running %1: %2"
@@ -4359,14 +4362,12 @@ msgid "Back to metadata alert rule list"
 msgstr "Terug naar lijst met zoekformulieren"
 
 #: ../../themes/default/views/manage/metadata_alert_rules/ajax_rule_trigger_filter_form_html.php:38
-#, fuzzy
 msgid "Limit to elements with"
-msgstr "metadata-elementen"
+msgstr "Beperk tot elementen met"
 
 #: ../../themes/default/views/manage/metadata_alert_rules/ajax_rule_trigger_settings_form_html.php:46
-#, fuzzy
 msgid "Attach to metadata element"
-msgstr "Datatype van metadata-element."
+msgstr "Koppel aan metadata-element"
 
 #: ../../themes/default/views/manage/search_forms/ajax_element_settings_html.php:38
 msgid "Settings for Group #%1/%2"
@@ -4551,14 +4552,12 @@ msgid "combination"
 msgstr "communicatie"
 
 #: ../../themes/default/views/manage/set_list_html.php:94
-#, fuzzy
 msgid "intersection"
-msgstr "Klantinteractie"
+msgstr "kruising"
 
 #: ../../themes/default/views/manage/set_list_html.php:94
-#, fuzzy
 msgid "difference"
-msgstr "Voorkeuren"
+msgstr "verschil"
 
 #: ../../themes/default/views/manage/set_list_html.php:94
 msgid "Create new set %1 from the %2 of %3 selected sets"
@@ -4681,7 +4680,7 @@ msgstr "Er zijn %1 weergaves beschikbaar"
 
 #: ../../themes/default/views/manage/search_form_list_html.php:38
 msgid "New search form for "
-msgstr "Nieuw zoekformulier voor"
+msgstr "Nieuw zoekformulier voor "
 
 #: ../../themes/default/views/manage/search_form_list_html.php:67
 msgid "Form name"
@@ -4985,9 +4984,8 @@ msgid "New metadata alert rule for "
 msgstr ""
 
 #: ../../themes/default/views/manage/metadata_alert_list_html.php:61
-#, fuzzy
 msgid "Alert name"
-msgstr "set naam"
+msgstr "Melding naam"
 
 #: ../../themes/default/views/manage/metadata_alert_list_html.php:64
 #, fuzzy
@@ -5717,9 +5715,8 @@ msgid "An error occurred while querying an external webservice"
 msgstr ""
 
 #: ../../app/helpers/utilityHelpers.php:3129
-#, fuzzy
 msgid " at %1"
-msgstr "Aangepast op %1"
+msgstr " op %1"
 
 #: ../../app/helpers/utilityHelpers.php:3283
 msgid "%1 is not a valid unit of length [%2]"
@@ -6135,9 +6132,8 @@ msgid "transfer references to"
 msgstr "alle referenties transfereren naar"
 
 #: ../../app/helpers/displayHelpers.php:415
-#, fuzzy
 msgid "Child records will be deleted"
-msgstr "Aangevinkte relaties zullen gekopieerd worden."
+msgstr "Child records zullen verwijderd worden."
 
 #: ../../app/helpers/displayHelpers.php:501
 msgid "References to this %1"
@@ -6536,16 +6532,10 @@ msgstr "Set bevat <em>%1</em>"
 #: ../../app/helpers/displayHelpers.php:2003
 msgid "More options"
 msgstr ""
-"Er zijn wijzigingen aangebracht sinds u deze data hebt geladen. Sla opnieuw "
-"op om deze aanpassingen te overschrijven, of annuleer om de aanpassingen te "
-"behouden."
 
 #: ../../app/helpers/displayHelpers.php:1984
 msgid "Delete <strong><em>all</em></strong> records in set"
 msgstr ""
-"Er zijn wijzigingen aangebracht door %1 sinds u deze data hebt geladen. Sla "
-"opnieuw op om deze aanpassingen te overschrijven, of annuleer om de "
-"aanpassingen te behouden."
 
 #: ../../app/helpers/displayHelpers.php:1989
 #, fuzzy
@@ -6578,9 +6568,6 @@ msgstr "Geselecteerde export"
 #: ../../app/helpers/displayHelpers.php:2062
 msgid "Back to record"
 msgstr ""
-"Er zijn wijzigingen aangebracht door deze gebruikers: %1 sinds u deze data "
-"hebt geladen. Sla opnieuw op om deze aanpassingen te overschrijven, of "
-"annuleer om de aanpassingen te behouden."
 
 #: ../../app/helpers/displayHelpers.php:3277
 msgid "↑"
@@ -6597,7 +6584,6 @@ msgstr ""
 #: ../../app/helpers/displayHelpers.php:3663
 msgid "No media"
 msgstr ""
-"Datum is niet gedefinieerd, maar het veld ondersteunt geen NULL waardes"
 
 #: ../../app/helpers/displayHelpers.php:3748
 msgid "Add item to %1"
@@ -6631,8 +6617,6 @@ msgstr ""
 #: ../../app/lib/BaseEditorController.php:2106
 msgid "Cannot view media"
 msgstr ""
-"Dit item kan niet worden verwijderd omdat gerelateerde items sub-records "
-"hebben (%1)"
 
 #: ../../app/helpers/displayHelpers.php:3921
 #, fuzzy
@@ -6643,8 +6627,6 @@ msgstr "Ongeldig id: %1"
 #: ../../app/lib/BatchProcessor.php:343
 msgid "Invalid subject"
 msgstr ""
-"Mirror via '%1' kon niet in de wachtrij gezet worden voor versie "
-"'%2' (handler '%3')"
 
 #: ../../app/helpers/displayHelpers.php:3989
 #: ../../app/helpers/displayHelpers.php:4035
@@ -6674,22 +6656,16 @@ msgstr ""
 #: ../../app/lib/Service/IIIFService.php:150
 msgid "Invalid identifier"
 msgstr ""
-"Bestand kon niet worden gekopieerd voor %1; het mimetype '%2' kan niet "
-"worden geconverteerd naar de extensie"
 
 #: ../../app/helpers/displayHelpers.php:4201
 msgid "Invalid viewer %1/%2"
 msgstr ""
-"Bestand kon niet worden gekopieerd. Vraag uw beheerder om de machtigingen en "
-"bestandsruimte voor %1 te verifiëren"
 
 #: ../../app/helpers/displayHelpers.php:4219
 #: ../../app/lib/BaseEditorController.php:1984
 #: ../../app/lib/BaseModel.php:12533
 msgid "Invalid id"
 msgstr ""
-"Bestand kon niet worden verwerkt voor %1; het mimetype '%2' kan niet worden "
-"geconverteerd naar de extensie"
 
 #: ../../app/helpers/displayHelpers.php:4616
 #: ../../app/lib/ApplicationChangeLog.php:1109
@@ -8035,9 +8011,8 @@ msgid "Invalid export type"
 msgstr ""
 
 #: ../../app/helpers/exportHelpers.php:519
-#, fuzzy
 msgid "Could not generate PDF: "
-msgstr "PDF kon niet gegenereerd worden"
+msgstr "PDF kon niet gegenereerd worden: "
 
 #: ../../app/helpers/importHelpers.php:73
 msgid ""
@@ -8695,7 +8670,7 @@ msgid ""
 "or tabs."
 msgstr ""
 "Karakter dat gebruikt wordt om waardes te scheiden. Typische waardes zijn "
-"komma's, puntkomma's of tabs. "
+"komma's, puntkomma's of tabs."
 
 #: ../../app/lib/Export/ExportFormats/ExportCSV.php:130
 msgid "Enclosure"
@@ -8743,7 +8718,7 @@ msgstr ""
 
 #: ../../app/lib/Export/ExportFormats/ExportXML.php:139
 msgid "XML documents must have exactly one root element"
-msgstr "XML-documenten moeten exact één root-element hebben."
+msgstr "XML-documenten moeten exact één root-element hebben"
 
 #: ../../app/lib/Export/ExportFormats/ExportXML.php:160
 msgid "Invalid XML attribute name '%1'"
@@ -8863,7 +8838,7 @@ msgstr ""
 
 #: ../../app/lib/BaseQuickAddController.php:272
 msgid "You are not allowed to quickadd %1"
-msgstr "U bent niet toegestaan om %1 te quickadden."
+msgstr "U bent niet toegestaan om %1 snel toe te voegen."
 
 #: ../../app/lib/BaseQuickAddController.php:324
 #: ../../app/lib/BaseEditorController.php:259
@@ -9401,8 +9376,6 @@ msgstr "ZIP kon niet gegenereerd worden voor download"
 #: ../../app/lib/BaseFindController.php:1074
 msgid "Cannot edit %1"
 msgstr ""
-"[%1] Media import aan het verwerken voor map %2 met %3 %4 begonnen om %5 is "
-"voltooid"
 
 #: ../../app/lib/File.php:102 ../../app/lib/Media.php:202
 #: ../../app/lib/Media.php:265
@@ -9804,14 +9777,10 @@ msgstr ""
 #: ../../app/lib/Utils/CLITools.php:258
 msgid "Directory containing images to examine."
 msgstr ""
-"Een lijst van gerelateerde mediavoorstellingen gebruik makend van versie "
-"\"%1\""
 
 #: ../../app/lib/Utils/CLITools.php:259
 msgid "File to write tab-delimited output to."
 msgstr ""
-"Een lijst van gerelateerde mediavoorstellingen gebruik makend van de "
-"standaard versie"
 
 #: ../../app/lib/Utils/CLITools.php:274
 msgid ""
@@ -9888,12 +9857,6 @@ msgstr ""
 #: ../../app/lib/Utils/CLIUtils.php:131
 msgid "Processing displays"
 msgstr ""
-"De CollectiveAccess <i>app/tmp</i> map is NIET beschrijfbaar door het "
-"installatiescript. Dit kan resulteren in installatiefouten. Er wordt "
-"aangeraden dat u de machtigingen voor deze map (<i>%1</i>) aanpast zodat "
-"schrijfrechten gegeven zijn alvorens de installatie aan te vangen. U kan het "
-"installatiescript herladen om te verifiëren dat de aangepaste machtigingen "
-"correct zijn."
 
 #: ../../app/lib/Utils/CLIUtils.php:134
 msgid "Processing search forms"
@@ -10027,10 +9990,6 @@ msgid ""
 "Updates the installation profile to match a supplied profile name. Backup "
 "your database before you use this!"
 msgstr ""
-"De __CA_BASE_DIR__ variabele in uw setup.php is niet correct ingesteld. "
-"Probeer dit in te stellen op &quot;%1&quot;. Deze suggestie wordt u gegeven "
-"omdat de locatie van dit script &quot;%2&quot; is. Merk op dat paden "
-"hoofdlettergevoelig zijn."
 
 #: ../../app/lib/Utils/CLIUtils.php:278
 msgid ""
@@ -10212,30 +10171,18 @@ msgstr "Binnenkort helptekst."
 #: ../../app/lib/Utils/CLIUtils.php:503
 msgid "Removing deleted representations from database"
 msgstr ""
-"U blijkt de PHP Suhoshin extensie te hebben geïnstalleerd, die enkele "
-"standaard beperkingen introduceert waardoor CA mogelijk wordt verhinderd om "
-"informatie in formulieren ingegeven op te slaan."
 
 #: ../../app/lib/Utils/CLIUtils.php:505
 msgid "Loading deleted representations from database"
 msgstr ""
-"Meer bepaald dient u de configuratiewaarde \"suhosin.post.max_name_length\" "
-"op 256 of hoger te zetten om te verzekeren dat CA correct werkt. Uw waarde "
-"is %1"
 
 #: ../../app/lib/Utils/CLIUtils.php:527 ../../app/lib/Utils/CLIUtils.php:613
 msgid "Done!"
 msgstr ""
-"Meer bepaald dient u de configuratiewaarde \"suhosin.request."
-"max_varname_length\" op 256 of hoger te zetten om te verzekeren dat CA "
-"correct werkt. Uw waarde is %1"
 
 #: ../../app/lib/Utils/CLIUtils.php:529
 msgid "There are no deleted representations to process!"
 msgstr ""
-"Meer bepaald dient u de configuratiewaarde \"suhosin.post."
-"max_totalname_length\" op 5012 of hoger te zetten om te verzekeren dat CA "
-"correct werkt. Uw waarde is %1"
 
 #: ../../app/lib/Utils/CLIUtils.php:531
 msgid ""
@@ -10270,16 +10217,16 @@ msgid ""
 msgstr ""
 
 #: ../../app/lib/Utils/CLIUtils.php:570
-#, fuzzy
 msgid ""
 "Are you sure you want to PERMANENTLY remove all deleted records? This cannot "
 "be undone.\n"
 "\n"
 "Type 'y' to proceed or 'N' to cancel, then hit return "
 msgstr ""
-"Bent u zeker dat u uw CollectiveAccess databank wil bijwerken van revisie %1 "
-"naar %2? OPMERKING: U moet u databank back-uppen voordat u de updates "
-"toepast!"
+"Bent u zeker dat u alle verwijderde items PERMANENT wil verwijderen? Dit kan "
+"niet ongedaan worden.\n"
+"\n"
+"Type 'y' om verder te gaan of 'N' om te annuleren, druk daarna op 'enter'  "
 
 #: ../../app/lib/Utils/CLIUtils.php:593
 #, fuzzy
@@ -10292,9 +10239,8 @@ msgid "Removed %1 %2"
 msgstr "%1 als %2 geïmporteerd"
 
 #: ../../app/lib/Utils/CLIUtils.php:615
-#, fuzzy
 msgid "Nothing to delete!"
-msgstr "Er werd niets geselecteerd"
+msgstr "Niets om te verwijderen!"
 
 #: ../../app/lib/Utils/CLIUtils.php:624
 msgid ""
@@ -10322,8 +10268,6 @@ msgstr "De PHP DOM-extensie is vereist om profielen te exporteren"
 #: ../../app/lib/Utils/CLIUtils.php:664
 msgid "Cannot write profile to '%1'"
 msgstr ""
-"Uw PHP installatie heeft geen MySQL ondersteuning. Gelieve dit toe te voegen "
-"en opnieuw te proberen..."
 
 #: ../../app/lib/Utils/CLIUtils.php:688
 msgid ""
@@ -10415,15 +10359,10 @@ msgstr "%1 opnieuw verwerken"
 #: ../../app/lib/Utils/CLIUtils.php:875
 msgid "Error processing representation media: %1"
 msgstr ""
-"Stel output formaat in. Momenteel ondersteund: leesbare MARC21, ruwe MARC "
-"voor het opslaan in MARC bestanden en MARCXML."
 
 #: ../../app/lib/Utils/CLIUtils.php:895
 msgid "Re-processing attribute media"
 msgstr ""
-"Waardes die worden voorafgegaan door @ reference XML-attributen. Alle andere "
-"waardes definiëren XML-elementen. De gebruikelijke beperkingen en benamingen "
-"voor de XML-elementen en attributen zijn van toepassing."
 
 #: ../../app/lib/Utils/CLIUtils.php:915
 msgid "Error processing attribute media: %1"
@@ -10977,7 +10916,6 @@ msgid ""
 msgstr ""
 
 #: ../../app/lib/Utils/CLIUtils.php:1902
-#, fuzzy
 msgid ""
 "CollectiveAccess must have both read and write access to the temporary "
 "storage directory (app/tmp), media directory (media) and HTMLPurifier "
@@ -10991,16 +10929,15 @@ msgid ""
 "for your server will be automatically determined and used."
 msgstr ""
 "CollectiveAccess moet zowel lees- als schrijftoegang tot de tijdelijke "
-"opslag directory (app/tmp), media-directory (media) en HTMLPurifier "
-"definition cache (app/lib/core/Parsers/HTMLPurifier/standalone/HTMLPurifier/"
-"DefinitionCache) hebben. Een run-time fout wordt weergegeven als een van "
-"deze locaties niet toegankelijk is voor de applicatie. Om deze rechten "
-"veranderen om CollectiveAccess toe te laten normaal te draaien voer je dit "
-"commando uit terwijl je ingelogd bent met administratieve/root privileges​. "
-"Je bent momenteel aangemeld als %1 (uid %2). Je kan opgeven welke gebruiker "
-"toegang tot de directories krijgt met de --user optie. Als u geen gebruiker "
-"opgeeft, zal de webserver gebruiker voor uw server automatisch worden "
-"bepaald en gebruikt."
+"opslag directory (app/tmp), media-directory (media) en HTMLPurifier cache "
+"(app/lib/core/Parsers/HTMLPurifier/standalone/HTMLPurifier/DefinitionCache) "
+"hebben. Een run-time fout wordt weergegeven als een van deze locaties niet "
+"toegankelijk is voor de applicatie. Om deze rechten te veranderen, zodat "
+"CollectiveAccess normaal kan functioneren, voer je dit commando uit terwijl "
+"je ingelogd bent met administrator/root rechten​. Je bent momenteel aangemeld "
+"als %1 (uid %2). Je kan opgeven welke gebruiker toegang tot de folders "
+"krijgt met de --user optie. Als u geen gebruiker opgeeft, zal de web-user "
+"van uw server automatisch worden afgeleid en gebruikt."
 
 #: ../../app/lib/Utils/CLIUtils.php:1913 ../../app/lib/Utils/CLIUtils.php:1942
 msgid "You must specify a user"
@@ -11036,11 +10973,11 @@ msgstr ""
 
 #: ../../app/lib/Utils/CLIUtils.php:2008
 msgid "Reset a user's password"
-msgstr ""
+msgstr "Reset het wachtwoord van een gebruiker"
 
 #: ../../app/lib/Utils/CLIUtils.php:2015
 msgid "Reset a user's password."
-msgstr ""
+msgstr "Reset het wachtwoord van een gebruiker."
 
 #: ../../app/lib/Utils/CLIUtils.php:2035 ../../app/lib/Utils/CLIUtils.php:3518
 msgid "You must specify a valid file"
@@ -11097,14 +11034,12 @@ msgid "Validate all records against rules in metadata dictionary."
 msgstr ""
 
 #: ../../app/lib/Utils/CLIUtils.php:2307
-#, fuzzy
 msgid "Email address is invalid"
-msgstr "Einddatum is ongeldig"
+msgstr "Emailadres is ongeldig"
 
 #: ../../app/lib/Utils/CLIUtils.php:2311
-#, fuzzy
 msgid "You must specify an output file or email address"
-msgstr "U moet een bestand opgeven"
+msgstr "U moet een output-bestandsnaam of emailadres opgeven"
 
 #: ../../app/lib/Utils/CLIUtils.php:2337
 #: ../../app/models/ca_data_exporter_items.php:559
@@ -11145,9 +11080,8 @@ msgid "Object representation"
 msgstr ""
 
 #: ../../app/lib/Utils/CLIUtils.php:2444
-#, fuzzy
 msgid "%1 error for %2 representations"
-msgstr "Toon optelsom voor objectvoorstellingen?"
+msgstr "%1 fout(en) for %2 representatie(s)"
 
 #: ../../app/lib/Utils/CLIUtils.php:2446
 msgid "%1 errors for %2 representations"
@@ -12425,15 +12359,12 @@ msgid ""
 "There were errors getting last replicated log id for source %1 and target "
 "%2: %3"
 msgstr ""
-"Niet geladen omdat Imagick/ImageMagick beschikbaar is en de voorkeur geniet"
 
 #: ../../app/lib/Sync/Replicator.php:132
 msgid ""
 "Couldn't get last replicated log id for source %1 and target %2. Starting at "
 "the beginning."
 msgstr ""
-"Niet geladen omdat ImageMagick (command-line) beschikbaar is en de voorkeur "
-"geniet"
 
 #: ../../app/lib/Sync/Replicator.php:137
 msgid "Starting replication for source %1 and target %2, log id is %3."
@@ -12520,8 +12451,6 @@ msgstr ""
 #: ../../app/lib/Sync/Replicator.php:666
 msgid "Pushing %3 missing log entries starting with %1 for %2. [%4]"
 msgstr ""
-"Ondersteuning voor RAW afbeeldingen is niet geactiveerd omdat DCRAW niet "
-"gevonden werd"
 
 #: ../../app/lib/Sync/Replicator.php:677
 msgid ""
@@ -12576,13 +12505,10 @@ msgstr ""
 #: ../../app/lib/Sync/LogEntry/AttributeValue.php:57
 msgid "Could not find element with code %1"
 msgstr ""
-"Camera RAW formaat bestand kon niet worden geconverteerd omdat de "
-"conversietool (dcraw) niet geïnstalleerd is"
 
 #: ../../app/lib/Sync/LogEntry/AttributeValue.php:60
 msgid "No element code found in attribute value log entry"
 msgstr ""
-"Het Camera RAW bestand kon niet gekopieerd worden naar de tijdelijke map"
 
 #: ../../app/lib/Sync/LogEntry/AttributeValue.php:67
 msgid "Could not find attribute with guid %1"
@@ -12604,8 +12530,6 @@ msgstr ""
 #: ../../app/lib/Sync/LogEntry/AttributeValue.php:98
 msgid "Invalid list item label %1 for attribute value log entry."
 msgstr ""
-"Niet geladen omdat GraphicsMagick uitvoerbare bestanden niet gevonden konden "
-"worden "
 
 #: ../../app/lib/Sync/LogEntry/AttributeValue.php:104
 msgid ""
@@ -12615,23 +12539,17 @@ msgstr ""
 #: ../../app/lib/Sync/LogEntry/Representation.php:71
 msgid "There were errors processing record from log entry on second try %1: %2"
 msgstr ""
-"Biedt afbeeldingsverwerking- en conversiediensten met ImageMagick via exec() "
-"aanroepen naar ImageMagick binaire bestanden"
 
 #: ../../app/lib/Sync/LogEntry/Representation.php:80
 #: ../../app/lib/Sync/LogEntry/Base.php:527
 msgid "There were errors processing record from log entry %1: %2"
 msgstr ""
-"Niet geladen omdat ImageMagick uitvoerbare bestanden niet gevonden konden "
-"worden "
 
 #: ../../app/lib/Sync/LogEntry/Representation.php:93
 msgid ""
 "There were errors processing record from log entry while trying to set media "
 "center %1: %2"
 msgstr ""
-"Biedt afbeeldingsverwerking- en conversiediensten met ImageMagick via de "
-"PECL Imagick PHP extensie"
 
 #: ../../app/lib/Sync/LogEntry/Representation.php:112
 msgid "Could not find media reference for checksum"
@@ -12664,14 +12582,10 @@ msgstr ""
 #: ../../app/lib/Sync/LogEntry/Attribute.php:68
 msgid "Couldn't find attribute_guid for update attribute log entry."
 msgstr ""
-"Accepteert en verwerkt Microsoft Word, Excel en PowerPoint formaat documenten"
 
 #: ../../app/lib/Sync/LogEntry/Attribute.php:73
 msgid "Couldnt find ca_attributes record for guid %1."
 msgstr ""
-"LibreOffice werd niet gevonden: conversie naar PDF en genereren van "
-"voorbeeldpagina's zal niet worden uitgevoerd; LibreOffice kan verkregen "
-"worden via http://www.libreoffice.org/"
 
 #: ../../app/lib/Sync/LogEntry/Label.php:90
 msgid "Could not load label subject record with GUID %1"
@@ -12709,9 +12623,6 @@ msgstr "zoek"
 #: ../../app/lib/BaseInterstitialController.php:144
 msgid "Invalid table %1"
 msgstr ""
-"PDFToText werd niet gevonden: indexering van tekst in PDF bestanden zal niet "
-"worden uitgevoerd; PDFToText kan verkregen worden via http://www.foolabs.com/"
-"xpdf/download.html"
 
 #: ../../app/lib/MediaContentLocationIndexer.php:170
 msgid "Invalid row %2 for table %1"
@@ -13068,8 +12979,6 @@ msgstr "De wortel van de hiërarchie kan niet worden verwijderd"
 #: ../../app/lib/BaseModel.php:9227
 msgid "Could not find a path to the specified related table"
 msgstr ""
-"Bestand kon niet worden verwerkt voor %1; het mimetype %2 kan niet worden "
-"geconverteerd naar de extensie"
 
 #: ../../app/lib/BaseModel.php:10195
 msgid "No locale was set for tag"
@@ -14377,16 +14286,12 @@ msgstr ""
 #: ../../app/lib/Plugins/PDFRenderer/PhantomJS.php:86
 msgid "Renders HTML as PDF using PhantomJS"
 msgstr ""
-"Beschrijving van het profiel, gebruikt voor \"ProfielBeschrijving\" element. "
-"(Optioneel)"
 
 #: ../../app/lib/Plugins/InformationService/EOL.php:48
 #: ../../app/lib/Plugins/InformationService/WorldCat.php:67
 #: ../../app/lib/Plugins/InformationService/ResourceSpace.php:57
 msgid "API Key"
 msgstr ""
-"Bestand om het profiel naar te outputten. Als dit niet ingevuld wordt, wordt "
-"het afgedrukt naar een standaard output. (Optioneel)"
 
 #: ../../app/lib/Plugins/InformationService/EOL.php:49
 msgid ""
@@ -14397,7 +14302,6 @@ msgstr ""
 #: ../../app/lib/Plugins/InformationService/EOL.php:67
 msgid "Provides access to Encyclopedia of Life (EOL) service"
 msgstr ""
-"Exporteer de huidige systeemconfiguratie als een XML installatieprofiel."
 
 #: ../../app/lib/Plugins/InformationService/EOL.php:134
 #, fuzzy
@@ -14483,8 +14387,8 @@ msgstr ""
 
 #: ../../app/lib/Plugins/InformationService/WorldCat.php:52
 msgid ""
-"[push-config-changes] Pushing to target '%1' seems to have failed. HTTP "
-"response code was %2. Enable debug logging mode to get more info below."
+"WorldCat Z39.50 login user name. Used to connect to WorldCat if Z39.50 "
+"support is available on your server."
 msgstr ""
 
 #: ../../app/lib/Plugins/InformationService/WorldCat.php:59
@@ -14499,8 +14403,8 @@ msgstr ""
 
 #: ../../app/lib/Plugins/InformationService/WorldCat.php:68
 msgid ""
-"Pushing to target '%1' seems to have failed. Response was not marked as "
-"okay. Raw response was: %2"
+"WorldCat API Key. Used to connect to WorldCat if Z39.50 login is not "
+"specified or Z39.50 support is not available on your server."
 msgstr ""
 
 #: ../../app/lib/Plugins/InformationService/WorldCat.php:75
@@ -14527,8 +14431,10 @@ msgstr ""
 
 #: ../../app/lib/Plugins/InformationService/WorldCat.php:89
 msgid ""
-"Comma- or semicolon separated list of target systems to push changes to. We "
-"assume the same service account exists on all of these systems"
+"Sets the style of the detail view. Use <em>Labeled MARC fields</em> to "
+"display MARC fields with english labels, <em>MARC codes</em> to display with "
+"numeric MARC codes, and <em>template</em> to use the XSL template specified "
+"below."
 msgstr ""
 
 #: ../../app/lib/Plugins/InformationService/WorldCat.php:96
@@ -14537,8 +14443,9 @@ msgstr ""
 
 #: ../../app/lib/Plugins/InformationService/WorldCat.php:97
 msgid ""
-"Password to use to log into the targets. We assume the same credentials can "
-"be used to log into all target systems."
+"A valid XSL template for transforming MARCXML provided by WorldCat into HTML "
+"for display. Only used when valid XSL and <em>Detail style</em> is set to "
+"<em>template</em>."
 msgstr ""
 
 #: ../../app/lib/Plugins/InformationService/WorldCat.php:134
@@ -14548,21 +14455,14 @@ msgstr ""
 #: ../../app/lib/Plugins/InformationService/WorldCat.php:243
 #: ../../app/lib/Plugins/InformationService/WorldCat.php:314
 msgid ""
-"Path to directory in which to log import details. If not set no logs will be "
-"recorded."
+"CURL is required for WorldCat web API usage but not available on this server"
 msgstr ""
-"Pad naar de map waarin de importdetails worden gelogd. Als dit niet "
-"ingesteld is, worden geen logs bewaard."
 
 #: ../../app/lib/Plugins/InformationService/WorldCat.php:247
 #: ../../app/lib/Plugins/InformationService/WorldCat.php:319
 msgid ""
-"Logging threshold. Possible values are, in ascending order of important: "
-"DEBUG, INFO, NOTICE, WARN, ERR, CRIT, ALERT. Default is INFO."
+"Neither Z39.50 client is installed nor is WorldCat web API key configured"
 msgstr ""
-"Logging samenvatting. Mogelijke waardes zijn, in dalende volgorde van "
-"belangrijkheid: DEBUG, INFO, NOTICE, WARN, ERR, CRIT, ALERT. INFO is "
-"standaard."
 
 #: ../../app/lib/Plugins/InformationService/WorldCat.php:249
 #: ../../app/lib/Plugins/InformationService/WorldCat.php:321
@@ -14983,8 +14883,6 @@ msgstr ""
 #: ../../app/lib/Import/DataReaders/TEIReader.php:94
 msgid "Text Encoding Initiative (TEI) XML Reader"
 msgstr ""
-"U moet opgeven of er een idno of een zoekexpressie een record of recordset "
-"moet selecteren voor export of om RDF-mode te activeren."
 
 #: ../../app/lib/Import/DataReaders/TEIReader.php:95
 msgid "Text Encoding Initiative (TEI) XML"
@@ -14997,8 +14895,6 @@ msgstr ""
 #: ../../app/lib/Import/DataReaders/TabDelimitedDataReader.php:54
 msgid "Tab delimited Data Reader"
 msgstr ""
-"U moet een configuratiebestand opgeven dat de exportdefinitie voor RDF-mode "
-"bevat."
 
 #: ../../app/lib/Import/DataReaders/TabDelimitedDataReader.php:56
 msgid "Reads tab delimited text files"
@@ -15032,10 +14928,6 @@ msgstr ""
 #: ../../app/lib/Import/DataReaders/PastPerfectXMLReader.php:91
 msgid "PastPerfect XML"
 msgstr ""
-"Schakel over naar RDF-export mode. U kan dit gebruiken om record-level "
-"exports over autoriteiten met meerdere mappings in een enkele export samen "
-"te voegen (meestal een RDF-grafiek). -s, -i en -m worden genegeerd en -c is "
-"vereist."
 
 #: ../../app/lib/Import/DataReaders/PastPerfectXMLReader.php:92
 msgid "Reads PastPerfect XML files"
@@ -16635,9 +16527,11 @@ msgstr "Beperk tot types"
 #: ../../app/lib/Attributes/Values/ObjectLotsAttributeValue.php:133
 #: ../../app/models/ca_bundle_displays.php:1486
 msgid ""
-"Pre-loads content cache by loading each cached page url. Pre-caching may "
-"take a while depending upon the quantity of content configured for caching."
+"Restricts display to items of the specified type(s). Leave all unchecked for "
+"no restriction."
 msgstr ""
+"Beperkt weergave tot items van de gespecificeerde type(s). Als er geen "
+"beperkingen zijn, laat het leeg."
 
 #: ../../app/lib/Attributes/Values/StorageLocationsAttributeValue.php:48
 msgid "Check this option if you want to require that a location be selected."
@@ -17151,28 +17045,6 @@ msgstr ""
 #: ../../app/lib/Attributes/Values/ListAttributeValue.php:98
 msgid "Use list default when value is null?"
 msgstr ""
-"CollectiveAccess maakt gebruik van indexen voor het doorzoeken van uw data. "
-"Indexen zijn eenvoudig gesteld samenvattingen van uw gegevens, opgesteld om "
-"aanvragen sneller te kunnen verwerken. De exacte vorm en karakteristieken "
-"van de gebruikte indexen zal verschillen per type zoekmachine die u "
-"gebruikt. Ze kunnen opgeslagen worden op de harde schijf, in een databank of "
-"op een andere server, maar hun doel is steeds hetzelfde: zoekacties sneller "
-"laten uitvoeren.\n"
-"\n"
-"\tOm accurate zoekresultaten te verkrijgen moeten de databank en indexen "
-"gesynchroniseerd zijn. CollectiveAccess werkt simultaan de databank en "
-"indexen bij indien u data toevoegt, aanpast of verwijdert, zodoende de "
-"databank en indexen gelijklopend houdend. Van tijd tot tijd kunnen deze "
-"echter ongesynchroniseerd raken. Indien uw basis- en geavanceerde zoekacties "
-"consistent onverwachte resultaten teruggeven kan u deze tool gebruiken om de "
-"indexen herop te bouwen vanuit de databank, en zodoende alles terug "
-"aligneren.\n"
-" \n"
-"\tMerk op dat afhankelijk van de grootte van uw databank het heropbouwen van "
-"enkele minuten tot enkele uren kan duren. Tijdens het heropbouwproces zal "
-"het systeem bruikbaar blijven, maar zoekfunctionaliteiten kunnen onvolledige "
-"resultaten teruggeven. Verkenfuncties, die niet afhankelijk zijn van "
-"indexen, zullen hier geen last van hebben."
 
 #: ../../app/lib/Attributes/Values/ListAttributeValue.php:99
 msgid ""
@@ -17180,8 +17052,6 @@ msgid ""
 "value is null. (The default is to disregard the default value and show the "
 "null value.)"
 msgstr ""
-"Herbouwt de zoekindexen. Gebruik dit als u vermoedt dat de databank niet "
-"synchroon is."
 
 #: ../../app/lib/Attributes/Values/ListAttributeValue.php:114
 msgid "Render list as"
@@ -17547,8 +17417,6 @@ msgstr ""
 #: ../../app/lib/Db/pdo_mysql.php:261 ../../app/lib/Db/pdo_mysql.php:262
 msgid "Could not start transaction: %1"
 msgstr ""
-"De relatieve prioriteit van de restrictie indien weergegeven in een lijst "
-"met andere restricties. Lagere nummers wijzen op een hogere prioriteit"
 
 #: ../../app/lib/Db/pdo_mysql.php:278
 msgid "Could not commit transaction: %1"
@@ -17557,8 +17425,6 @@ msgstr ""
 #: ../../app/lib/Db/pdo_mysql.php:292
 msgid "Could not rollback transaction: %1"
 msgstr ""
-"Unieke numerieke identificatiecode, intern door CollectiveAccess gebruikt om "
-"deze weergave te identificeren"
 
 #: ../../app/lib/Db/mysql.php:119 ../../app/lib/Db/mysqli.php:132
 msgid "Your PHP installation lacks MySQL support. Please add it and retry..."
@@ -17636,8 +17502,6 @@ msgstr "Kon geen plug-in vinden voor het mimetype %1"
 msgid ""
 "Authentication back-end doesn't support creating new users programmatically."
 msgstr ""
-"Indien aangevinkt zullen alle waardes worden weergegeven, ongeacht of er "
-"inhoud voor beschikbaar is."
 
 #: ../../app/lib/Auth/BaseAuthAdapter.php:71
 msgid ""
@@ -17852,8 +17716,6 @@ msgstr "VEREIST"
 #: ../../app/lib/BundlableLabelableBaseModelWithAttributes.php:1362
 msgid "These problems require attention:"
 msgstr ""
-"Beperkt weergave tot gerelateerde items die gebruik maken van de "
-"gespecificeerde relatietype(s). Als er geen beperkingen zijn, laat het leeg."
 
 #: ../../app/lib/BundlableLabelableBaseModelWithAttributes.php:1418
 msgid "Not yet issued"
@@ -17961,8 +17823,6 @@ msgstr ""
 #: ../../app/lib/BundlableLabelableBaseModelWithAttributes.php:5070
 msgid "There must be at least %1 relationship for %2"
 msgstr ""
-"Maximum aantal weer te geven items in de hiërarchie. Laat leeg om de "
-"onverkorte hiërarchie te tonen."
 
 #: ../../app/lib/BundlableLabelableBaseModelWithAttributes.php:5070
 msgid "There must be at least %1 relationships for %2"
@@ -18032,9 +17892,6 @@ msgstr ""
 #: ../../app/controllers/library/CheckOutController.php:88
 msgid "Out"
 msgstr ""
-"Het label voor deze plaatsing, zoals gedefinieerd in de "
-"plaatsingsinstellingen. De gebruikte waarde zal worden aangepast om overeen "
-"te komen met de lokalisatie van de huidige gebruiker."
 
 #: ../../app/lib/Browse/BrowseEngine.php:674
 msgid "%1 for %2"
@@ -18047,8 +17904,6 @@ msgstr ""
 #: ../../app/lib/Browse/BrowseEngine.php:5255
 msgid "Date unknown"
 msgstr ""
-"De versie van de mediavoorstelling gespecificeerd door {version name} voor "
-"weergave."
 
 #: ../../app/lib/Browse/BrowseEngine.php:796
 #: ../../app/lib/Browse/BrowseEngine.php:6164
@@ -20239,13 +20094,10 @@ msgstr ""
 #: ../../app/models/ca_metadata_dictionary_entries.php:75
 msgid "Restrict to"
 msgstr ""
-"[%1] groep %2 overgeslagen omdat de waarde voor %3 overeenkomt met waarde %4"
 
 #: ../../app/models/ca_metadata_dictionary_entries.php:76
 msgid "Restrict entry to specific table."
 msgstr ""
-"[%1] Groep %2 overgeslagen omdat de waarde voor %3 niet overeenkomt met de "
-"lijst van waardes"
 
 #: ../../app/models/ca_metadata_dictionary_entries.php:86
 msgid ""
@@ -23894,8 +23746,6 @@ msgid ""
 "this mapping is '%1'. It includes the custom delimiter ';#;' that is later "
 "used to split the value into multiple values."
 msgstr ""
-"Unieke numerieke identificatiecode, intern door CollectiveAccess gebruikt om "
-"deze voorstelling te identificeren"
 
 #: ../../app/models/ca_data_exporters.php:2083
 msgid ""
@@ -24308,10 +24158,10 @@ msgstr "plaats"
 #: ../../app/models/ca_places.php:52
 msgid ""
 "Unique numeric identifier used by CollectiveAccess internally to identify "
-"this object"
+"this place"
 msgstr ""
 "Unieke numerieke identificatiecode, intern door CollectiveAccess gebruikt om "
-"dit object te identificeren"
+"deze plaats te identificeren"
 
 #: ../../app/models/ca_places.php:67
 msgid "The primary locale associated with the place."
@@ -24323,19 +24173,20 @@ msgid ""
 "\"instrinsic\" type that determines the set of descriptive and "
 "administrative metadata that can be applied to it."
 msgstr ""
-"Lot waartoe dit object behoort; is null als het object geen onderdeel is van "
-"een lot."
+"Het type plaats. In CollectiveAccess heeft elke plaats een enkel \"intrinsiek"
+"\" type dat de set van beschrijvende en administratieve metadata bepaalt die "
+"erop kunnen worden toegepast."
 
 #: ../../app/models/ca_places.php:84
 msgid ""
-"Administrative source of object. This value is often used to indicate the "
-"administrative sub-division or legacy database from which the object "
-"originates, but can also be re-tasked for use as a simple classification "
-"tool if needed."
+"Administrative source of the place. This value is often used to indicate the "
+"administrative sub-division or legacy database from which the place "
+"information originates, but can also be re-tasked for use as a simple "
+"classification tool if needed."
 msgstr ""
-"Administratieve bron van het object. Deze waarde wordt vaak gebruikt om de "
-"administratieve sub-afdeling of oude database aan te geven waarvan het "
-"object afkomstig is, maar kan ook worden aangewend als een eenvoudige "
+"Administratieve bron van de plaats. Deze waarde wordt vaak gebruikt om de "
+"administratieve sub-afdeling of oude database aan te geven waarvan de plaats "
+"afkomstig is, maar kan ook worden aangewend als een eenvoudige "
 "classificatietool indien nodig."
 
 #: ../../app/models/ca_places.php:100
@@ -25721,8 +25572,6 @@ msgstr ""
 #: ../../app/models/ca_objects.php:560
 msgid "Components"
 msgstr ""
-"Unieke numerieke identificatiecode, intern door CollectiveAccess gebruikt om "
-"deze opslaglocatie te identificeren"
 
 #: ../../app/models/ca_objects.php:562
 #, fuzzy
@@ -26001,8 +25850,6 @@ msgstr ""
 #: ../../app/models/ca_data_exporter_items.php:318
 msgid "If set, id values refering to foreign keys are returned as idno."
 msgstr ""
-"Omschrijving van de groep. Deze tekst zal enkel worden getoond aan "
-"systeembeheerders en dient duidelijk het doel van de groep weer te geven."
 
 #: ../../app/models/ca_data_exporter_items.php:331
 msgid "Return id numbers for List attribute values"
@@ -26208,8 +26055,6 @@ msgstr "rondleidingshalte ⇔ woordenschat term relaties"
 #: ../../app/models/ca_metadata_dictionary_rules.php:47
 msgid "Rule display label"
 msgstr ""
-"De relatieve prioriteit van de rol indien weergegeven in een lijst met "
-"andere rollen. Lagere nummers verwijzen naar een hogere prioriteit"
 
 #: ../../app/models/ca_metadata_dictionary_rules.php:48
 msgid "Short label for this rule, used for display in issue lists."
@@ -26222,8 +26067,6 @@ msgstr ""
 #: ../../app/models/ca_metadata_dictionary_rules.php:56
 msgid "Message used for display to user when presenting issues."
 msgstr ""
-"Bevat definities van welke tabel/veld-combinaties gebruikers met deze rol "
-"toegang hebben."
 
 #: ../../app/models/ca_metadata_dictionary_rules.php:63
 msgid "Rule description"
@@ -26947,8 +26790,6 @@ msgid ""
 "Unique numeric identifier used by CollectiveAccess internally to identify "
 "this object checkout entry"
 msgstr ""
-"Voegt een \"Kopie\" menu toe dat alle recent gekopieerde items oplijst en de "
-"mogelijkheid biedt om aanvullende kopieën aan te maken."
 
 #: ../../app/models/ca_object_checkouts.php:80
 msgid "The user who checked out the object."
@@ -27267,9 +27108,6 @@ msgstr ""
 #: ../../app/models/ca_data_importers.php:259
 msgid "Set data types for which this importer is usable.  Ex. XLSX, XLS, MYSQL"
 msgstr ""
-"Stelt het standaard relatietype in dat gebruikt zal worden als geen enkele "
-"bepaald is of als de gegevensbron waardes niet overeenkomen met een enkele "
-"waarde in het CollectiveAccess systeem."
 
 #: ../../app/models/ca_data_importers.php:268
 msgid ""
@@ -27431,9 +27269,6 @@ msgstr ""
 #: ../../app/models/ca_data_importers.php:384
 msgid "Base path"
 msgstr ""
-"Stelt het standaard itemtype in dat gebruikt zal worden als geen enkele "
-"bepaald is of als de gegevensbron waardes niet overeenkomen met een enkele "
-"waarde in de CollectiveAccess lijst lijst_item_types."
 
 #: ../../app/models/ca_data_importers.php:385
 msgid ""
@@ -27794,8 +27629,6 @@ msgstr ""
 #: ../../app/models/ca_data_importers.php:1962
 msgid "[%1] Skipped mapping %2 because of type restriction for type %3"
 msgstr ""
-"Mapt de data van de gegevensbron dat aan het begin van het samengevoegde "
-"datumbereik is. (Voor 2-kolom bereik)."
 
 #: ../../app/models/ca_data_importers.php:1982
 msgid "[%1] Skipped row %2 because expression %3 is true"
@@ -27880,8 +27713,6 @@ msgstr "idno %1 aangepast in %2 seconden"
 #: ../../app/models/ca_data_importers.php:2461
 msgid "Could update idno"
 msgstr ""
-"Mapt de data van de gegevensbron dat aan het eind van het samengevoegde "
-"datumbereik is. (Voor 2-kolom bereik)."
 
 #: ../../app/models/ca_data_importers.php:2476
 msgid "Started insert of content tree for idno %1 at %2 seconds [id=%3]"
@@ -27946,8 +27777,6 @@ msgstr ""
 #: ../../app/models/ca_data_importers.php:3090
 msgid "[%1] Could not add related %2 (%3) to related %4 with relationship %5:"
 msgstr ""
-"Mapt de dagwaarde voor de begindatum van de gegevensbron (voor meerdere "
-"kolombereik)"
 
 #: ../../app/models/ca_data_importers.php:2645
 msgid "[%1] Failed to add value for %2; values were %3: "
@@ -27960,8 +27789,6 @@ msgstr "[%1] Ongeldige %2; waarden zijn %3: "
 #: ../../app/models/ca_data_importers.php:2740
 msgid "Relationship type is missing for ca_objects relationship"
 msgstr ""
-"Mapt de maandwaarde voor de startdatum van de gegevensbron (voor meerdere "
-"kolombereik)"
 
 #: ../../app/models/ca_data_importers.php:2746
 msgid "[%1] Could not add related object with relationship %2:"
@@ -27970,8 +27797,6 @@ msgstr ""
 #: ../../app/models/ca_data_importers.php:2768
 msgid "[%1] Could not add related object lot with relationship %2:"
 msgstr ""
-"Mapt de jaarwaarde voor de begindatum van de gegevensbron (voor meerdere "
-"kolombereik)"
 
 #: ../../app/models/ca_data_importers.php:2785
 msgid "[%1] Could not add related entity with relationship %2:"
@@ -28000,8 +27825,6 @@ msgstr "[%1] Kon gerelateerde item van lijst met relatie %2 niet toevoegen"
 #: ../../app/models/ca_data_importers.php:2884
 msgid "[%1] Could not add related object representation with:"
 msgstr ""
-"Mapt de dagwaarde voor de einddatum van de gegevensbron (voor meerdere "
-"kolombereik)"
 
 #: ../../app/models/ca_data_importers.php:2900
 msgid "[%1] Could not add related loan with relationship %2:"
@@ -28010,8 +27833,6 @@ msgstr ""
 #: ../../app/models/ca_data_importers.php:2916
 msgid "[%1] Could not add related movement with relationship %2:"
 msgstr ""
-"Mapt de maandwaarde voor de einddatum van de gegevensbron (voor meerdere "
-"kolombereik)"
 
 #: ../../app/models/ca_data_importers.php:2930
 #, fuzzy
@@ -28043,8 +27864,6 @@ msgstr "%1 geïmporteerd"
 #: ../../app/models/ca_data_importers.php:3008
 msgid "Could not add imported item %1 to set %2: %3"
 msgstr ""
-"Mapt de jaarwaarde voor de einddatum van de gegevensbron (voor meerdere "
-"kolombereik)"
 
 #: ../../app/models/ca_data_importers.php:3017
 msgid ""
@@ -28064,8 +27883,6 @@ msgstr "Import voltooid"
 #: ../../app/models/ca_data_importers.php:3038
 msgid "Rollback successful import run in \"dry run\" mode"
 msgstr ""
-"Mapt de maandwaarde voor de datum van de gegevensbron (voor meerdere "
-"kolombereik)"
 
 #: ../../app/models/ca_data_importers.php:3067
 #, fuzzy
@@ -28229,8 +28046,6 @@ msgstr "Wachtwoord"
 #: ../../app/models/ca_users.php:401
 msgid "Current authentication adapter does not support creating new users."
 msgstr ""
-"Stelt de waarde van de delimiter om af te breken, om waardes van de "
-"gegevensbron te scheiden."
 
 #: ../../app/models/ca_users.php:408
 msgid "Authentication adapter could not create user. Message was: %1"
@@ -28373,9 +28188,6 @@ msgid ""
 "User %1 was permanently deactivated because the maximum number of "
 "consecutive unsuccessful password reset attemps was reached."
 msgstr ""
-"Stelt het standaard lijstitemtype in dat gebruikt zal worden als geen enkele "
-"bepaald is of als de gegevensbron waardes niet overeenkomen met een enkele "
-"waarde in de CollectiveAccess lijst lijst_item_types."
 
 #: ../../app/models/ca_users.php:2876
 msgid "Information regarding your account"
@@ -29016,9 +28828,6 @@ msgstr ""
 #: ../../app/plugins/libraryServices/libraryServicesPlugin.php:165
 msgid "Notice of reserved available items"
 msgstr ""
-"Stelt het standaard plaatstype in dat gebruikt zal worden als geen enkele "
-"bepaald is of als de gegevensbron waardes niet overeenkomen met een enkele "
-"waarde in de CollectiveAccess lijst plaats_types."
 
 #: ../../app/plugins/libraryServices/libraryServicesPlugin.php:174
 msgid ""
@@ -29062,7 +28871,7 @@ msgstr "bewerkt"
 
 #: ../../app/widgets/recentChanges/views/main_html.php:92
 msgid "There have been no changes to <strong>%1</strong> from %2."
-msgstr "Er zijn geen wijzigingen aan <strong>%1</strong>van %2."
+msgstr "Er zijn geen wijzigingen aan <strong>%1</strong> van %2."
 
 #: ../../app/widgets/recentChanges/recentChangesWidget.php:43
 msgid "Recent changes"
@@ -29086,13 +28895,10 @@ msgstr "Kan recente wijzigingen widget gebruiken"
 
 #: ../../app/widgets/recentChanges/recentChangesWidget.php:107
 msgid ""
-"Sets or maps metadata for the storage location record by referencing the "
-"metadataElement code and the location in the data source where the data "
-"values can be found."
+"User can use dashboard widget that lists recent changes in the database."
 msgstr ""
-"Stelt of mapt de metadata voor het opslagplaatsrecord in door te verwijzen "
-"naar de metadataElement code en de plaats in de gegevensbron waar de "
-"gegevenswaarden kunnen worden gevonden."
+"Gebruiker kan dashboard widget gebruiken dat recente databasewijzigingen "
+"oplijst"
 
 #: ../../app/widgets/recentChanges/recentChangesWidget.php:130
 #: ../../app/widgets/clock/clockWidget.php:88
@@ -29724,8 +29530,6 @@ msgstr ""
 #: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:219
 msgid "Recently created: places"
 msgstr ""
-"Gebruiker kan dashboard widget gebruiken dat nieuwe objecten oplijst, "
-"gesorteerd op aanmaakdatum"
 
 #: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:220
 msgid ""
@@ -29738,8 +29542,6 @@ msgstr ""
 #: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:223
 msgid "Recently created: occurrences"
 msgstr ""
-"Gebruiker kan dashboard widget gebruiken dat nieuwe entiteiten oplijst, "
-"gesorteerd op aanmaakdatum"
 
 #: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:224
 msgid ""
@@ -29752,8 +29554,6 @@ msgstr ""
 #: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:227
 msgid "Recently created: sets"
 msgstr ""
-"Gebruiker kan dashboard widget gebruiken dat nieuwe plaatsen oplijst, "
-"gesorteerd op aanmaakdatum"
 
 #: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:228
 msgid ""
@@ -29766,8 +29566,6 @@ msgstr ""
 #: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:231
 msgid "Recently created: collections"
 msgstr ""
-"Gebruiker kan dashboard widget gebruiken dat nieuwe gebeurtenissen oplijst, "
-"gesorteerd op aanmaakdatum"
 
 #: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:232
 msgid ""
@@ -29780,8 +29578,6 @@ msgstr ""
 #: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:235
 msgid "Recently created: object representations"
 msgstr ""
-"Gebruiker kan dashboard widget gebruiken dat nieuwe sets oplijst, gesorteerd "
-"op aanmaakdatum"
 
 #: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:236
 msgid ""
@@ -29794,8 +29590,6 @@ msgstr ""
 #: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:239
 msgid "Recently created: object lots"
 msgstr ""
-"Gebruiker kan dashboard widget gebruiken dat nieuwe collecties oplijst, "
-"gesorteerd op aanmaakdatum"
 
 #: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:240
 msgid ""
@@ -30749,15 +30543,6 @@ msgstr ""
 #: ../../app/controllers/manage/sets/SetEditorController.php:298
 msgid "No items are available for export"
 msgstr ""
-"Dit installatiescript zal uw installatie van CollectiveAccess klaarzetten in "
-"enkele minuten. \n"
-"\t\tVoordat u dit installatiescript uitvoert, vergewis uzelf ervan dat de "
-"instellingen in uw <i>setup.php</i> bestand correct zijn \n"
-"\t\tHet installatiescript zal uw databaseverbinding testen, het "
-"databaseschema installeren en standaardwaarden in de nieuwe database "
-"inladen. \n"
-"\t\tHet zal ook een beheerderslogin klaarzetten die u kan gebruiken om "
-"toegang te verkrijgen tot uw nieuw systeem."
 
 #: ../../app/controllers/manage/ToolsController.php:336
 #, fuzzy
@@ -32034,8 +31819,6 @@ msgid ""
 "data: if the relationship type matches that set as the hierarchy control, "
 "the object will be pulled in as a \"child\" element in the object hierarchy."
 msgstr ""
-"Uw bewerking in bulk staat in de wachtrij en zal binnenkort uitgevoerd "
-"worden. U mag verderwerken terwijl de bewerking verwerkt wordt."
 
 #: ../../app/refineries/objectSplitter/objectSplitterRefinery.php:136
 msgid ""
@@ -32507,9 +32290,6 @@ msgid ""
 "\", \"displayname\") will first try to match on idno and label [forename, "
 "surname] if the first match fails, then finally the displayname field"
 msgstr ""
-"<strong>Opgelet:</strong>Het %1 type veranderen zorgt ervoor dat alle "
-"informatie in de velden die niet toepasbaar zijn op dit nieuwe type zullen "
-"verwijderd worden. Deze actie kan niet ongedaan gemaakt worden. "
 
 #: ../../app/refineries/entitySplitter/entitySplitterRefinery.php:120
 msgid ""
@@ -33012,14 +32792,10 @@ msgstr ""
 #: ../../install/inc/Installer.php:183
 msgid "Successfully validated profile %1"
 msgstr ""
-"Klik %1 namen om te verkennen. Klik op een pijltjesicoon om een %1 te openen "
-"voor bewerking."
 
 #: ../../install/inc/Installer.php:185
 msgid "Validation failed for profile %1"
 msgstr ""
-"Klik op een pijl om de locatie te selecteren waaronder deze record geplaatst "
-"dient te worden."
 
 #: ../../install/inc/Installer.php:215
 msgid "Successfully loaded profile from string"
@@ -33028,8 +32804,6 @@ msgstr ""
 #: ../../install/inc/Installer.php:224
 msgid "Successfully loaded base profile %1"
 msgstr ""
-"Gebruik de bedieningselementen hieronder om nieuwe %1 aan te maken relatief "
-"aan dit record in de hiërarchie."
 
 #: ../../install/inc/Installer.php:576
 msgid "Processing list with code %1"
@@ -33046,25 +32820,18 @@ msgstr ""
 #: ../../install/inc/Installer.php:591
 msgid "Deleting list %1"
 msgstr ""
-"Gebruik de bedieningselementen hieronder om nieuwe %1 aan te maken relatief "
-"aan dit %2 in de hiërarchie."
 
 #: ../../install/inc/Installer.php:621
 msgid "Successfully inserted or updated list %1"
 msgstr ""
-"Zal onder <em>%1</em> verplaatst worden wanneer u de volgende keer opslaat."
 
 #: ../../install/inc/Installer.php:670
 msgid "Processing list item with idno %1"
 msgstr ""
-"Zal bovenaan zijn eigen hiërarchie worden geplaatst bij de volgende "
-"bewaaractie."
 
 #: ../../install/inc/Installer.php:673
 msgid "List item with idno %1 already exists"
 msgstr ""
-"Gebruik de verkenner om de hiërarchie te doorlopen.  U kan andere hiërachie-"
-"items bewerken door op de pijl te klikken."
 
 #: ../../install/inc/Installer.php:675
 msgid "Deleting list item with idno %1"
@@ -33142,23 +32909,10 @@ msgstr ""
 #: ../../install/inc/Installer.php:1074
 msgid "Screen with code %1 for user interface with code %2 already exists"
 msgstr ""
-"Dit is je CollectiveAccess dashboard. Klik de \"Dashboard bewerken\" knop "
-"hierboven om widgets toe te voegen aan je dashboard, die je toelaten om "
-"systeemactiviteiten op te volgen. Je zal het dashboard zien telkens je "
-"inlogt of op het CollectiveAccess logo hierboven klikt."
 
 #: ../../install/inc/Installer.php:1076
 msgid "Screen with code %1 for user interface with code %2 is new"
 msgstr ""
-"Gebruik bovenstaande knop om een widget aan je dashboard toe te voegen. Je "
-"kan de widgets in de linker- of rechterkolommen verplaatsen in de volgorde "
-"waarin je ze wenst weer te geven. Om de informatie in elke widget aan te "
-"passen, klik je op de <i>\"i\"</i> knop in de rechterbovenhoek van de "
-"widget. Om een widget van je dashboard te verwijderen, klik je op de \"X\" "
-"knop in de rechterbovenhoek van de widget. Klik de \"Dashboard leegmaken\" "
-"knop bovenaan om alle widget van je dashboard te verwijderen. Wanneer je "
-"klaar bent met het aanpassen van je dashboard, klik dan op de \"Gereed\" "
-"knop bovenaan."
 
 #: ../../install/inc/Installer.php:1080
 msgid "Deleting screen with code %1 for user interface with code %2"
@@ -33350,8 +33104,6 @@ msgstr ""
 #: ../../install/inc/Installer.php:1871
 msgid "Successfully nuked all type restrictions for form with code %1"
 msgstr ""
-"%1 van %2 resultaten komen overeen. Om alle resultaten te zien, kies een "
-"andere weergave."
 
 #: ../../install/inc/Installer.php:1884
 msgid "Added type restriction with code %1 and type %2 for form with code %3"
@@ -33360,8 +33112,6 @@ msgstr ""
 #: ../../install/inc/Installer.php:1893
 msgid "Added type restriction with type %1 for form with code %2"
 msgstr ""
-"Het is niet mogelijk om een kaart te tonen van de resultaten want geen enkel "
-"item bevat kaartcoördinaten"
 
 #: ../../install/inc/Installer.php:1948
 msgid "Successfully nuked all placements for form with code %1"
@@ -33410,8 +33160,6 @@ msgstr ""
 #: ../../install/inc/Installer.php:2288
 msgid "Successfully nuked all triggers for metadata alert with code %1"
 msgstr ""
-"Klik op een %1 om specifiekere %2 te zien binnen deze %3. Klik op het "
-"pijltje naast een %4 om gerelateerde %5 te vinden."
 
 #: ../../install/inc/Installer.php:2300
 msgid ""

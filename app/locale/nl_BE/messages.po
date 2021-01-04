@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: CollectiveAccess Providence\n"
 "Report-Msgid-Bugs-To: info@collectiveaccess.org\n"
 "POT-Creation-Date: 2020-12-04 10:37+0100\n"
-"PO-Revision-Date: 2021-01-04 14:45+0100\n"
+"PO-Revision-Date: 2021-01-04 14:53+0100\n"
 "Last-Translator: Seth <Seth@collectiveacess.org>\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/"
 "collectiveaccess/collectiveaccess-providence/language/nl_NL/)\n"
@@ -3053,7 +3053,7 @@ msgstr "Groep"
 #: ../../themes/default/views/bundles/ca_user_groups.php:60
 #: ../../themes/default/views/bundles/ca_users.php:59
 msgid " for period "
-msgstr " voor de periode"
+msgstr " voor de periode "
 
 #: ../../themes/default/views/bundles/ca_user_groups.php:84
 #: ../../themes/default/views/bundles/ca_acl_user_groups.php:82
@@ -10973,11 +10973,11 @@ msgstr ""
 
 #: ../../app/lib/Utils/CLIUtils.php:2008
 msgid "Reset a user's password"
-msgstr ""
+msgstr "Reset het wachtwoord van een gebruiker"
 
 #: ../../app/lib/Utils/CLIUtils.php:2015
 msgid "Reset a user's password."
-msgstr ""
+msgstr "Reset het wachtwoord van een gebruiker."
 
 #: ../../app/lib/Utils/CLIUtils.php:2035 ../../app/lib/Utils/CLIUtils.php:3518
 msgid "You must specify a valid file"
