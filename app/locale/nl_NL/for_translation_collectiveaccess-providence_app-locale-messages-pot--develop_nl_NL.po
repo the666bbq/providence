@@ -5,14 +5,15 @@
 #
 # Translators:
 # Seth Kaufman <seth@collectiveaccess.org>, 2020
+# Peter Janssens <janssens.peter@gmail.com>, 2021
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Providence\n"
 "Report-Msgid-Bugs-To: info@collectiveaccess.org\n"
 "POT-Creation-Date: 2020-11-30 11:39+0100\n"
-"PO-Revision-Date: 2021-01-04 17:02+0100\n"
-"Last-Translator: Seth Kaufman <seth@collectiveaccess.org>, 2020\n"
+"PO-Revision-Date: 2021-01-05 14:01+0100\n"
+"Last-Translator: Peter Janssens <janssens.peter@gmail.com>, 2021\n"
 "Language-Team: Dutch (Netherlands) (https://www.transifex.com/collectiveaccess/teams/328/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -195,10 +196,11 @@ msgstr "Lees/bewerk toegang"
 #: ../../themes/default/views/logs/download_html.php:119 ../../themes/default/views/logs/global_change_log_html.php:101 ../../themes/default/views/bundles/ca_tour_stops_list.php:57 ../../themes/default/views/bundles/ca_object_representations_classic.php:171 ../../themes/default/views/manage/export/exporter_list_html.php:74
 #: ../../themes/default/views/manage/set_list_html.php:117 ../../themes/default/views/manage/set_list_by_user_html.php:106 ../../themes/default/views/batch/metadataimport/importer_list_html.php:79 ../../themes/default/views/batch/mediaimport/import_options_html.php:142 ../../app/helpers/displayHelpers.php:1845
 #: ../../app/helpers/displayHelpers.php:1857 ../../app/lib/Utils/CLIUtils/Maintenance.php:814 ../../app/models/ca_collection_labels.php:73 ../../app/models/ca_list_item_labels.php:72 ../../app/models/ca_entity_labels.php:75 ../../app/models/ca_tour_stops.php:77 ../../app/models/ca_loan_labels.php:72 ../../app/models/ca_place_labels.php:72
-#: ../../app/models/ca_data_import_items.php:83 ../../app/models/ca_user_representation_annotation_labels.php:73 ../../app/models/ca_set_items.php:93 ../../app/models/ca_object_labels.php:72 ../../app/models/ca_metadata_alert_triggers.php:85 ../../app/models/ca_storage_locations.php:67 ../../app/models/ca_object_representation_labels.php:72
-#: ../../app/models/ca_data_importer_log_items.php:74 ../../app/models/ca_occurrence_labels.php:72 ../../app/models/ca_object_lots.php:60 ../../app/models/ca_places.php:75 ../../app/models/ca_occurrences.php:73 ../../app/models/ca_representation_annotation_labels.php:73 ../../app/models/ca_list_items.php:77
-#: ../../app/models/ca_movement_labels.php:72 ../../app/models/ca_objects.php:106 ../../app/models/ca_object_representations.php:77 ../../app/models/ca_object_lot_labels.php:73 ../../app/models/ca_sets.php:112 ../../app/models/ca_storage_location_labels.php:72 ../../app/models/ca_data_import_event_log.php:74
-#: ../../app/models/ca_data_import_events.php:78 ../../app/models/ca_collections.php:74 ../../app/models/ca_tours.php:67 ../../app/models/ca_metadata_type_restrictions.php:112 ../../app/conf/browse.conf:122 ../../app/conf/browse.conf:181 ../../app/conf/browse.conf:394 ../../app/conf/annotation_types.conf:171
+#: ../../app/models/ca_data_import_items.php:83 ../../app/models/ca_user_representation_annotation_labels.php:73 ../../app/models/ca_set_items.php:93 ../../app/models/ca_object_labels.php:72 ../../app/models/ca_metadata_alert_triggers.php:85 ../../app/models/ca_storage_locations.php:67
+#: ../../app/models/ca_object_representation_labels.php:72 ../../app/models/ca_data_importer_log_items.php:74 ../../app/models/ca_occurrence_labels.php:72 ../../app/models/ca_object_lots.php:60 ../../app/models/ca_places.php:75 ../../app/models/ca_occurrences.php:73 ../../app/models/ca_representation_annotation_labels.php:73
+#: ../../app/models/ca_list_items.php:77 ../../app/models/ca_movement_labels.php:72 ../../app/models/ca_objects.php:106 ../../app/models/ca_object_representations.php:77 ../../app/models/ca_object_lot_labels.php:73 ../../app/models/ca_sets.php:112 ../../app/models/ca_storage_location_labels.php:72
+#: ../../app/models/ca_data_import_event_log.php:74 ../../app/models/ca_data_import_events.php:78 ../../app/models/ca_collections.php:74 ../../app/models/ca_tours.php:67 ../../app/models/ca_metadata_type_restrictions.php:112 ../../app/conf/browse.conf:122 ../../app/conf/browse.conf:181 ../../app/conf/browse.conf:394
+#: ../../app/conf/annotation_types.conf:171
 msgid "Type"
 msgstr "Type"
 
@@ -287,31 +289,31 @@ msgstr "Laatste login"
 
 #: ../../themes/default/views/administrate/access/user_list_html.php:96 ../../themes/default/views/administrate/setup/ui_list_html.php:88 ../../themes/default/views/editor/representation_annotations/quickadd_html.php:135 ../../themes/default/views/bundles/ca_objects_deaccession.php:40
 #: ../../themes/default/views/bundles/ca_objects_deaccession.php:50 ../../themes/default/views/manage/group_list_html.php:84 ../../app/lib/RepresentableBaseModel.php:1281 ../../app/lib/Browse/BrowseEngine.php:556 ../../app/lib/Browse/BrowseEngine.php:630 ../../app/lib/Browse/BrowseEngine.php:3212 ../../app/lib/Browse/BrowseEngine.php:4915
-#: ../../app/models/ca_search_indexing_queue.php:80 ../../app/models/ca_search_indexing_queue.php:107 ../../app/models/ca_bundle_displays.php:1596 ../../app/models/ca_objects.php:139 ../../app/models/ca_metadata_dictionary_rules.php:56 ../../app/widgets/clock/clockWidget.php:98 ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:284
-#: ../../app/conf/user_pref_defs.conf:151 ../../app/conf/user_pref_defs.conf:540 ../../app/conf/user_pref_defs.conf:551 ../../app/conf/user_pref_defs.conf:562 ../../app/conf/user_pref_defs.conf:592 ../../app/conf/user_pref_defs.conf:603 ../../app/conf/user_pref_defs.conf:614 ../../app/conf/user_pref_defs.conf:632
-#: ../../app/conf/user_pref_defs.conf:643 ../../app/conf/user_pref_defs.conf:654 ../../app/conf/user_pref_defs.conf:682 ../../app/conf/user_pref_defs.conf:693 ../../app/conf/user_pref_defs.conf:711 ../../app/conf/user_pref_defs.conf:722 ../../app/conf/user_pref_defs.conf:733 ../../app/conf/user_pref_defs.conf:764
-#: ../../app/conf/user_pref_defs.conf:775 ../../app/conf/user_pref_defs.conf:793 ../../app/conf/user_pref_defs.conf:804 ../../app/conf/user_pref_defs.conf:815 ../../app/conf/user_pref_defs.conf:842 ../../app/conf/user_pref_defs.conf:853 ../../app/conf/user_pref_defs.conf:871 ../../app/conf/user_pref_defs.conf:882
-#: ../../app/conf/user_pref_defs.conf:893 ../../app/conf/user_pref_defs.conf:922 ../../app/conf/user_pref_defs.conf:933 ../../app/conf/user_pref_defs.conf:951 ../../app/conf/user_pref_defs.conf:962 ../../app/conf/user_pref_defs.conf:973 ../../app/conf/user_pref_defs.conf:1001 ../../app/conf/user_pref_defs.conf:1012
-#: ../../app/conf/user_pref_defs.conf:1030 ../../app/conf/user_pref_defs.conf:1041 ../../app/conf/user_pref_defs.conf:1052 ../../app/conf/user_pref_defs.conf:1076 ../../app/conf/user_pref_defs.conf:1087 ../../app/conf/user_pref_defs.conf:1105 ../../app/conf/user_pref_defs.conf:1116 ../../app/conf/user_pref_defs.conf:1127
-#: ../../app/conf/user_pref_defs.conf:1150 ../../app/conf/user_pref_defs.conf:1161 ../../app/conf/user_pref_defs.conf:1179 ../../app/conf/user_pref_defs.conf:1190 ../../app/conf/user_pref_defs.conf:1201 ../../app/conf/user_pref_defs.conf:1225 ../../app/conf/user_pref_defs.conf:1236 ../../app/conf/user_pref_defs.conf:1254
-#: ../../app/conf/user_pref_defs.conf:1265 ../../app/conf/user_pref_defs.conf:1276 ../../app/conf/user_pref_defs.conf:1287 ../../app/conf/user_pref_defs.conf:1305 ../../app/conf/user_pref_defs.conf:1316 ../../app/conf/user_pref_defs.conf:1327 ../../app/conf/user_pref_defs.conf:1361 ../../app/conf/user_pref_defs.conf:1372
-#: ../../app/conf/user_pref_defs.conf:1383 ../../app/conf/user_pref_defs.conf:1401 ../../app/conf/user_pref_defs.conf:1412 ../../app/conf/user_pref_defs.conf:1423 ../../app/conf/user_pref_defs.conf:1450 ../../app/conf/user_pref_defs.conf:1468 ../../app/conf/user_pref_defs.conf:1479 ../../app/conf/user_pref_defs.conf:1490
-#: ../../app/conf/user_pref_defs.conf:1501 ../../app/conf/user_pref_defs.conf:1519 ../../app/conf/user_pref_defs.conf:1558
+#: ../../app/models/ca_search_indexing_queue.php:80 ../../app/models/ca_search_indexing_queue.php:107 ../../app/models/ca_bundle_displays.php:1596 ../../app/models/ca_objects.php:139 ../../app/models/ca_metadata_dictionary_rules.php:56 ../../app/widgets/clock/clockWidget.php:98
+#: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:284 ../../app/conf/user_pref_defs.conf:151 ../../app/conf/user_pref_defs.conf:540 ../../app/conf/user_pref_defs.conf:551 ../../app/conf/user_pref_defs.conf:562 ../../app/conf/user_pref_defs.conf:592 ../../app/conf/user_pref_defs.conf:603 ../../app/conf/user_pref_defs.conf:614
+#: ../../app/conf/user_pref_defs.conf:632 ../../app/conf/user_pref_defs.conf:643 ../../app/conf/user_pref_defs.conf:654 ../../app/conf/user_pref_defs.conf:682 ../../app/conf/user_pref_defs.conf:693 ../../app/conf/user_pref_defs.conf:711 ../../app/conf/user_pref_defs.conf:722 ../../app/conf/user_pref_defs.conf:733
+#: ../../app/conf/user_pref_defs.conf:764 ../../app/conf/user_pref_defs.conf:775 ../../app/conf/user_pref_defs.conf:793 ../../app/conf/user_pref_defs.conf:804 ../../app/conf/user_pref_defs.conf:815 ../../app/conf/user_pref_defs.conf:842 ../../app/conf/user_pref_defs.conf:853 ../../app/conf/user_pref_defs.conf:871
+#: ../../app/conf/user_pref_defs.conf:882 ../../app/conf/user_pref_defs.conf:893 ../../app/conf/user_pref_defs.conf:922 ../../app/conf/user_pref_defs.conf:933 ../../app/conf/user_pref_defs.conf:951 ../../app/conf/user_pref_defs.conf:962 ../../app/conf/user_pref_defs.conf:973 ../../app/conf/user_pref_defs.conf:1001
+#: ../../app/conf/user_pref_defs.conf:1012 ../../app/conf/user_pref_defs.conf:1030 ../../app/conf/user_pref_defs.conf:1041 ../../app/conf/user_pref_defs.conf:1052 ../../app/conf/user_pref_defs.conf:1076 ../../app/conf/user_pref_defs.conf:1087 ../../app/conf/user_pref_defs.conf:1105 ../../app/conf/user_pref_defs.conf:1116
+#: ../../app/conf/user_pref_defs.conf:1127 ../../app/conf/user_pref_defs.conf:1150 ../../app/conf/user_pref_defs.conf:1161 ../../app/conf/user_pref_defs.conf:1179 ../../app/conf/user_pref_defs.conf:1190 ../../app/conf/user_pref_defs.conf:1201 ../../app/conf/user_pref_defs.conf:1225 ../../app/conf/user_pref_defs.conf:1236
+#: ../../app/conf/user_pref_defs.conf:1254 ../../app/conf/user_pref_defs.conf:1265 ../../app/conf/user_pref_defs.conf:1276 ../../app/conf/user_pref_defs.conf:1287 ../../app/conf/user_pref_defs.conf:1305 ../../app/conf/user_pref_defs.conf:1316 ../../app/conf/user_pref_defs.conf:1327 ../../app/conf/user_pref_defs.conf:1361
+#: ../../app/conf/user_pref_defs.conf:1372 ../../app/conf/user_pref_defs.conf:1383 ../../app/conf/user_pref_defs.conf:1401 ../../app/conf/user_pref_defs.conf:1412 ../../app/conf/user_pref_defs.conf:1423 ../../app/conf/user_pref_defs.conf:1450 ../../app/conf/user_pref_defs.conf:1468 ../../app/conf/user_pref_defs.conf:1479
+#: ../../app/conf/user_pref_defs.conf:1490 ../../app/conf/user_pref_defs.conf:1501 ../../app/conf/user_pref_defs.conf:1519 ../../app/conf/user_pref_defs.conf:1558
 msgid "Yes"
 msgstr "Ja"
 
 #: ../../themes/default/views/administrate/access/user_list_html.php:96 ../../themes/default/views/administrate/setup/ui_list_html.php:88 ../../themes/default/views/editor/representation_annotations/quickadd_html.php:136 ../../themes/default/views/bundles/ca_objects_deaccession.php:40
 #: ../../themes/default/views/bundles/ca_objects_deaccession.php:50 ../../themes/default/views/manage/group_list_html.php:84 ../../app/lib/RepresentableBaseModel.php:1281 ../../app/lib/Browse/BrowseEngine.php:557 ../../app/lib/Browse/BrowseEngine.php:630 ../../app/lib/Browse/BrowseEngine.php:3213 ../../app/lib/Browse/BrowseEngine.php:4916
-#: ../../app/models/ca_search_indexing_queue.php:81 ../../app/models/ca_search_indexing_queue.php:108 ../../app/models/ca_bundle_displays.php:1597 ../../app/models/ca_objects.php:140 ../../app/models/ca_metadata_dictionary_rules.php:57 ../../app/widgets/clock/clockWidget.php:99 ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:283
-#: ../../app/conf/user_pref_defs.conf:150 ../../app/conf/user_pref_defs.conf:541 ../../app/conf/user_pref_defs.conf:552 ../../app/conf/user_pref_defs.conf:563 ../../app/conf/user_pref_defs.conf:593 ../../app/conf/user_pref_defs.conf:604 ../../app/conf/user_pref_defs.conf:615 ../../app/conf/user_pref_defs.conf:633
-#: ../../app/conf/user_pref_defs.conf:644 ../../app/conf/user_pref_defs.conf:655 ../../app/conf/user_pref_defs.conf:683 ../../app/conf/user_pref_defs.conf:694 ../../app/conf/user_pref_defs.conf:712 ../../app/conf/user_pref_defs.conf:723 ../../app/conf/user_pref_defs.conf:734 ../../app/conf/user_pref_defs.conf:765
-#: ../../app/conf/user_pref_defs.conf:776 ../../app/conf/user_pref_defs.conf:794 ../../app/conf/user_pref_defs.conf:805 ../../app/conf/user_pref_defs.conf:816 ../../app/conf/user_pref_defs.conf:843 ../../app/conf/user_pref_defs.conf:854 ../../app/conf/user_pref_defs.conf:872 ../../app/conf/user_pref_defs.conf:883
-#: ../../app/conf/user_pref_defs.conf:894 ../../app/conf/user_pref_defs.conf:923 ../../app/conf/user_pref_defs.conf:934 ../../app/conf/user_pref_defs.conf:952 ../../app/conf/user_pref_defs.conf:963 ../../app/conf/user_pref_defs.conf:974 ../../app/conf/user_pref_defs.conf:1002 ../../app/conf/user_pref_defs.conf:1013
-#: ../../app/conf/user_pref_defs.conf:1031 ../../app/conf/user_pref_defs.conf:1042 ../../app/conf/user_pref_defs.conf:1053 ../../app/conf/user_pref_defs.conf:1077 ../../app/conf/user_pref_defs.conf:1088 ../../app/conf/user_pref_defs.conf:1106 ../../app/conf/user_pref_defs.conf:1117 ../../app/conf/user_pref_defs.conf:1128
-#: ../../app/conf/user_pref_defs.conf:1151 ../../app/conf/user_pref_defs.conf:1162 ../../app/conf/user_pref_defs.conf:1180 ../../app/conf/user_pref_defs.conf:1191 ../../app/conf/user_pref_defs.conf:1202 ../../app/conf/user_pref_defs.conf:1226 ../../app/conf/user_pref_defs.conf:1237 ../../app/conf/user_pref_defs.conf:1255
-#: ../../app/conf/user_pref_defs.conf:1266 ../../app/conf/user_pref_defs.conf:1277 ../../app/conf/user_pref_defs.conf:1288 ../../app/conf/user_pref_defs.conf:1306 ../../app/conf/user_pref_defs.conf:1317 ../../app/conf/user_pref_defs.conf:1328 ../../app/conf/user_pref_defs.conf:1362 ../../app/conf/user_pref_defs.conf:1373
-#: ../../app/conf/user_pref_defs.conf:1384 ../../app/conf/user_pref_defs.conf:1402 ../../app/conf/user_pref_defs.conf:1413 ../../app/conf/user_pref_defs.conf:1424 ../../app/conf/user_pref_defs.conf:1451 ../../app/conf/user_pref_defs.conf:1469 ../../app/conf/user_pref_defs.conf:1480 ../../app/conf/user_pref_defs.conf:1491
-#: ../../app/conf/user_pref_defs.conf:1502 ../../app/conf/user_pref_defs.conf:1520 ../../app/conf/user_pref_defs.conf:1559
+#: ../../app/models/ca_search_indexing_queue.php:81 ../../app/models/ca_search_indexing_queue.php:108 ../../app/models/ca_bundle_displays.php:1597 ../../app/models/ca_objects.php:140 ../../app/models/ca_metadata_dictionary_rules.php:57 ../../app/widgets/clock/clockWidget.php:99
+#: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:283 ../../app/conf/user_pref_defs.conf:150 ../../app/conf/user_pref_defs.conf:541 ../../app/conf/user_pref_defs.conf:552 ../../app/conf/user_pref_defs.conf:563 ../../app/conf/user_pref_defs.conf:593 ../../app/conf/user_pref_defs.conf:604 ../../app/conf/user_pref_defs.conf:615
+#: ../../app/conf/user_pref_defs.conf:633 ../../app/conf/user_pref_defs.conf:644 ../../app/conf/user_pref_defs.conf:655 ../../app/conf/user_pref_defs.conf:683 ../../app/conf/user_pref_defs.conf:694 ../../app/conf/user_pref_defs.conf:712 ../../app/conf/user_pref_defs.conf:723 ../../app/conf/user_pref_defs.conf:734
+#: ../../app/conf/user_pref_defs.conf:765 ../../app/conf/user_pref_defs.conf:776 ../../app/conf/user_pref_defs.conf:794 ../../app/conf/user_pref_defs.conf:805 ../../app/conf/user_pref_defs.conf:816 ../../app/conf/user_pref_defs.conf:843 ../../app/conf/user_pref_defs.conf:854 ../../app/conf/user_pref_defs.conf:872
+#: ../../app/conf/user_pref_defs.conf:883 ../../app/conf/user_pref_defs.conf:894 ../../app/conf/user_pref_defs.conf:923 ../../app/conf/user_pref_defs.conf:934 ../../app/conf/user_pref_defs.conf:952 ../../app/conf/user_pref_defs.conf:963 ../../app/conf/user_pref_defs.conf:974 ../../app/conf/user_pref_defs.conf:1002
+#: ../../app/conf/user_pref_defs.conf:1013 ../../app/conf/user_pref_defs.conf:1031 ../../app/conf/user_pref_defs.conf:1042 ../../app/conf/user_pref_defs.conf:1053 ../../app/conf/user_pref_defs.conf:1077 ../../app/conf/user_pref_defs.conf:1088 ../../app/conf/user_pref_defs.conf:1106 ../../app/conf/user_pref_defs.conf:1117
+#: ../../app/conf/user_pref_defs.conf:1128 ../../app/conf/user_pref_defs.conf:1151 ../../app/conf/user_pref_defs.conf:1162 ../../app/conf/user_pref_defs.conf:1180 ../../app/conf/user_pref_defs.conf:1191 ../../app/conf/user_pref_defs.conf:1202 ../../app/conf/user_pref_defs.conf:1226 ../../app/conf/user_pref_defs.conf:1237
+#: ../../app/conf/user_pref_defs.conf:1255 ../../app/conf/user_pref_defs.conf:1266 ../../app/conf/user_pref_defs.conf:1277 ../../app/conf/user_pref_defs.conf:1288 ../../app/conf/user_pref_defs.conf:1306 ../../app/conf/user_pref_defs.conf:1317 ../../app/conf/user_pref_defs.conf:1328 ../../app/conf/user_pref_defs.conf:1362
+#: ../../app/conf/user_pref_defs.conf:1373 ../../app/conf/user_pref_defs.conf:1384 ../../app/conf/user_pref_defs.conf:1402 ../../app/conf/user_pref_defs.conf:1413 ../../app/conf/user_pref_defs.conf:1424 ../../app/conf/user_pref_defs.conf:1451 ../../app/conf/user_pref_defs.conf:1469 ../../app/conf/user_pref_defs.conf:1480
+#: ../../app/conf/user_pref_defs.conf:1491 ../../app/conf/user_pref_defs.conf:1502 ../../app/conf/user_pref_defs.conf:1520 ../../app/conf/user_pref_defs.conf:1559
 msgid "No"
 msgstr "Nee"
 
@@ -490,7 +492,7 @@ msgstr "Systeem GUID"
 
 #: ../../themes/default/views/administrate/setup/config_check_html.php:72
 msgid "Last change log ID"
-msgstr "Laatste change log ID"
+msgstr "Laatste aanpassing log ID"
 
 #: ../../themes/default/views/administrate/setup/config_check_html.php:76
 msgid "PHP version"
@@ -708,8 +710,8 @@ msgid "Download results as"
 msgstr "Download resultaten als "
 
 #: ../../themes/default/views/administrate/setup/Search/search_controls_html.php:43 ../../themes/default/views/administrate/setup/Search/search_controls_html.php:45 ../../themes/default/views/administrate/setup/Search/search_controls_html.php:53 ../../themes/default/views/administrate/setup/Search/search_controls_html.php:54
-#: ../../themes/default/views/administrate/setup/Browse/ajax_browse_facet_html.php:76 ../../themes/default/views/editor/storage_locations/quickadd_html.php:84 ../../themes/default/views/editor/places/quickadd_html.php:84 ../../themes/default/views/logs/search_html.php:58 ../../themes/default/views/bundles/history_tracking_chronology.php:351
-#: ../../themes/default/views/bundles/ca_storage_locations.php:183 ../../themes/default/views/bundles/ca_places.php:198 ../../themes/default/views/bundles/ca_list_items.php:232 ../../themes/default/views/find/Search/widget_ca_movements_search_tools.php:101
+#: ../../themes/default/views/administrate/setup/Browse/ajax_browse_facet_html.php:76 ../../themes/default/views/editor/storage_locations/quickadd_html.php:84 ../../themes/default/views/editor/places/quickadd_html.php:84 ../../themes/default/views/logs/search_html.php:58
+#: ../../themes/default/views/bundles/history_tracking_chronology.php:351 ../../themes/default/views/bundles/ca_storage_locations.php:183 ../../themes/default/views/bundles/ca_places.php:198 ../../themes/default/views/bundles/ca_list_items.php:232 ../../themes/default/views/find/Search/widget_ca_movements_search_tools.php:101
 #: ../../themes/default/views/find/Search/widget_ca_storage_locations_search_tools.php:101 ../../themes/default/views/find/Search/widget_ca_loans_search_tools.php:101 ../../themes/default/views/find/Search/widget_ca_tour_stops_search_tools.php:101 ../../themes/default/views/find/Search/widget_ca_object_lots_search_tools.php:101
 #: ../../themes/default/views/find/Search/widget_ca_object_representations_search_tools.php:101 ../../themes/default/views/find/Search/widget_ca_places_search_tools.php:101 ../../themes/default/views/find/Search/search_advanced_form_html.php:76 ../../themes/default/views/find/Search/widget_ca_tours_search_tools.php:101
 #: ../../themes/default/views/find/Search/widget_ca_entities_search_tools.php:102 ../../themes/default/views/find/Search/search_controls_html.php:44 ../../themes/default/views/find/Search/search_controls_html.php:46 ../../themes/default/views/find/Search/search_controls_html.php:54
@@ -771,7 +773,7 @@ msgstr "Open hiërarchie venster"
 
 #: ../../themes/default/views/administrate/setup/Search/search_refine_html.php:38 ../../themes/default/views/find/Search/search_refine_html.php:38
 msgid "Filtering results by"
-msgstr "sultaten gefilterd op"
+msgstr "Resultaten gefilterd op"
 
 #: ../../themes/default/views/administrate/setup/Search/search_refine_html.php:49 ../../themes/default/views/find/Search/search_refine_html.php:49
 msgid "clear all"
@@ -838,7 +840,7 @@ msgstr ""
 
 #: ../../themes/default/views/administrate/setup/data_dictionary_list_html.php:70 ../../app/models/ca_metadata_dictionary_entries.php:279 ../../app/models/ca_data_importers.php:110
 msgid "Rules"
-msgstr "gels"
+msgstr "Regels"
 
 #: ../../themes/default/views/administrate/setup/data_dictionary_list_html.php:104
 msgid "No entries have been created"
@@ -940,7 +942,7 @@ msgstr "%1 resultaten: "
 
 #: ../../themes/default/views/administrate/setup/Results/ca_relationship_types_list_html.php:45 ../../app/models/ca_relationship_types.php:109
 msgid "Relationship"
-msgstr "latie"
+msgstr "Relatie"
 
 #: ../../themes/default/views/administrate/setup/Results/ca_relationship_types_list_html.php:54
 msgid "Type name (forward sense)"
@@ -1042,8 +1044,8 @@ msgid ""
 msgstr ""
 "<p>CollectiveAccess maakt gebruik van <em>sorteerwaardes</em> bij het sorteren van waarden die niet alfabetisch gesorteerd dienen te worden, zoals titels (bvb. <em>De Man Die De Wolken Meet</em> dient gesorteerd te worden als <em>De Man Die De Wolken Meet, De</em>) en alfanumerieke identificatiecodes (bvb. <em>2011.001</em> en "
 "<em>2011.2</em> dienen na elkaar gesorteerd te worden met de voorloopnullen in de eerste genegeerd).</p>\n"
-"<p>Sorteerwaardes worden afgeleid uit overeenstemmende waardes in uw databank. Het interne formaat van sorteerwaardes kan anders zijn tussen verschillende CollectiveAccess versies, resulterend in foutief sorteren na een upgrade. Indien u merkt dat waardes zoals titels of identificatiecodes niet correct worden gesorteerd, dient u mogelijk "
-"de sorteerwaardes opnieuw te laden vanuit uw data.</p>\n"
+"<p>Sorteerwaardes worden afgeleid uit overeenstemmende waardes in uw databank. Het interne formaat van sorteerwaardes kan anders zijn tussen verschillende CollectiveAccess versies, resulterend in foutief sorteren na een upgrade. Indien u merkt dat waardes zoals titels of identificatiecodes niet correct worden gesorteerd, dient u "
+"mogelijk de sorteerwaardes opnieuw te laden vanuit uw data.</p>\n"
 "<p>Merk op dat afhankelijk van de grootte van uw databank het herladen van sorteerwaardes van enkele minuten tot een uur of meer kan duren. Tijdens het herlaadproces zal het systeem bruikbaar blijven, maar zoek-en verkenfuncties kunnen mogelijk onjuiste sorteerresultaten teruggeven.</p>\n"
 "\t"
 
@@ -1074,14 +1076,14 @@ msgstr "Exporteer de systeemconfiguratie als installatieprofiel"
 
 #: ../../themes/default/views/administrate/maintenance/export_configuration_landing_html.php:32
 msgid ""
-"<p>You can export the current configuration of this system as an <em>installation profile</em>. A profile is an XML document fully describing all of the metadata elements, lists, user interfaces, locales, search forms and displays present in your system. The <em>CollectiveAccess</em> installer can use installation profiles to create new, "
-"empty instances with specific configurations for use in new projects.</p>\n"
+"<p>You can export the current configuration of this system as an <em>installation profile</em>. A profile is an XML document fully describing all of the metadata elements, lists, user interfaces, locales, search forms and displays present in your system. The <em>CollectiveAccess</em> installer can use installation profiles to create "
+"new, empty instances with specific configurations for use in new projects.</p>\n"
 "\t<p>Click on the \"Export\" button below to export and download the current system configuration as an installation profile.</p> \n"
 "\t<p>Note that for systems with complex configurations, generating the profile may take up to two minutes.</p>\n"
 "\t"
 msgstr ""
-"<p>U kan de huidige systeemconfiguratie als een <em>installatieprofiel</em> exporteren. Een profiel is een XML-document dat alle metadata-elementen, lijsten, gebruikersinterfaces, taalinstellingen, zoekformulieren en weergaves in uw systeem beschrijft. De <em>CollectiveAccess</em> installer kan dit installatieprofiel gebruiken om nieuwe, "
-"lege voorbeelden met specifieke instellingen voor nieuwe projecten aan te maken.</p>"
+"<p>U kan de huidige systeemconfiguratie als een <em>installatieprofiel</em> exporteren. Een profiel is een XML-document dat alle metadata-elementen, lijsten, gebruikersinterfaces, taalinstellingen, zoekformulieren en weergaves in uw systeem beschrijft. De <em>CollectiveAccess</em> installer kan dit installatieprofiel gebruiken om "
+"nieuwe, lege voorbeelden met specifieke instellingen voor nieuwe projecten aan te maken.</p>"
 
 #: ../../themes/default/views/administrate/maintenance/export_configuration_landing_html.php:38
 msgid "Export and download system configuration"
@@ -1112,8 +1114,8 @@ msgstr ""
 "worden op de harde schijf, in een databank of op een andere server, maar hun doel is steeds hetzelfde: zoekacties sneller laten uitvoeren.</p>\n"
 "<p>Om accurate zoekresultaten te verkrijgen moeten de databank en indexen gesynchroniseerd zijn. CollectiveAccess werkt simultaan de databank en indexen bij indien u data toevoegt, aanpast of verwijdert, zodoende de databank en indexen gelijklopend houdend. Van tijd tot tijd kunnen deze echter ongesynchroniseerd raken. Indien uw basis- "
 "en geavanceerde zoekacties consistent onverwachte resultaten teruggeven kan u deze tool gebruiken om de indexen herop te bouwen vanuit de databank, en zodoende alles terug aligneren.</p> \n"
-"<p>Merk op dat afhankelijk van de grootte van uw databank het heropbouwen van enkele minuten tot enkele uren kan duren. Tijdens het heropbouwproces zal het systeem bruikbaar blijven, maar zoekfunctionaliteiten kunnen onvolledige resultaten teruggeven. Verkenfuncties, die niet afhankelijk zijn van indexen, zullen hier geen last van hebben."
-"</p>\n"
+"<p>Merk op dat afhankelijk van de grootte van uw databank het heropbouwen van enkele minuten tot enkele uren kan duren. Tijdens het heropbouwproces zal het systeem bruikbaar blijven, maar zoekfunctionaliteiten kunnen onvolledige resultaten teruggeven. Verkenfuncties, die niet afhankelijk zijn van indexen, zullen hier geen last van "
+"hebben.</p>\n"
 "\t"
 
 #: ../../themes/default/views/administrate/maintenance/hierarchical_reindex_status_html.php:30 ../../themes/default/views/administrate/maintenance/hierarchical_reindex_landing_html.php:29 ../../themes/default/views/administrate/maintenance/hierarchical_reindex_landing_html.php:37 ../../app/conf/navigation.conf:4473
@@ -1181,7 +1183,7 @@ msgstr ""
 #: ../../themes/default/views/system/preferences_duplication_html.php:42 ../../themes/default/views/system/preferences_batch_html.php:38 ../../themes/default/views/system/preferences_quicksearch_html.php:36 ../../themes/default/views/system/preferences_cataloguing_html.php:38
 #: ../../themes/default/views/system/preferences_quickadd_html.php:38 ../../themes/default/views/system/preferences_html.php:38 ../../themes/default/views/find/Search/search_advanced_form_html.php:75 ../../app/helpers/themeHelpers.php:1088 ../../app/widgets/advancedSearchForm/views/search_advanced_form_html.php:77
 msgid "Reset"
-msgstr "set"
+msgstr "Reset"
 
 #: ../../themes/default/views/system/preferences_duplication_html.php:48 ../../themes/default/views/system/preferences_batch_html.php:44 ../../themes/default/views/system/preferences_quicksearch_html.php:42 ../../themes/default/views/system/preferences_cataloguing_html.php:44
 #: ../../themes/default/views/system/preferences_quickadd_html.php:44 ../../themes/default/views/system/preferences_html.php:44 ../../themes/default/views/pageFormat/pageFooter.php:46 ../../app/widgets/recentRegistrations/views/main_html.php:54
@@ -1450,7 +1452,7 @@ msgid ""
 "You may add text annotations to the image. Each annotation is associated with a point, rectangular or polygon area on the image. To create an annotation\n"
 "\tselect the point (line icon), rectangle or polygon tool from the tool bar, then click on the location you wish to annotate. "
 msgstr ""
-"U kunt tekstaantekeningen aan de afbeelding toevoegen. Elke annotatie wordt geassocieerd met een punt, rechthoekig of polygoon gebied op de afbeelding. \n"
+"U kunt tekstaantekeningen aan de afbeelding toevoegen. Elke aantekening wordt geassocieerd met een punt, rechthoekig of polygoon gebied op de afbeelding. \n"
 "Selecteer het punt- (lijnpictogram), rechthoek- of polygoongereedschap in de werkbalk om een aantekening te maken, en klik vervolgens op de locatie die u wilt annoteren."
 
 #: ../../themes/default/views/editor/objects/viewer_help_html.php:16
@@ -1477,63 +1479,63 @@ msgstr ""
 
 #: ../../themes/default/views/editor/objects/viewer_help_html.php:29
 msgid "You may also drag the text box into position. Click on the text box to add text. All changes to annotations are saved automatically as you work."
-msgstr ""
+msgstr "U kunt het tekstvak ook naar de juiste positie slepen. Klik op het tekstvak om tekst toe te voegen. Alle wijzigingen in annotaties worden automatisch opgeslagen terwijl u werkt."
 
 #: ../../themes/default/views/editor/objects/viewer_help_html.php:32
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Keyboard sneltoetsen"
 
 #: ../../themes/default/views/editor/objects/viewer_help_html.php:35
 msgid "Single-key shortcuts are available for common actions. Pressing the key is equivalent to the corresponding mouse action."
-msgstr ""
+msgstr "Sneltoetsen met één toets zijn beschikbaar voor veelvoorkomende acties. Het indrukken van de toets is gelijk aan de corresponderende muisactie."
 
 #: ../../themes/default/views/editor/objects/viewer_help_html.php:38
 msgid "%1 to activate image panning"
-msgstr ""
+msgstr "%1 om het pannen van afbeeldingen te activeren"
 
 #: ../../themes/default/views/editor/objects/viewer_help_html.php:39
 msgid "%1 to select the rectangle annotation tool"
-msgstr ""
+msgstr "%1 om het annotatiegereedschap voor rechthoeken te selecteren"
 
 #: ../../themes/default/views/editor/objects/viewer_help_html.php:40
 msgid "%1 to select the point annotation tool"
-msgstr ""
+msgstr "%1 om het annotatiegereedschap voor punten te selecteren"
 
 #: ../../themes/default/views/editor/objects/viewer_help_html.php:41
 msgid "%1 to select the polygon annotation tool"
-msgstr ""
+msgstr "%1 om het annotatiegereedschap voor veelhoeken te selecteren"
 
 #: ../../themes/default/views/editor/objects/viewer_help_html.php:42
 msgid "%1 to delete the selected annotation"
-msgstr ""
+msgstr "%1 om de geselecteerde aantekening te verwijderen"
 
 #: ../../themes/default/views/editor/objects/viewer_help_html.php:43
 msgid "%1 to toggle visibility of the image overview"
-msgstr ""
+msgstr "%1 om de zichtbaarheid van het afbeeldingsoverzicht in of uit te schakelen"
 
 #: ../../themes/default/views/editor/objects/viewer_help_html.php:44
 msgid "%1 to return the image to the centered, zoomed out \"home\" position"
-msgstr ""
+msgstr "%1 om de afbeelding terug te brengen naar de gecentreerde, uitgezoomde \"begin\" -positie"
 
 #: ../../themes/default/views/editor/objects/viewer_help_html.php:45
 msgid "%1 to toggle visibility of viewer controls"
-msgstr ""
+msgstr "%1 om de zichtbaarheid van de bediening van de viewer in of uit te schakelen"
 
 #: ../../themes/default/views/editor/objects/viewer_help_html.php:46
 msgid "%1 to hide controls and labels"
-msgstr ""
+msgstr "%1 om bedieningselementen en labels te verbergen"
 
 #: ../../themes/default/views/editor/objects/viewer_help_html.php:47
 msgid "%1 or %2 to zoom in in small increments"
-msgstr ""
+msgstr "%1 of %2 om in kleine stappen in te zoomen"
 
 #: ../../themes/default/views/editor/objects/viewer_help_html.php:48
 msgid "%1 or %2 to zoom out in small increments"
-msgstr ""
+msgstr "%1 of %2 om in kleine stappen uit te zoomen"
 
 #: ../../themes/default/views/editor/objects/viewer_help_html.php:49
 msgid "%1, %2, %3 or %4 to pan the image in small increments"
-msgstr ""
+msgstr "%1, %2, %3 of %4 om in kleine stappen te pannen"
 
 #: ../../themes/default/views/editor/objects/object_representation_media_replication_controls_html.php:43
 msgid "Replicate media to %1"
@@ -1545,7 +1547,7 @@ msgstr ""
 
 #: ../../themes/default/views/editor/objects/object_representation_media_replication_controls_html.php:51
 msgid "Replication target"
-msgstr ""
+msgstr "Replicatiedoel"
 
 #: ../../themes/default/views/editor/objects/object_representation_media_replication_controls_html.php:60
 msgid "Delete &rsaquo;"
@@ -1761,7 +1763,7 @@ msgstr "Quick Add"
 #: ../../themes/default/views/bundles/ca_movements.php:205 ../../themes/default/views/bundles/ca_places.php:291 ../../themes/default/views/bundles/ca_occurrences.php:207 ../../themes/default/views/bundles/ca_list_items.php:320 ../../themes/default/views/bundles/ca_loans.php:205 ../../themes/default/views/bundles/ca_objects.php:279
 #: ../../themes/default/views/bundles/ca_collections.php:205
 msgid "Relation editor"
-msgstr "latie ingavescherm"
+msgstr "Relatie editor"
 
 #: ../../themes/default/views/bundles/ca_attributes_elements_only.php:61 ../../themes/default/views/bundles/ca_object_representation_captions.php:64 ../../themes/default/views/bundles/ca_attributes.php:251 ../../app/models/ca_collection_labels.php:64 ../../app/models/ca_list_item_labels.php:63 ../../app/models/ca_entity_labels.php:66
 #: ../../app/models/ca_tour_labels.php:63 ../../app/models/ca_loan_labels.php:63 ../../app/models/ca_place_labels.php:63 ../../app/models/ca_user_representation_annotations.php:66 ../../app/models/ca_object_representation_captions.php:64 ../../app/models/ca_set_labels.php:64 ../../app/models/ca_user_representation_annotation_labels.php:64
@@ -2298,8 +2300,8 @@ msgstr "Voorbeeldweergaves bijwerken"
 #: ../../themes/default/views/bundles/ca_object_representations_media_display.php:170
 msgid ""
 "Use the controls above to replace existing preview images for this representation. If <em>Update with uploaded media</em> is checked then the media you have selected for upload will be used to generate the replacement previews. For PDF and video representations you may alternatively elect to generate new previews from a specific page or "
-"frame using the <em>Update using page</em> and <em>Update using frame at timecode</em> options. You can control which preview versions are generated by checking or unchecking options in the <em>Update preview versions</em> section. Note that replacement of preview images will be performed only if the master <em>Modify preview images</em> "
-"checkbox is checked. If unchecked the uploaded media will completely replace <strong>all</strong> media and previews associated with this representation."
+"frame using the <em>Update using page</em> and <em>Update using frame at timecode</em> options. You can control which preview versions are generated by checking or unchecking options in the <em>Update preview versions</em> section. Note that replacement of preview images will be performed only if the master <em>Modify preview images</"
+"em> checkbox is checked. If unchecked the uploaded media will completely replace <strong>all</strong> media and previews associated with this representation."
 msgstr ""
 "Gebruik bovenstaande opties om bestaande voorbeeldweergaves te vervangen voor deze voorstelling. Indien <em>Werk bij met geuploade media</em> is geselecteerd, zullen de voor upload geselecteerde media gebruikt worden om de vervangende voorbeeldweergaves te genereren. Voor PDF en video voorstellingen kan u alternatief kiezen om "
 "voorbeeldweergaves te genereren op basis van een specifieke pagina of frame via respectievelijk de <em>Stel in op paginanummer</em> en <em>Stel in op frame op volgende tijdscode</em> opties. U kan bepalen welke voorbeeldweergaves gegenereerd zullen worden door de opties aan- of af te vinken in de <em>Voorbeeldweergaves bijwerken</em> "
@@ -2927,7 +2929,7 @@ msgstr ""
 
 #: ../../themes/default/views/manage/user_sort_list_html.php:56 ../../app/models/ca_data_importers.php:299
 msgid "Record type"
-msgstr "cordtype"
+msgstr "Record type"
 
 #: ../../themes/default/views/manage/widget_group_info_html.php:36 ../../themes/default/views/manage/group_list_html.php:45
 msgid "Your project teams"
@@ -2971,7 +2973,7 @@ msgstr "Item type"
 
 #: ../../themes/default/views/manage/watched_items_list_html.php:72 ../../app/widgets/watchedItems/views/main_html.php:48
 msgid "Recent Changes"
-msgstr "cente wijzigingen"
+msgstr "Recente wijzigingen"
 
 #: ../../themes/default/views/manage/watched_items_list_html.php:72
 msgid "Hide Recent Changes"
@@ -3384,7 +3386,7 @@ msgstr "volglijst"
 
 #: ../../themes/default/views/manage/widget_watched_items_info_html.php:46
 msgid "containing watched"
-msgstr "met bekeken"
+msgstr "bevat bekeken"
 
 #: ../../themes/default/views/manage/Results/ca_item_tags_list_html.php:46
 msgid "Number of tagged items"
@@ -3564,7 +3566,7 @@ msgstr "Algemene informatie"
 
 #: ../../themes/default/views/batch/metadataimport/importer_run_html.php:153
 msgid "Existing record policy messages"
-msgstr "Berichten over beleid bij bestaande records"
+msgstr "Berichten over bestaand record beleid"
 
 #: ../../themes/default/views/batch/metadataimport/importer_run_html.php:153
 msgid "Skip message"
@@ -3806,7 +3808,7 @@ msgstr ""
 #: ../../app/refineries/loanSplitter/loanSplitterRefinery.php:216 ../../app/refineries/entitySplitter/entitySplitterRefinery.php:236 ../../app/refineries/entitySplitter/entitySplitterRefinery.php:245 ../../app/refineries/listItemSplitter/listItemSplitterRefinery.php:257 ../../app/refineries/listItemSplitter/listItemSplitterRefinery.php:266
 #: ../../app/refineries/occurrenceSplitter/occurrenceSplitterRefinery.php:206 ../../app/refineries/occurrenceSplitter/occurrenceSplitterRefinery.php:215
 msgid "Relationships"
-msgstr "laties"
+msgstr "Relaties"
 
 #: ../../themes/default/views/batch/mediaimport/import_options_html.php:447
 msgid "Relationships will be created by matching the identifier extracted from the media file name with identifiers in related records."
@@ -3996,7 +3998,7 @@ msgstr ""
 
 #: ../../themes/default/views/library/checkout/items_html.php:26 ../../themes/default/views/library/checkin/items_html.php:23 ../../app/helpers/displayHelpers.php:747
 msgid "Results"
-msgstr "sultaten"
+msgstr "Resultaten"
 
 #: ../../themes/default/views/library/checkin/items_html.php:1 ../../themes/default/views/library/checkin/items_html.php:19 ../../app/conf/navigation.conf:4677
 msgid "Check in"
@@ -4487,7 +4489,7 @@ msgstr ""
 
 #: ../../app/helpers/displayHelpers.php:543
 msgid "References to this %1"
-msgstr "ferenties naar %1"
+msgstr "Referenties naar %1"
 
 #: ../../app/helpers/displayHelpers.php:549
 msgid "This %1 references %2 other item in metadata"
@@ -4970,8 +4972,9 @@ msgstr ""
 msgid "Invalid identifier"
 msgstr ""
 
-#: ../../app/helpers/displayHelpers.php:4273 ../../app/helpers/displayHelpers.php:4304 ../../app/helpers/displayHelpers.php:4338 ../../app/helpers/displayHelpers.php:4353 ../../app/helpers/displayHelpers.php:4387 ../../app/helpers/displayHelpers.php:4402 ../../app/lib/BaseEditorController.php:1977 ../../app/lib/BaseEditorController.php:2006
-#: ../../app/lib/BaseEditorController.php:2056 ../../app/lib/BaseEditorController.php:2103 ../../app/lib/BaseEditorController.php:2142 ../../app/lib/BaseEditorController.php:2188 ../../app/lib/BaseEditorController.php:2196 ../../app/lib/BaseEditorController.php:2226 ../../app/lib/BaseEditorController.php:2234
+#: ../../app/helpers/displayHelpers.php:4273 ../../app/helpers/displayHelpers.php:4304 ../../app/helpers/displayHelpers.php:4338 ../../app/helpers/displayHelpers.php:4353 ../../app/helpers/displayHelpers.php:4387 ../../app/helpers/displayHelpers.php:4402 ../../app/lib/BaseEditorController.php:1977
+#: ../../app/lib/BaseEditorController.php:2006 ../../app/lib/BaseEditorController.php:2056 ../../app/lib/BaseEditorController.php:2103 ../../app/lib/BaseEditorController.php:2142 ../../app/lib/BaseEditorController.php:2188 ../../app/lib/BaseEditorController.php:2196 ../../app/lib/BaseEditorController.php:2226
+#: ../../app/lib/BaseEditorController.php:2234
 msgid "Invalid viewer"
 msgstr ""
 
@@ -4979,8 +4982,8 @@ msgstr ""
 msgid "Invalid viewer %1/%2"
 msgstr ""
 
-#: ../../app/helpers/displayHelpers.php:4457 ../../app/lib/BaseEditorController.php:1960 ../../app/lib/BaseEditorController.php:2076 ../../app/lib/BaseEditorController.php:2675 ../../app/lib/BaseEditorController.php:2682 ../../app/lib/BaseEditorController.php:2718 ../../app/lib/BaseEditorController.php:2819 ../../app/lib/BaseModel.php:12530
-#: ../../app/controllers/find/RelatedListController.php:108
+#: ../../app/helpers/displayHelpers.php:4457 ../../app/lib/BaseEditorController.php:1960 ../../app/lib/BaseEditorController.php:2076 ../../app/lib/BaseEditorController.php:2675 ../../app/lib/BaseEditorController.php:2682 ../../app/lib/BaseEditorController.php:2718 ../../app/lib/BaseEditorController.php:2819
+#: ../../app/lib/BaseModel.php:12530 ../../app/controllers/find/RelatedListController.php:108
 msgid "Invalid id"
 msgstr ""
 
@@ -5179,7 +5182,7 @@ msgstr "Kaaimaneilanden"
 
 #: ../../app/helpers/gisHelpers.php:87
 msgid "Central African Republic"
-msgstr "Centraal-Afrikaanse publiek"
+msgstr "Centraal-Afrikaanse Republiek"
 
 #: ../../app/helpers/gisHelpers.php:88
 msgid "Chad"
@@ -5215,7 +5218,7 @@ msgstr "Kongo"
 
 #: ../../app/helpers/gisHelpers.php:96
 msgid "Congo, The Democratic Republic O"
-msgstr "Kongo, De Democratische publiek"
+msgstr "Kongo, De Democratische Republiek"
 
 #: ../../app/helpers/gisHelpers.php:97
 msgid "Cook Islands"
@@ -5263,7 +5266,7 @@ msgstr "Dominica"
 
 #: ../../app/helpers/gisHelpers.php:108
 msgid "Dominican Republic"
-msgstr "Domenicaanse publiek"
+msgstr "Domenicaanse Republiek"
 
 #: ../../app/helpers/gisHelpers.php:109
 msgid "East Timor"
@@ -5735,7 +5738,7 @@ msgstr "Qatar"
 
 #: ../../app/helpers/gisHelpers.php:226
 msgid "Reunion"
-msgstr "ünie"
+msgstr "Reünie"
 
 #: ../../app/helpers/gisHelpers.php:227
 msgid "Romania"
@@ -5867,7 +5870,7 @@ msgstr "Zwisterland"
 
 #: ../../app/helpers/gisHelpers.php:259
 msgid "Syrian Arab Republic"
-msgstr "Syrische Arabische publiek"
+msgstr "Syrische Arabische Republiek"
 
 #: ../../app/helpers/gisHelpers.php:260
 msgid "Taiwan"
@@ -6456,8 +6459,8 @@ msgstr ""
 #: ../../app/lib/ConfigurationCheck.php:147
 msgid "The CollectiveAccess <i>app/tmp</i> directory is NOT writeable by the installer. This may result in installation errors. It is recommended that you change permissions on this directory (<i>%1</i>) to allow write access prior to installation. You can reload the installer to verify that the changed permissions are correct."
 msgstr ""
-"De CollectiveAccess <i>app/tmp</i> map is NIET beschrijfbaar door het installatiescript. Dit kan resulteren in installatiefouten. Er wordt aangeraden dat u de machtigingen voor deze map (<i>%1</i>) aanpast zodat schrijfrechten gegeven zijn alvorens de installatie aan te vangen. U kan het installatiescript herladen om te verifiëren dat de "
-"aangepaste machtigingen correct zijn."
+"De CollectiveAccess <i>app/tmp</i> map is NIET beschrijfbaar door het installatiescript. Dit kan resulteren in installatiefouten. Er wordt aangeraden dat u de machtigingen voor deze map (<i>%1</i>) aanpast zodat schrijfrechten gegeven zijn alvorens de installatie aan te vangen. U kan het installatiescript herladen om te verifiëren dat "
+"de aangepaste machtigingen correct zijn."
 
 #: ../../app/lib/ConfigurationCheck.php:154
 msgid "The CollectiveAccess <i>app/log</i> directory is NOT writeable by the installer. This may result in installation errors. It is recommended that you change permissions on this directory (<i>%1</i>) to allow write access prior to installation. You can reload the installer to verify that the changed permissions are correct."
@@ -7833,8 +7836,8 @@ msgstr ""
 "CollectiveAccess maakt gebruik van indexen voor het doorzoeken van uw data. Indexen zijn eenvoudig gesteld samenvattingen van uw gegevens, opgesteld om aanvragen sneller te kunnen verwerken. De exacte vorm en karakteristieken van de gebruikte indexen zal verschillen per type zoekmachine die u gebruikt. Ze kunnen opgeslagen worden op de "
 "harde schijf, in een databank of op een andere server, maar hun doel is steeds hetzelfde: zoekacties sneller laten uitvoeren.\n"
 "\n"
-"\tOm accurate zoekresultaten te verkrijgen moeten de databank en indexen gesynchroniseerd zijn. CollectiveAccess werkt simultaan de databank en indexen bij indien u data toevoegt, aanpast of verwijdert, zodoende de databank en indexen gelijklopend houdend. Van tijd tot tijd kunnen deze echter ongesynchroniseerd raken. Indien uw basis- en "
-"geavanceerde zoekacties consistent onverwachte resultaten teruggeven kan u deze tool gebruiken om de indexen herop te bouwen vanuit de databank, en zodoende alles terug aligneren.\n"
+"\tOm accurate zoekresultaten te verkrijgen moeten de databank en indexen gesynchroniseerd zijn. CollectiveAccess werkt simultaan de databank en indexen bij indien u data toevoegt, aanpast of verwijdert, zodoende de databank en indexen gelijklopend houdend. Van tijd tot tijd kunnen deze echter ongesynchroniseerd raken. Indien uw basis- "
+"en geavanceerde zoekacties consistent onverwachte resultaten teruggeven kan u deze tool gebruiken om de indexen herop te bouwen vanuit de databank, en zodoende alles terug aligneren.\n"
 " \n"
 "\tMerk op dat afhankelijk van de grootte van uw databank het heropbouwen van enkele minuten tot enkele uren kan duren. Tijdens het heropbouwproces zal het systeem bruikbaar blijven, maar zoekfunctionaliteiten kunnen onvolledige resultaten teruggeven. Verkenfuncties, die niet afhankelijk zijn van indexen, zullen hier geen last van hebben."
 
@@ -8735,11 +8738,11 @@ msgstr ""
 #: ../../app/lib/Utils/CLIUtils/Maintenance.php:586
 msgid ""
 "CollectiveAccess must have both read and write access to the temporary storage directory (app/tmp), media directory (media) and HTMLPurifier definition cache (app/lib/Parsers/htmlpurifier/standalone/HTMLPurifier/DefinitionCache). A run-time error will be displayed if any of these locations is not accessible to the application. To change "
-"these permissions to allow CollectiveAccess to run normally run this command while logged in with administrative/root privileges. You are currently logged in as %1 (uid %2). You can specify which user will be given ownership of the directories using the --user option. If you do not specify a user, the web server user for your server will "
-"be automatically determined and used."
+"these permissions to allow CollectiveAccess to run normally run this command while logged in with administrative/root privileges. You are currently logged in as %1 (uid %2). You can specify which user will be given ownership of the directories using the --user option. If you do not specify a user, the web server user for your server "
+"will be automatically determined and used."
 msgstr ""
-"CollectiveAccess moet zowel lees- als schrijftoegang tot de tijdelijke opslag directory (app/tmp), media-directory (media) en HTMLPurifier cache (app/lib/core/Parsers/HTMLPurifier/standalone/HTMLPurifier/DefinitionCache) hebben. Een run-time fout wordt weergegeven als een van deze locaties niet toegankelijk is voor de applicatie. Om deze "
-"rechten te veranderen, zodat CollectiveAccess normaal kan functioneren, voer je dit commando uit terwijl je ingelogd bent met administrator/root rechten​. Je bent momenteel aangemeld als %1 (uid %2). Je kan opgeven welke gebruiker toegang tot de folders krijgt met de --user optie. Als u geen gebruiker opgeeft, zal de web-user van uw "
+"CollectiveAccess moet zowel lees- als schrijftoegang tot de tijdelijke opslag directory (app/tmp), media-directory (media) en HTMLPurifier cache (app/lib/core/Parsers/HTMLPurifier/standalone/HTMLPurifier/DefinitionCache) hebben. Een run-time fout wordt weergegeven als een van deze locaties niet toegankelijk is voor de applicatie. Om "
+"deze rechten te veranderen, zodat CollectiveAccess normaal kan functioneren, voer je dit commando uit terwijl je ingelogd bent met administrator/root rechten​. Je bent momenteel aangemeld als %1 (uid %2). Je kan opgeven welke gebruiker toegang tot de folders krijgt met de --user optie. Als u geen gebruiker opgeeft, zal de web-user van uw "
 "server automatisch worden afgeleid en gebruikt."
 
 #: ../../app/lib/Utils/CLIUtils/Maintenance.php:597 ../../app/lib/Utils/CLIUtils/Maintenance.php:626
@@ -8776,11 +8779,11 @@ msgstr ""
 
 #: ../../app/lib/Utils/CLIUtils/Maintenance.php:692
 msgid "Reset a user's password"
-msgstr "set het wachtwoord van een gebruiker"
+msgstr "Reset het wachtwoord van een gebruiker"
 
 #: ../../app/lib/Utils/CLIUtils/Maintenance.php:699
 msgid "Reset a user's password."
-msgstr "set het wachtwoord van een gebruiker."
+msgstr "Reset het wachtwoord van een gebruiker."
 
 #: ../../app/lib/Utils/CLIUtils/Maintenance.php:711
 msgid "Evaluating"
@@ -9247,7 +9250,7 @@ msgstr ""
 
 #: ../../app/lib/Utils/CLIUtils/Maintenance.php:2059 ../../support/sql/migrations/VersionUpdate49.php:129
 msgid "Could not create root for relationship %1: %2"
-msgstr "Kon wortel voor de relatie %1 niet aanmaken: %2"
+msgstr "Kon radix voor de relatie %1 niet aanmaken: %2"
 
 #: ../../app/lib/Utils/CLIUtils/Maintenance.php:2069 ../../support/sql/migrations/VersionUpdate49.php:139
 msgid "Could not add label to root for relationship %1: %2"
@@ -9294,8 +9297,8 @@ msgstr ""
 
 #: ../../app/lib/Utils/CLIUtils/Maintenance.php:2214
 msgid ""
-"CollectiveAccess supports tracking of location and use histories through history tracking policies. Current values for each record for each policy are cached to speed browses and display. For records with values having future dates, current values will change as those future dates become present dates. This command will update the cached "
-"current values to reflect the transition from future to current. It should be run periodically (at least once a day) to ensure the accuracy of the current value cache."
+"CollectiveAccess supports tracking of location and use histories through history tracking policies. Current values for each record for each policy are cached to speed browses and display. For records with values having future dates, current values will change as those future dates become present dates. This command will update the "
+"cached current values to reflect the transition from future to current. It should be run periodically (at least once a day) to ensure the accuracy of the current value cache."
 msgstr ""
 
 #: ../../app/lib/Utils/CLIUtils/Maintenance.php:2313 ../../app/lib/Utils/CLIUtils/Maintenance.php:2320
@@ -9815,8 +9818,8 @@ msgstr ""
 
 #: ../../app/lib/Utils/CLIUtils/Media.php:491
 msgid ""
-"The CollectiveAccess document viewer can search text within PDFs and highlight matches. To enable this feature PDF content must be analyzed and indexed. If your database predates the introduction of in-viewer PDF search in CollectiveAccess 1.4, or search is otherwise failing to work properly, you can use this command to analyze and index "
-"PDFs in the database."
+"The CollectiveAccess document viewer can search text within PDFs and highlight matches. To enable this feature PDF content must be analyzed and indexed. If your database predates the introduction of in-viewer PDF search in CollectiveAccess 1.4, or search is otherwise failing to work properly, you can use this command to analyze and "
+"index PDFs in the database."
 msgstr ""
 
 #: ../../app/lib/Utils/CLIUtils/Media.php:531
@@ -10545,7 +10548,7 @@ msgstr "Gerelateerde tabel specificatie \"%1\" is ongeldig"
 
 #: ../../app/lib/BaseModel.php:9130 ../../app/lib/BaseModel.php:9273
 msgid "Relationship already exists"
-msgstr "latie bestaat al"
+msgstr "Relatie bestaat al"
 
 #: ../../app/lib/BaseModel.php:9138 ../../app/lib/BaseModel.php:9281
 msgid "Cannot relate a record to itself"
@@ -10645,7 +10648,7 @@ msgstr ""
 
 #: ../../app/lib/Service/BrowseService.php:70 ../../app/lib/Service/BrowseService.php:119
 msgid "Getting results for browses without criteria is not supported"
-msgstr "sultaten krijgen via verkennen zonder criteria op te geven wordt niet ondersteund"
+msgstr "Resultaten krijgen via verkennen zonder criteria op te geven wordt niet ondersteund"
 
 #: ../../app/lib/Service/BrowseService.php:75 ../../app/lib/Service/ItemService.php:95
 msgid "Invalid HTTP request method"
@@ -11369,11 +11372,11 @@ msgstr "Mediaverwerkingsregels"
 
 #: ../../app/lib/Plugins/TaskQueueHandlers/mediaproc.php:177
 msgid "Record %1.field = file '%2' did not exist; queued file was discarded"
-msgstr "cord %1.field = bestand '%2' bestaat niet; bestand werd uit wachtrij verwijderd"
+msgstr "Record %1.field = bestand '%2' bestaat niet; bestand werd uit wachtrij verwijderd"
 
 #: ../../app/lib/Plugins/TaskQueueHandlers/mediaproc.php:196
 msgid "Record %1.field = %2 did not exist; queued file was discarded"
-msgstr "cord %1.field = %2 bestaat niet; bestand werd uit wachtrij verwijderd"
+msgstr "Record %1.field = %2 bestaat niet; bestand werd uit wachtrij verwijderd"
 
 #: ../../app/lib/Plugins/TaskQueueHandlers/mediaproc.php:201
 msgid "Invalid media field '%1' in table '%2'"
@@ -12242,15 +12245,15 @@ msgstr ""
 
 #: ../../app/lib/Import/DataReaders/FMPDSOResultReader.php:89
 msgid "FMPro DSOResult XML Reader"
-msgstr "FMPro DSOsult XML ader"
+msgstr "FMPro DSOResult XML Reader"
 
 #: ../../app/lib/Import/DataReaders/FMPDSOResultReader.php:90
 msgid "FMPro DSOResult"
-msgstr "FMPro DSOsult"
+msgstr "FMPro DSOResult"
 
 #: ../../app/lib/Import/DataReaders/FMPDSOResultReader.php:91
 msgid "Reads Filemaker Pro DSOResult-format XML files"
-msgstr "Leest Filemaker Pro DSOsult-formaat XML-bestanden"
+msgstr "Leest Filemaker Pro DSOResult-formaat XML-bestanden"
 
 #: ../../app/lib/Import/DataReaders/ExcelDataReader.php:57
 msgid "Excel XLSX data reader"
@@ -12374,7 +12377,7 @@ msgstr "Leest MARC-bestanden"
 
 #: ../../app/lib/Import/DataReaders/InmagicReader.php:95
 msgid "Inmagic XML Reader"
-msgstr "Inmagic XML ader"
+msgstr "Inmagic XML Reader"
 
 #: ../../app/lib/Import/DataReaders/InmagicReader.php:96
 msgid "Inmagic XML"
@@ -12855,7 +12858,7 @@ msgstr "Cryptografische hash-functies"
 
 #: ../../app/lib/Attributes/Values/LCSHAttributeValue.php:154
 msgid "MARC Relators"
-msgstr "MARC latorcodes"
+msgstr "MARC Relatorcodes"
 
 #: ../../app/lib/Attributes/Values/LCSHAttributeValue.php:155
 msgid "MARC Countries"
@@ -12942,7 +12945,7 @@ msgstr "Maximum aantal tekens om toe te laten. Een langere input dan vereist zal
 
 #: ../../app/lib/Attributes/Values/TextAttributeValue.php:65 ../../app/lib/Attributes/Values/UrlAttributeValue.php:65 ../../app/lib/Attributes/Values/NumericAttributeValue.php:81 ../../app/lib/Attributes/Values/IntegerAttributeValue.php:82
 msgid "Regular expression to validate input with"
-msgstr "guliere expressie om input mee te valideren"
+msgstr "Reguliere expressie om input mee te valideren"
 
 #: ../../app/lib/Attributes/Values/TextAttributeValue.php:66 ../../app/lib/Attributes/Values/UrlAttributeValue.php:66 ../../app/lib/Attributes/Values/NumericAttributeValue.php:82 ../../app/lib/Attributes/Values/IntegerAttributeValue.php:83
 msgid "A Perl-format regular expression with which to validate the input. Input not matching the expression will be rejected. Do not include the leading and trailling delimiter characters (typically \"/\") in your expression. Leave blank if you don't want to use regular expression-based validation."
@@ -13025,7 +13028,7 @@ msgstr ""
 
 #: ../../app/lib/Attributes/Values/TextAttributeValue.php:226
 msgid "Reference media in"
-msgstr ""
+msgstr "Referentie afbeelding in"
 
 #: ../../app/lib/Attributes/Values/TextAttributeValue.php:227
 msgid "Allow in-line references in text to a media element."
@@ -13065,7 +13068,7 @@ msgstr "Vink deze optie aan indien uw gebundelde attributen niet taalspecifiek h
 
 #: ../../app/lib/Attributes/Values/ContainerAttributeValue.php:58
 msgid "Line breaks"
-msgstr "geleindes"
+msgstr "Regeleindes"
 
 #: ../../app/lib/Attributes/Values/ContainerAttributeValue.php:59
 msgid "Insert number of metadata elements after which a line break should be inserted here. (Default is 0 - i.e. no line breaks)"
@@ -14589,11 +14592,11 @@ msgstr "Zoekacties"
 #: ../../app/refineries/movementSplitter/movementSplitterRefinery.php:125 ../../app/refineries/loanSplitter/loanSplitterRefinery.php:126 ../../app/refineries/entitySplitter/entitySplitterRefinery.php:137 ../../app/refineries/listItemSplitter/listItemSplitterRefinery.php:158
 #: ../../app/refineries/occurrenceSplitter/occurrenceSplitterRefinery.php:125
 msgid "Relationship type"
-msgstr "latietype"
+msgstr "Relatietype"
 
 #: ../../app/lib/Browse/BrowseEngine.php:166 ../../app/models/ca_relationship_types.php:712 ../../app/conf/navigation.conf:4421
 msgid "Relationship types"
-msgstr "latietypes"
+msgstr "Relatietypes"
 
 #: ../../app/lib/Browse/BrowseEngine.php:254
 msgid "a"
@@ -14748,10 +14751,10 @@ msgstr "rondleidingshalte ⇔ gebeurtenis relaties"
 #: ../../app/models/ca_list_items_x_list_items.php:84 ../../app/models/ca_user_representation_annotations_x_places.php:85 ../../app/models/ca_representation_annotations_x_places.php:85 ../../app/models/ca_entities_x_places.php:85 ../../app/models/ca_object_lots_x_occurrences.php:86 ../../app/models/ca_movements_x_occurrences.php:86
 #: ../../app/models/ca_entities_x_occurrences.php:86 ../../app/models/ca_places_x_collections.php:85 ../../app/models/ca_occurrences_x_occurrences.php:86 ../../app/models/ca_objects_x_entities.php:86 ../../app/models/ca_collections_x_collections.php:86 ../../app/models/ca_movements_x_storage_locations.php:86
 #: ../../app/models/ca_representation_annotations_x_vocabulary_terms.php:85 ../../app/models/ca_object_representations_x_vocabulary_terms.php:85 ../../app/models/ca_movements_x_places.php:85 ../../app/models/ca_movements_x_vocabulary_terms.php:85 ../../app/models/ca_tour_stops_x_objects.php:85
-#: ../../app/models/ca_places_x_storage_locations.php:85 ../../app/models/ca_places_x_places.php:84 ../../app/models/ca_loans_x_collections.php:86 ../../app/models/ca_loans_x_objects.php:86 ../../app/models/ca_object_representations_x_occurrences.php:85 ../../app/models/ca_loans_x_entities.php:86 ../../app/models/ca_loans_x_movements.php:86
-#: ../../app/models/ca_user_representation_annotations_x_occurrences.php:85 ../../app/models/ca_places_x_vocabulary_terms.php:85 ../../app/models/ca_tour_stops_x_vocabulary_terms.php:85 ../../app/models/ca_object_representations_x_object_representations.php:86 ../../app/models/ca_object_lots_x_collections.php:86
-#: ../../app/models/ca_objects_x_occurrences.php:86 ../../app/models/ca_loans_x_places.php:85 ../../app/models/ca_entities_x_collections.php:86 ../../app/models/ca_sets_x_users.php:81 ../../app/models/ca_relationship_relationships.php:99 ../../app/models/ca_tour_stops_x_collections.php:85 ../../app/models/ca_loans_x_occurrences.php:86
-#: ../../app/models/ca_loans_x_object_lots.php:86 ../../app/models/ca_user_representation_annotations_x_objects.php:85
+#: ../../app/models/ca_places_x_storage_locations.php:85 ../../app/models/ca_places_x_places.php:84 ../../app/models/ca_loans_x_collections.php:86 ../../app/models/ca_loans_x_objects.php:86 ../../app/models/ca_object_representations_x_occurrences.php:85 ../../app/models/ca_loans_x_entities.php:86
+#: ../../app/models/ca_loans_x_movements.php:86 ../../app/models/ca_user_representation_annotations_x_occurrences.php:85 ../../app/models/ca_places_x_vocabulary_terms.php:85 ../../app/models/ca_tour_stops_x_vocabulary_terms.php:85 ../../app/models/ca_object_representations_x_object_representations.php:86
+#: ../../app/models/ca_object_lots_x_collections.php:86 ../../app/models/ca_objects_x_occurrences.php:86 ../../app/models/ca_loans_x_places.php:85 ../../app/models/ca_entities_x_collections.php:86 ../../app/models/ca_sets_x_users.php:81 ../../app/models/ca_relationship_relationships.php:99
+#: ../../app/models/ca_tour_stops_x_collections.php:85 ../../app/models/ca_loans_x_occurrences.php:86 ../../app/models/ca_loans_x_object_lots.php:86 ../../app/models/ca_user_representation_annotations_x_objects.php:85
 msgid "Effective dates"
 msgstr "Toepassingsdatums"
 
@@ -14766,10 +14769,10 @@ msgstr "Toepassingsdatums"
 #: ../../app/models/ca_list_items_x_list_items.php:84 ../../app/models/ca_user_representation_annotations_x_places.php:85 ../../app/models/ca_representation_annotations_x_places.php:85 ../../app/models/ca_entities_x_places.php:85 ../../app/models/ca_object_lots_x_occurrences.php:86 ../../app/models/ca_movements_x_occurrences.php:86
 #: ../../app/models/ca_entities_x_occurrences.php:86 ../../app/models/ca_places_x_collections.php:85 ../../app/models/ca_occurrences_x_occurrences.php:86 ../../app/models/ca_objects_x_entities.php:86 ../../app/models/ca_collections_x_collections.php:86 ../../app/models/ca_movements_x_storage_locations.php:86
 #: ../../app/models/ca_representation_annotations_x_vocabulary_terms.php:85 ../../app/models/ca_object_representations_x_vocabulary_terms.php:85 ../../app/models/ca_movements_x_places.php:85 ../../app/models/ca_movements_x_vocabulary_terms.php:85 ../../app/models/ca_tour_stops_x_objects.php:85
-#: ../../app/models/ca_places_x_storage_locations.php:85 ../../app/models/ca_places_x_places.php:84 ../../app/models/ca_loans_x_collections.php:86 ../../app/models/ca_loans_x_objects.php:86 ../../app/models/ca_object_representations_x_occurrences.php:85 ../../app/models/ca_loans_x_entities.php:86 ../../app/models/ca_loans_x_movements.php:86
-#: ../../app/models/ca_user_representation_annotations_x_occurrences.php:85 ../../app/models/ca_places_x_vocabulary_terms.php:85 ../../app/models/ca_tour_stops_x_vocabulary_terms.php:85 ../../app/models/ca_object_representations_x_object_representations.php:86 ../../app/models/ca_object_lots_x_collections.php:86
-#: ../../app/models/ca_objects_x_occurrences.php:86 ../../app/models/ca_loans_x_places.php:85 ../../app/models/ca_entities_x_collections.php:86 ../../app/models/ca_relationship_relationships.php:99 ../../app/models/ca_tour_stops_x_collections.php:85 ../../app/models/ca_loans_x_occurrences.php:86
-#: ../../app/models/ca_loans_x_object_lots.php:86 ../../app/models/ca_user_representation_annotations_x_objects.php:85
+#: ../../app/models/ca_places_x_storage_locations.php:85 ../../app/models/ca_places_x_places.php:84 ../../app/models/ca_loans_x_collections.php:86 ../../app/models/ca_loans_x_objects.php:86 ../../app/models/ca_object_representations_x_occurrences.php:85 ../../app/models/ca_loans_x_entities.php:86
+#: ../../app/models/ca_loans_x_movements.php:86 ../../app/models/ca_user_representation_annotations_x_occurrences.php:85 ../../app/models/ca_places_x_vocabulary_terms.php:85 ../../app/models/ca_tour_stops_x_vocabulary_terms.php:85 ../../app/models/ca_object_representations_x_object_representations.php:86
+#: ../../app/models/ca_object_lots_x_collections.php:86 ../../app/models/ca_objects_x_occurrences.php:86 ../../app/models/ca_loans_x_places.php:85 ../../app/models/ca_entities_x_collections.php:86 ../../app/models/ca_relationship_relationships.php:99 ../../app/models/ca_tour_stops_x_collections.php:85
+#: ../../app/models/ca_loans_x_occurrences.php:86 ../../app/models/ca_loans_x_object_lots.php:86 ../../app/models/ca_user_representation_annotations_x_objects.php:85
 msgid "Period of time for which this relationship was in effect. This is an option qualification for the relationship. If left blank, this relationship is implied to have existed for as long as the related items have existed."
 msgstr "Tijdperiode waarin deze relatie van toepassing was. Dit is een optionele kwalificatie voor de relatie. Indien leeg gelaten, wordt geïmpliceerd dat de relatie bestond voor zolang als de gerelateerde items bestaan hebben."
 
@@ -14970,7 +14973,7 @@ msgstr "Tabel waartoe deze restrictie het UI scherm verbindt"
 #: ../../app/models/ca_bundle_display_type_restrictions.php:83 ../../app/models/ca_metadata_alert_rule_type_restrictions.php:83 ../../app/models/ca_editor_ui_type_restrictions.php:83 ../../app/models/ca_search_form_type_restrictions.php:83 ../../app/models/ca_editor_ui_screen_type_restrictions.php:83
 #: ../../app/models/ca_metadata_type_restrictions.php:119
 msgid "Include subtypes in restriction?"
-msgstr "ken subtypes mee in de beperking van type"
+msgstr "Reken subtypes mee in de beperking van type"
 
 #: ../../app/models/ca_bundle_display_type_restrictions.php:83 ../../app/models/ca_metadata_alert_rule_type_restrictions.php:83 ../../app/models/ca_editor_ui_type_restrictions.php:83 ../../app/models/ca_search_form_type_restrictions.php:83 ../../app/models/ca_bundle_displays.php:2279
 #: ../../app/models/ca_editor_ui_screen_type_restrictions.php:83 ../../app/models/ca_metadata_type_restrictions.php:119
@@ -14979,7 +14982,7 @@ msgstr "???"
 
 #: ../../app/models/ca_bundle_display_type_restrictions.php:90 ../../app/models/ca_metadata_alert_rule_type_restrictions.php:90 ../../app/models/ca_editor_ui_type_restrictions.php:90 ../../app/models/ca_search_form_type_restrictions.php:90 ../../app/models/ca_editor_ui_screen_type_restrictions.php:90
 msgid "Restriction settings"
-msgstr "strictie-instellingen"
+msgstr "Restrictie-instellingen"
 
 #: ../../app/models/ca_bundle_display_type_restrictions.php:97 ../../app/models/ca_metadata_alert_rule_type_restrictions.php:97 ../../app/models/ca_editor_ui_type_restrictions.php:97 ../../app/models/ca_search_form_type_restrictions.php:97 ../../app/models/ca_editor_ui_screen_type_restrictions.php:97
 #: ../../app/models/ca_metadata_type_restrictions.php:143
@@ -15750,7 +15753,7 @@ msgstr "Bron referentie"
 
 #: ../../app/models/ca_data_import_items.php:61
 msgid "Reference to location of imported item in source data"
-msgstr "ferentie naar locatie van geïmporteerd item in brondata"
+msgstr "Referentie naar locatie van geïmporteerd item in brondata"
 
 #: ../../app/models/ca_data_import_items.php:83
 msgid "Code indicating whether row was newly inserted into database or and existing row was updated"
@@ -16359,7 +16362,7 @@ msgstr "Typenaam (voorwaartse richting)"
 
 #: ../../app/models/ca_relationship_type_labels.php:70
 msgid "Relationship type used when relation is read left-to-right."
-msgstr "latietype wanneer de relatie van links naar rechts wordt gelezen."
+msgstr "Relatietype wanneer de relatie van links naar rechts wordt gelezen."
 
 #: ../../app/models/ca_relationship_type_labels.php:78
 msgid "Typename (reverse sense)"
@@ -16367,7 +16370,7 @@ msgstr "Typenaam (achterwaartse richting)"
 
 #: ../../app/models/ca_relationship_type_labels.php:78
 msgid "Relationship type used when relation is read right-to-left."
-msgstr "latietype wanneer de relatie van rechts naar links wordt gelezen."
+msgstr "Relatietype wanneer de relatie van rechts naar links wordt gelezen."
 
 #: ../../app/models/ca_relationship_type_labels.php:86
 msgid "Description (forward sense)"
@@ -17441,7 +17444,7 @@ msgstr "Als aangevinkt zal de verwijder relatie controle niet uitgevoerd worden.
 
 #: ../../app/models/ca_editor_ui_screens.php:859 ../../app/models/ca_editor_ui_screens.php:1014 ../../app/models/ca_editor_ui_screens.php:1267
 msgid "Relationship display template"
-msgstr "latie weergave template"
+msgstr "Relatie weergave template"
 
 #: ../../app/models/ca_editor_ui_screens.php:860 ../../app/models/ca_editor_ui_screens.php:1015 ../../app/models/ca_editor_ui_screens.php:1268
 msgid "Layout for relationship when displayed in list (can include HTML). Element code tags prefixed with the ^ character can be used to represent the value in the template. For example: <i>^my_element_code</i>."
@@ -17469,7 +17472,7 @@ msgstr ""
 
 #: ../../app/models/ca_editor_ui_screens.php:935
 msgid "Do not include sub-types in type restriction"
-msgstr "ken subtypes niet mee in de restrictie van type"
+msgstr "Reken subtypes niet mee in de restrictie van type"
 
 #: ../../app/models/ca_editor_ui_screens.php:936
 msgid "Normally restricting to type(s) automatically includes all sub-(child) types. If this option is checked then the lookup results will include items with the selected type(s) <b>only</b>."
@@ -17479,18 +17482,18 @@ msgstr "Normaal gezien omvat het beperken tot bepaalde type(s) automatisch alle 
 msgid "bubbles"
 msgstr ""
 
-#: ../../app/models/ca_editor_ui_screens.php:943 ../../app/models/ca_editor_ui_screens.php:1770 ../../app/models/ca_lists.php:51 ../../app/controllers/administrate/setup/RelationshipTypesController.php:55 ../../app/controllers/administrate/setup/BrowseListItemsController.php:62 ../../app/controllers/administrate/setup/ListsController.php:60
-#: ../../app/controllers/find/RelatedListController.php:66 ../../app/controllers/find/SearchTourStopsAdvancedController.php:61 ../../app/controllers/find/BrowseObjectLotsController.php:63 ../../app/controllers/find/BrowseObjectLotsController.php:69 ../../app/controllers/find/SearchStorageLocationsController.php:60
-#: ../../app/controllers/find/SearchPlacesAdvancedController.php:62 ../../app/controllers/find/SearchToursAdvancedController.php:61 ../../app/controllers/find/BrowseStorageLocationsController.php:62 ../../app/controllers/find/BrowseCollectionsController.php:63 ../../app/controllers/find/BrowseCollectionsController.php:69
-#: ../../app/controllers/find/SearchMovementsAdvancedController.php:62 ../../app/controllers/find/SearchEntitiesAdvancedController.php:63 ../../app/controllers/find/SearchEntitiesAdvancedController.php:69 ../../app/controllers/find/SearchObjectRepresentationsAdvancedController.php:61
-#: ../../app/controllers/find/BrowseOccurrencesController.php:63 ../../app/controllers/find/BrowseOccurrencesController.php:69 ../../app/controllers/find/SearchEntitiesController.php:61 ../../app/controllers/find/SearchEntitiesController.php:67 ../../app/controllers/find/SearchTourStopsController.php:60
-#: ../../app/controllers/find/SearchOccurrencesAdvancedController.php:63 ../../app/controllers/find/SearchOccurrencesAdvancedController.php:69 ../../app/controllers/find/SearchCollectionsAdvancedController.php:63 ../../app/controllers/find/SearchCollectionsAdvancedController.php:69
-#: ../../app/controllers/find/SearchOccurrencesController.php:61 ../../app/controllers/find/SearchOccurrencesController.php:67 ../../app/controllers/find/BrowseEntitiesController.php:63 ../../app/controllers/find/BrowseEntitiesController.php:69 ../../app/controllers/find/BrowseLoansController.php:62
-#: ../../app/controllers/find/SearchCollectionsController.php:61 ../../app/controllers/find/SearchCollectionsController.php:67 ../../app/controllers/find/SearchLoansAdvancedController.php:62 ../../app/controllers/find/SearchToursController.php:60 ../../app/controllers/find/SearchObjectLotsAdvancedController.php:62
-#: ../../app/controllers/find/SearchLoansController.php:60 ../../app/controllers/find/SearchObjectsAdvancedController.php:65 ../../app/controllers/find/SearchPlacesController.php:60 ../../app/controllers/find/BrowseToursController.php:62 ../../app/controllers/find/BrowseTourStopsController.php:62
-#: ../../app/controllers/find/SearchObjectRepresentationsController.php:60 ../../app/controllers/find/SearchObjectLotsController.php:61 ../../app/controllers/find/SearchObjectLotsController.php:67 ../../app/controllers/find/BrowseObjectsController.php:66 ../../app/controllers/find/SearchObjectsController.php:68
-#: ../../app/controllers/find/BrowseMovementsController.php:62 ../../app/controllers/find/SearchStorageLocationsAdvancedController.php:62 ../../app/controllers/find/BrowsePlacesController.php:62 ../../app/controllers/find/SearchMovementsController.php:60 ../../app/controllers/find/BrowseObjectRepresentationsController.php:62
-#: ../../app/controllers/manage/TagsController.php:56 ../../app/controllers/manage/CommentsController.php:55
+#: ../../app/models/ca_editor_ui_screens.php:943 ../../app/models/ca_editor_ui_screens.php:1770 ../../app/models/ca_lists.php:51 ../../app/controllers/administrate/setup/RelationshipTypesController.php:55 ../../app/controllers/administrate/setup/BrowseListItemsController.php:62
+#: ../../app/controllers/administrate/setup/ListsController.php:60 ../../app/controllers/find/RelatedListController.php:66 ../../app/controllers/find/SearchTourStopsAdvancedController.php:61 ../../app/controllers/find/BrowseObjectLotsController.php:63 ../../app/controllers/find/BrowseObjectLotsController.php:69
+#: ../../app/controllers/find/SearchStorageLocationsController.php:60 ../../app/controllers/find/SearchPlacesAdvancedController.php:62 ../../app/controllers/find/SearchToursAdvancedController.php:61 ../../app/controllers/find/BrowseStorageLocationsController.php:62 ../../app/controllers/find/BrowseCollectionsController.php:63
+#: ../../app/controllers/find/BrowseCollectionsController.php:69 ../../app/controllers/find/SearchMovementsAdvancedController.php:62 ../../app/controllers/find/SearchEntitiesAdvancedController.php:63 ../../app/controllers/find/SearchEntitiesAdvancedController.php:69
+#: ../../app/controllers/find/SearchObjectRepresentationsAdvancedController.php:61 ../../app/controllers/find/BrowseOccurrencesController.php:63 ../../app/controllers/find/BrowseOccurrencesController.php:69 ../../app/controllers/find/SearchEntitiesController.php:61 ../../app/controllers/find/SearchEntitiesController.php:67
+#: ../../app/controllers/find/SearchTourStopsController.php:60 ../../app/controllers/find/SearchOccurrencesAdvancedController.php:63 ../../app/controllers/find/SearchOccurrencesAdvancedController.php:69 ../../app/controllers/find/SearchCollectionsAdvancedController.php:63
+#: ../../app/controllers/find/SearchCollectionsAdvancedController.php:69 ../../app/controllers/find/SearchOccurrencesController.php:61 ../../app/controllers/find/SearchOccurrencesController.php:67 ../../app/controllers/find/BrowseEntitiesController.php:63 ../../app/controllers/find/BrowseEntitiesController.php:69
+#: ../../app/controllers/find/BrowseLoansController.php:62 ../../app/controllers/find/SearchCollectionsController.php:61 ../../app/controllers/find/SearchCollectionsController.php:67 ../../app/controllers/find/SearchLoansAdvancedController.php:62 ../../app/controllers/find/SearchToursController.php:60
+#: ../../app/controllers/find/SearchObjectLotsAdvancedController.php:62 ../../app/controllers/find/SearchLoansController.php:60 ../../app/controllers/find/SearchObjectsAdvancedController.php:65 ../../app/controllers/find/SearchPlacesController.php:60 ../../app/controllers/find/BrowseToursController.php:62
+#: ../../app/controllers/find/BrowseTourStopsController.php:62 ../../app/controllers/find/SearchObjectRepresentationsController.php:60 ../../app/controllers/find/SearchObjectLotsController.php:61 ../../app/controllers/find/SearchObjectLotsController.php:67 ../../app/controllers/find/BrowseObjectsController.php:66
+#: ../../app/controllers/find/SearchObjectsController.php:68 ../../app/controllers/find/BrowseMovementsController.php:62 ../../app/controllers/find/SearchStorageLocationsAdvancedController.php:62 ../../app/controllers/find/BrowsePlacesController.php:62 ../../app/controllers/find/SearchMovementsController.php:60
+#: ../../app/controllers/find/BrowseObjectRepresentationsController.php:62 ../../app/controllers/manage/TagsController.php:56 ../../app/controllers/manage/CommentsController.php:55
 msgid "list"
 msgstr "lijst"
 
@@ -18647,7 +18650,8 @@ msgstr "Tekst inpakken na de export"
 #: ../../app/models/ca_data_exporters.php:267
 msgid "If this exporter is used for an item set export (as opposed to a single item), the text set here will be inserted after the last item. This can for instance be used to wrap a repeating set of XML elements in a single global element. The text has to be valid for the current exporter format."
 msgstr ""
-"Als deze exporter gebruikt wordt voor een itemset export (in tegenstelling tot een enkelvoudig item), zal de ingestelde tekst na het laatste item toevoegd worden. Dit kan bijvoorbeeld gebruikt worden om een herhalende set van XML-elementen in een enkel globaal element te steken. De tekst moet geldig zijn voor het huidige exporteerformaat."
+"Als deze exporter gebruikt wordt voor een itemset export (in tegenstelling tot een enkelvoudig item), zal de ingestelde tekst na het laatste item toevoegd worden. Dit kan bijvoorbeeld gebruikt worden om een herhalende set van XML-elementen in een enkel globaal element te steken. De tekst moet geldig zijn voor het huidige "
+"exporteerformaat."
 
 #: ../../app/models/ca_data_exporters.php:276
 msgid "Wrapping text before record export"
@@ -18731,7 +18735,7 @@ msgstr "%1 mapping records toegevoegd aan de set"
 
 #: ../../app/models/ca_data_exporters.php:1163
 msgid "Exporting record set"
-msgstr "cordset exporteren"
+msgstr "Recordset exporteren"
 
 #: ../../app/models/ca_data_exporters.php:1277
 msgid "Export failed: %1"
@@ -19698,7 +19702,7 @@ msgstr "Bepaalt hoe fouten behandeld worden voor de mapping. Mogelijkheden zijn 
 
 #: ../../app/models/ca_data_importer_items.php:551
 msgid "Relationship type to use when linking to a related record."
-msgstr "latietype wanneer gelinkt wordt aan een gerelateerd record."
+msgstr "Relatietype wanneer gelinkt wordt aan een gerelateerd record."
 
 #: ../../app/models/ca_data_importer_items.php:559
 msgid "Convert newlines to HTML"
@@ -20837,7 +20841,7 @@ msgstr ""
 
 #: ../../app/models/ca_data_exporter_items.php:376
 msgid "Return-separated list of values from the CollectiveAccess source to be replaced. PCRE-style regular expressions are allowed (without delimiters)."
-msgstr "Teruggebrachte-gescheiden lijst van waarden uit de CollectiveAccess bron om te vervangen. guliere expressies in PCRE-stijl zijn toegestaan (zonder scheidingstekens)."
+msgstr "Teruggebrachte-gescheiden lijst van waarden uit de CollectiveAccess bron om te vervangen. Reguliere expressies in PCRE-stijl zijn toegestaan (zonder scheidingstekens)."
 
 #: ../../app/models/ca_data_exporter_items.php:386
 msgid "Return-separated list of replacement values that correspond to the mapped values from the original data source."
@@ -21761,7 +21765,7 @@ msgstr "Unieke numerieke identificatiecode, intern door CollectiveAccess gebruik
 
 #: ../../app/models/ca_relationship_types.php:56
 msgid "Type restriction for \"left\" side of relationship"
-msgstr "strictie op type voor \"linkerkant\" van relatie"
+msgstr "Restrictie op type voor \"linkerkant\" van relatie"
 
 #: ../../app/models/ca_relationship_types.php:56
 msgid "Type restriction for \"left\" side of relationship (eg. if relationship is object-entity, then the restriction controls for which types of objects this relationship type is valid."
@@ -21777,7 +21781,7 @@ msgstr ""
 
 #: ../../app/models/ca_relationship_types.php:70
 msgid "Type restriction for \"right\" side of relationship"
-msgstr "strictie op type voor \"rechterkant\" van relatie"
+msgstr "Restrictie op type voor \"rechterkant\" van relatie"
 
 #: ../../app/models/ca_relationship_types.php:70
 msgid "Type restriction for \"right\" side of relationship (eg. if relationship is object-entity, then the restriction controls for which types of entities this relationship type is valid."
@@ -21789,7 +21793,7 @@ msgstr ""
 
 #: ../../app/models/ca_relationship_types.php:92
 msgid "Relationship type hierarchy identifier"
-msgstr "latietype hiërarchie identificatiecode"
+msgstr "Relatietype hiërarchie identificatiecode"
 
 #: ../../app/models/ca_relationship_types.php:92
 msgid "Identifier of relationship_type that is root of the relationship_type hierarchy."
@@ -21797,7 +21801,7 @@ msgstr "Identificatiecode van relatietype dat de wortel is van de relatietype-hi
 
 #: ../../app/models/ca_relationship_types.php:100
 msgid "Relationship type code"
-msgstr "latietype code"
+msgstr "Relatietype code"
 
 #: ../../app/models/ca_relationship_types.php:100
 msgid "Unique identifier for the relationship type; must be unique for relationship types for the current relationship."
@@ -23459,7 +23463,7 @@ msgstr "Er zijn geen wijzigingen aan <strong>%1</strong> van %2."
 
 #: ../../app/widgets/recentChanges/recentChangesWidget.php:43
 msgid "Recent changes"
-msgstr "cente wijzigingen"
+msgstr "Recente wijzigingen"
 
 #: ../../app/widgets/recentChanges/recentChangesWidget.php:44
 msgid "Lists recent changes to objects or authority items"
@@ -23467,7 +23471,7 @@ msgstr "Toont recente wijzigingen aan objecten of autoriteitsitems"
 
 #: ../../app/widgets/recentChanges/recentChangesWidget.php:92
 msgid "Recent changes widget"
-msgstr "\"cente wijzigingen\" widget"
+msgstr "\"Recente wijzigingen\" widget"
 
 #: ../../app/widgets/recentChanges/recentChangesWidget.php:93
 msgid "Actions for recent changes widget"
@@ -23864,7 +23868,7 @@ msgstr "Er zijn"
 
 #: ../../app/widgets/lastLogins/lastLoginsWidget.php:41
 msgid "Recent logins"
-msgstr "cente gebruikerslogins"
+msgstr "Recente gebruikerslogins"
 
 #: ../../app/widgets/lastLogins/lastLoginsWidget.php:42
 msgid "Displays recent logins to the system"
@@ -23912,7 +23916,7 @@ msgstr "niet-gemodereerd"
 
 #: ../../app/widgets/recentTags/recentTagsWidget.php:115
 msgid "Recent tags widget"
-msgstr "\"cente tags\" widget"
+msgstr "\"Recente tags\" widget"
 
 #: ../../app/widgets/recentTags/recentTagsWidget.php:116
 msgid "Actions for recent tags widget"
@@ -24000,7 +24004,7 @@ msgstr ""
 
 #: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:43
 msgid "Recently created"
-msgstr "cent aangemaakt"
+msgstr "Recent aangemaakt"
 
 #: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:44
 msgid "Lists recently created objects or authority items"
@@ -24008,7 +24012,7 @@ msgstr "Toont recent aangemaakte objecten of autoriteitsitems"
 
 #: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:196
 msgid "Recently created widget"
-msgstr "\"cent aangemaakt\" widget"
+msgstr "\"Recent aangemaakt\" widget"
 
 #: ../../app/widgets/recentlyCreated/recentlyCreatedWidget.php:197
 msgid "Actions for recently created widget"
@@ -24100,7 +24104,7 @@ msgstr "Geeft de %1 laatst aangemaakte <span style='font-weight:bold; text-trans
 
 #: ../../app/widgets/recordsByStatus/recordsByStatusWidget.php:46
 msgid "Records by status"
-msgstr "cords per status"
+msgstr "Records per status"
 
 #: ../../app/widgets/recordsByStatus/recordsByStatusWidget.php:47
 msgid "Displays objects or authority items by cataloguing status"
@@ -24108,7 +24112,7 @@ msgstr "Geeft objecten of autoriteit items weer op basis van catalogiseerstatus"
 
 #: ../../app/widgets/recordsByStatus/recordsByStatusWidget.php:172
 msgid "Records by status widget"
-msgstr "\"cords per status\" widget"
+msgstr "\"Records per status\" widget"
 
 #: ../../app/widgets/recordsByStatus/recordsByStatusWidget.php:173
 msgid "Actions for records by status widget"
@@ -24196,7 +24200,7 @@ msgstr "Geeft overzicht van recente commentaren"
 
 #: ../../app/widgets/recentComments/recentCommentsWidget.php:113
 msgid "Recent comments widget"
-msgstr "\"cente commentaren\" widget"
+msgstr "\"Recente commentaren\" widget"
 
 #: ../../app/widgets/recentComments/recentCommentsWidget.php:114
 msgid "Actions for recent comments widget"
@@ -25361,8 +25365,8 @@ msgid "Ignore type when trying to match row"
 msgstr ""
 
 #: ../../app/refineries/objectRepresentationSplitter/objectRepresentationSplitterRefinery.php:100 ../../app/refineries/storageLocationSplitter/storageLocationSplitterRefinery.php:103 ../../app/refineries/tourStopSplitter/tourStopSplitterRefinery.php:198 ../../app/refineries/placeSplitter/placeSplitterRefinery.php:122
-#: ../../app/refineries/objectLotSplitter/objectLotSplitterRefinery.php:100 ../../app/refineries/objectSplitter/objectSplitterRefinery.php:100 ../../app/refineries/movementSplitter/movementSplitterRefinery.php:99 ../../app/refineries/loanSplitter/loanSplitterRefinery.php:100 ../../app/refineries/entitySplitter/entitySplitterRefinery.php:111
-#: ../../app/refineries/listItemSplitter/listItemSplitterRefinery.php:114 ../../app/refineries/occurrenceSplitter/occurrenceSplitterRefinery.php:99
+#: ../../app/refineries/objectLotSplitter/objectLotSplitterRefinery.php:100 ../../app/refineries/objectSplitter/objectSplitterRefinery.php:100 ../../app/refineries/movementSplitter/movementSplitterRefinery.php:99 ../../app/refineries/loanSplitter/loanSplitterRefinery.php:100
+#: ../../app/refineries/entitySplitter/entitySplitterRefinery.php:111 ../../app/refineries/listItemSplitter/listItemSplitterRefinery.php:114 ../../app/refineries/occurrenceSplitter/occurrenceSplitterRefinery.php:99
 msgid "Ignore type when trying to match row."
 msgstr ""
 
@@ -25732,7 +25736,7 @@ msgstr ""
 
 #: ../../app/refineries/ATSubjectGetter/ATSubjectGetterRefinery.php:217
 msgid "Foreign key in ArchDescriptionSubjects to select on (eg. ResourceID, resourceComponentId, accessionId, digitalObjectId."
-msgstr "Vremde sleutel in ArchDescriptionSubjects om op te selecteren (bijvoorbeeld sourceID, resourceComponentId, accessionId, digitalObjectId)."
+msgstr "Vreemde sleutel in ArchDescriptionSubjects om op te selecteren (bijvoorbeeld ResourceID, resourceComponentId, accessionId, digitalObjectId."
 
 #: ../../app/refineries/ATSubjectGetter/ATSubjectGetterRefinery.php:235
 msgid "Character(s) to break subject names on."
@@ -25768,7 +25772,7 @@ msgstr "Stelt het standaard itemtype in dat gebruikt zal worden als geen enkele 
 
 #: ../../app/refineries/ATRelatedGetter/ATRelatedGetterRefinery.php:38
 msgid "AT Related Getter"
-msgstr "AT lated Getter"
+msgstr "AT Related Getter"
 
 #: ../../app/refineries/ATRelatedGetter/ATRelatedGetterRefinery.php:39
 msgid "Fetches data from related Archivists Toolkit tables"
@@ -26096,7 +26100,7 @@ msgstr "Geïmporteerde gerelateerde entiteiten (aka namen) van Archivists Toolki
 
 #: ../../app/refineries/ATEntityGetter/ATEntityGetterRefinery.php:199
 msgid "Foreign key in ArchDescriptionNames to select on (eg. ResourceID, resourceComponentId, accessionId, digitalObjectId."
-msgstr "Vreemde sleutel in ArchDescriptionNames om op te selecteren op (bijvoorbeeld sourceID, resourceComponentId, accessionId, digitalObjectId)."
+msgstr "Vreemde sleutel in ArchDescriptionNames om op te selecteren op (bijvoorbeeld ResourceID, resourceComponentId, accessionId, digitalObjectId."
 
 #: ../../app/refineries/ATEntityGetter/ATEntityGetterRefinery.php:216
 msgid "Entity types"
