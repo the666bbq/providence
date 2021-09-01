@@ -36512,17 +36512,17 @@ msgstr "Sta gebruiker toe om gebeurtenissen in batch te bewerken"
 #: ../../app/conf/user_actions.conf:641
 #, fuzzy
 msgid "Batch delete occurrences"
-msgstr "Gebeurtenissen in batch bewerken"
+msgstr "Gebeurtenissen in batch verwijderen"
 
 #: ../../app/conf/user_actions.conf:642
 #, fuzzy
 msgid "Allow user to delete batches of occurrences"
-msgstr "Sta gebruiker toe om gebeurtenissen in batch te bewerken"
+msgstr "Sta gebruiker toe om gebeurtenissen in batch te verwijderen"
 
 #: ../../app/conf/user_actions.conf:646
 #, fuzzy
 msgid "Allow user to view occurrence change logs"
-msgstr "Sta gebruiker toe om gebeurtenissen te verwijderen"
+msgstr "Sta gebruiker toe om gebeurtenissen te bewerken"
 
 #: ../../app/conf/user_actions.conf:652
 msgid "Collection authority editing"
