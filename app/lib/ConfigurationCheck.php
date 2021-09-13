@@ -7,7 +7,7 @@
  * ----------------------------------------------------------------------
  *
  * Software by Whirl-i-Gig (http://www.whirl-i-gig.com)
- * Copyright 2010-2020 Whirl-i-Gig
+ * Copyright 2010-2021 Whirl-i-Gig
  *
  * For more information visit http://www.CollectiveAccess.org
  *
@@ -111,6 +111,7 @@ final class ConfigurationCheck {
 		self::permissionInstallCheck();
 		self::DBLoginQuickCheck();
 		self::tmpDirQuickCheck();
+		self::uploadTmpDirQuickCheck();
 	}
 	# -------------------------------------------------------
 	private static function addError($ps_error) {
@@ -243,12 +244,12 @@ final class ConfigurationCheck {
 	 */
 	public static function DBOutOfDateQuickCheck() {
 		if (!in_array('ca_schema_updates', self::$opo_db->getTables())) {
-			self::addError(_t("Your database is extremely out-of-date. Please install all database migrations starting with migration #1 or contact support@collectiveaccess.org for assistance. See the <a href=\"http://docs.collectiveaccess.org/wiki/Applying_Database_Updates\">update HOW-TO</a> for instructions on applying database updates manually."));
+			self::addError(_t("Your database is extremely out-of-date. Please install all database migrations starting with migration #1 or contact support@collectiveaccess.org for assistance."));
 		} else if (($vn_schema_revision = self::getSchemaVersion()) < __CollectiveAccess_Schema_Rev__) {
 			if (defined('__CA_ALLOW_AUTOMATIC_UPDATE_OF_DATABASE__') && __CA_ALLOW_AUTOMATIC_UPDATE_OF_DATABASE__) {
-				self::addError(_t("Your database is out-of-date. Please install all schema migrations starting with migration #%1. <a href='index.php?updateSchema=1'><strong>Click here</strong></a> to automatically apply the required updates, or see the <a href=\"http://docs.collectiveaccess.org/wiki/Applying_Database_Updates\">update HOW-TO</a> for instructions on applying database updates manually.<br/><br/><div align='center'><strong>NOTE: you should back-up your database before applying updates!</strong></div>",($vn_schema_revision + 1)));
+				self::addError(_t("Your database is out-of-date. Please install all schema migrations starting with migration #%1. <a href='index.php?updateSchema=1'><strong>Click here</strong></a> to automatically apply the required updates.<br/><br/><div align='center'><strong>NOTE: you should back-up your database before applying updates!</strong></div>",($vn_schema_revision + 1)));
 			} else {
-				self::addError(_t("Your database is out-of-date. Please install all schema migrations starting with migration #%1. See the <a href=\"http://docs.collectiveaccess.org/wiki/Applying_Database_Updates\">update HOW-TO</a> for instructions on applying database updates manually.<br/><br/><div align='center'><strong>NOTE: you should back-up your database before applying updates!</strong></div>",($vn_schema_revision + 1)));
+				self::addError(_t("Your database is out-of-date. Please install all schema migrations starting with migration #%1.<br/><br/><div align='center'><strong>NOTE: you should back-up your database before applying updates!</strong></div>",($vn_schema_revision + 1)));
 			}
 			for($vn_i = ($vn_schema_revision + 1); $vn_i <= __CollectiveAccess_Schema_Rev__; $vn_i++) {
 				if ($o_instance = ConfigurationCheck::getVersionUpdateInstance($vn_i)) {
@@ -280,6 +281,17 @@ final class ConfigurationCheck {
 			self::addError(_t("Your setup.php file does not include a setting for __CA_SITE_PROTOCOL__. Please update it using the current setup.php-dist as a template."));
 		}
 		
+		return true;
+	}
+	# -------------------------------------------------------
+	/**
+	 * Does a temporary upload dir exist and is it writable?
+	 */
+	public static function uploadTmpDirQuickCheck() {
+		$tmp_dir = ini_get('upload_tmp_dir') ? ini_get('upload_tmp_dir') : sys_get_temp_dir();
+		if (!file_exists($tmp_dir) || !is_writable($tmp_dir)){
+			self::addError(_t("It looks like the directory for temporary upload files is not writable by the webserver. Please change the permissions of %1 and enable the user which runs the webserver to write to this directory.",$tmp_dir));
+		}
 		return true;
 	}
 	# -------------------------------------------------------

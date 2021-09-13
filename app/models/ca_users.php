@@ -2995,7 +2995,7 @@ class ca_users extends BaseModel {
         }
 
 		// if user doesn't exist, try creating it through the authentication backend, if the backend supports it
-		if (strlen($vs_username) > 0 && !$this->load($vs_username)) {
+		if ((strlen($vs_username) > 0) && !$this->load(['user_name' => $vs_username])) {
 			if(AuthenticationManager::supports(__CA_AUTH_ADAPTER_FEATURE_AUTOCREATE_USERS__)) {
 				try{
 					$va_values = AuthenticationManager::getUserInfo($vs_username, $ps_password);
@@ -3058,27 +3058,8 @@ class ca_users extends BaseModel {
         if ($vs_username) {
             try {
                 if(AuthenticationManager::authenticate($vs_username, $ps_password, $pa_options)) {
-                    if ($this->load($vs_username)) {
-                        if (
-                            defined('__CA_APP_TYPE__') && (__CA_APP_TYPE__ === 'PAWTUCKET') && 
-                            $this->canDoAction('can_not_login') &&
-                            ($this->getPrimaryKey() != $this->_CONFIG->get('administrator_user_id')) &&
-                            !$this->canDoAction('is_administrator')
-                        ) {
-                            $this->opo_log->log(array(
-                                'CODE' => 'SYS', 'SOURCE' => 'ca_users/authenticate',
-                                'MESSAGE' => _t('There was an error while trying to authenticate user %1: User is not authorized to log into Pawtucket', $vs_username)
-                            ));
-                            return false;
-                        }
-                        return true;
-                    } else {
-                        $this->opo_log->log(array(
-                            'CODE' => 'SYS', 'SOURCE' => 'ca_users/authenticate',
-                            'MESSAGE' => _t('There was an error while trying to authenticate user %1: Load by user name failed', $vs_username)
-                        ));
-                        return false;
-                    }
+                    $this->load(['user_name' => $vs_username]);
+                    return true;
                 }
             }  catch (Exception $e) {
                 $this->opo_log->log(array(
@@ -3091,7 +3072,7 @@ class ca_users extends BaseModel {
 		// check ips
 		if (!isset($pa_options["dont_check_ips"]) || !$pa_options["dont_check_ips"]) {
 			if ($vn_user_id = $this->ipAuthenticate()) {
-				if ($this->load($vn_user_id)) {
+				if ($this->load(['user_id' => $vn_user_id])) {
 					$ps_username = $this->get("user_name");
 					return 2;
 				} 

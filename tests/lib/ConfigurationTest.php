@@ -7,7 +7,7 @@
  * ----------------------------------------------------------------------
  *
  * Software by Whirl-i-Gig (http://www.whirl-i-gig.com)
- * Copyright 2009-2018 Whirl-i-Gig
+ * Copyright 2009-2021 Whirl-i-Gig
  *
  * For more information visit http://www.CollectiveAccess.org
  *
@@ -46,6 +46,8 @@ class ConfigurationTest extends TestCase {
 		$this->assertEquals('This scalar is embedded: "/usr/local/fish"', $o_config->get('a_scalar_using_an_embedded_macro'));
 		$this->assertEquals('Expreß zug: חי תהער', $o_config->get('a_scalar_with_utf_8_chars'));
 		$this->assertEquals( "Foo\nHello\nWorld\n", $o_config->get('a_scalar_with_line_breaks'));
+		$this->assertEquals( 'This is a " test of escaped @ characters', $o_config->get('a_scalar_with_escaped_characters'));
+		$this->assertEquals( 'This is a \" test of escaped \@ characters', $o_config->get('a_scalar_with_escaped_backslashes'));
 	}
 
 	public function testLists() {
@@ -136,7 +138,7 @@ class ConfigurationTest extends TestCase {
 
 		$va_keys = $o_config->getScalarKeys();
 		$this->assertTrue(is_array($va_keys));
-		$this->assertEquals(14, sizeof($va_keys));		// 13 in config file + 1 "LOCALE" value that's automatically inserted
+		$this->assertEquals(16, sizeof($va_keys));		// 15 in config file + 1 "LOCALE" value that's automatically inserted
 		$va_keys = $o_config->getListKeys();
 		$this->assertTrue(is_array($va_keys));
 		$this->assertEquals(6, sizeof($va_keys));
@@ -148,13 +150,11 @@ class ConfigurationTest extends TestCase {
 
 
 	public function testGreps(){
-			$o_config = new Configuration(__CA_BASE_DIR__.'/tests/lib/data/test.conf');
-			$va_regexes = $o_config->get("idno_regexes");
-			$this->assertTrue(is_array($va_regexes));
-			$this->assertArrayHasKey("ca_objects", $va_regexes);
-			$this->assertEquals('[\d]{4}\.[\d]{1,5}\.[\d]{0,5}', $va_regexes["ca_objects"][0]);
+		$o_config = new Configuration(__CA_BASE_DIR__.'/tests/lib/data/test.conf');
+		$va_regexes = $o_config->get("idno_regexes");
+		$this->assertTrue(is_array($va_regexes));
+		$this->assertArrayHasKey("ca_objects", $va_regexes);
+		$this->assertEquals('[\d]{4}\.[\d]{1,5}\.[\d]{0,5}', $va_regexes["ca_objects"][0]);
 	}
-
-
 }
-?>
+

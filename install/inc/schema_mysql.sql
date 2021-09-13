@@ -627,7 +627,7 @@ create table ca_object_representation_captions (
       
     index i_representation_id	(representation_id),
     index i_locale_id			(locale_id),
-   constraint fk_ca_object_rep_captiopns_locale_id foreign key (locale_id)
+   constraint fk_ca_object_rep_captions_locale_id foreign key (locale_id)
       references ca_locales (locale_id) on delete restrict on update restrict
 ) engine=innodb CHARACTER SET utf8 COLLATE utf8_general_ci;
 
@@ -4401,7 +4401,7 @@ create table ca_editor_ui_labels (
 	ui_id int unsigned not null references ca_editor_uis(ui_id),
 	name varchar(255) not null,
 	description text not null,
-	locale_id smallint not null references ca_locales(locale_id),
+	locale_id smallint unsigned not null references ca_locales(locale_id),
 	
 	primary key 				(label_id),
 	index i_ui_id				(ui_id),
@@ -4439,7 +4439,7 @@ create table ca_editor_uis_x_users (
 create table ca_editor_uis_x_roles (
 	relation_id int unsigned not null auto_increment,
 	ui_id int unsigned not null references ca_editor_uis(ui_id),
-	role_id int unsigned not null references ca_user_roles(role_id),
+	role_id smallint unsigned not null references ca_user_roles(role_id),
 	access 			tinyint unsigned not null default 0,
 	
 	primary key 				(relation_id),
@@ -4479,7 +4479,7 @@ create table ca_editor_ui_screen_labels (
 	screen_id int unsigned not null references ca_editor_ui_screens(screen_id),
 	name varchar(255) not null,
 	description text not null,
-	locale_id smallint not null references ca_locales(locale_id),
+	locale_id smallint unsigned not null references ca_locales(locale_id),
 	
 	primary key 				(label_id),
 	index i_screen_id			(screen_id),
@@ -4517,7 +4517,7 @@ create table ca_editor_ui_screens_x_users (
 create table ca_editor_ui_screens_x_roles (
 	relation_id int unsigned not null auto_increment,
 	screen_id int unsigned not null references ca_editor_ui_screens(screen_id),
-	role_id int unsigned not null references ca_user_roles(role_id),
+	role_id smallint unsigned not null references ca_user_roles(role_id),
 	access 			tinyint unsigned not null default 0,
 	
 	primary key 				(relation_id),
@@ -4681,7 +4681,7 @@ create table ca_sets_x_user_groups (
 create table ca_sets_x_users (
 	relation_id int unsigned not null auto_increment,
 	set_id int unsigned not null references ca_sets(set_id),
-	user_id int unsigned not null references ca_user(user_id),
+	user_id int unsigned not null references ca_users(user_id),
 	access tinyint unsigned not null default 0,
 	sdatetime int unsigned null,
 	edatetime int unsigned null,
@@ -4746,7 +4746,7 @@ create table ca_items_x_tags (
 	table_num	tinyint unsigned not null,
 	row_id		int unsigned not null,
 	
-	tag_id		int unsigned not null references ca_tags(tag_id),
+	tag_id		int unsigned not null references ca_item_tags(tag_id),
 	
 	user_id		int unsigned null references ca_users(user_id),
 	access		tinyint unsigned not null default 0,
@@ -5014,7 +5014,7 @@ create table ca_bundle_display_type_restrictions (
 
 
 /*==========================================================================*/
-/* Support for tour content
+/* Support for tour content                                                 */
 /*==========================================================================*/
 create table ca_tours
 (
